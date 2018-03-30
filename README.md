@@ -37,13 +37,13 @@ price.
 ```
 # Achievements:
 ```Markdown
-I. RDS Subject Matter Expert.
-II. Assisted several customer to migrate to and from “Aurora, MySQL, and MariaDB” databases over several regions minimizing the downtime to 5 minutes at MAX.
-III.Deeply investigated failure root causes for the customers and the company.
-IV.Worked directly with Amazon’s solution architects to provide best possible practices for the customer use cases focusing on high availability, Durability, and performance of the solution.
-V.Convinced several customer to use specific product over another based on their needs, workloads, features, and budget.
-VI. convinced several internal and external customers to redesign their applications to adjust the communication method between their application and the database which significantly optimized their workloads.
-VII. Learned a lot more about Scalable, Distributed, and Highly Available Solution.
+I.    RDS Subject Matter Expert.
+II.   Assisted several customer to migrate to and from “Aurora, MySQL, and MariaDB” databases over several regions minimizing the downtime to 5 minutes at MAX.
+III.  Deeply investigated failure root causes for the customers and the company.
+IV.   Worked directly with Amazon’s solution architects to provide best possible practices for the customer use cases focusing on high availability, Durability, and performance of the solution.
+V.    Convinced several customer to use specific product over another based on their needs, workloads, features, and budget.
+VI.   convinced several internal and external customers to redesign their applications to adjust the communication method between their application and the database which significantly optimized their workloads.
+VII.  Learned a lot more about Scalable, Distributed, and Highly Available Solution.
 VIII. Created bash and python scripts to assist customers automating their tasks.
 ```
 
