@@ -22,21 +22,7 @@ I am interested in system engineering and automation, and looking forward to Sit
 
 ## _Working Experience:_ 
 ### - Cloud Support Engineer in [Amazon Web Services](https://aws.amazon.com/) (Current): 
->
->**Speciality:** Relational Database Services
->
->**Expertiese:**
->- MySQL
->- MariaDB
->- Amazon Aurora-MySQL
->
->**Working Period:**
->- Cloud Support Engineer I: November 2015 - September 2017
->- Cloud Support Engineer II: October 2017(Promotion) - Current
->
 >**Description:** Supporting “Amazon Web Services’ Enterprise customers” to solve their infrastructure problems through mail, chat, or Phone calls and recommending the best ways to assist them in achieving their aim maintaining the best possible Performance and the minimal price.
->
->**Projects:** Designed and Implemented automated practical onBoarding training for MySQL, MariaDB, and Aurora Engines.
 >
 >**Achievements:**
 >1. RDS Subject Matter Expert.
@@ -48,8 +34,40 @@ I am interested in system engineering and automation, and looking forward to Sit
 >7. Learned a lot more about Scalable, Distributed, and Highly Available Solution.
 >8. Created bash and python scripts to assist customers automating their tasks.
 >9. [Business Critical] Discovered “bugs” in the AWS internal workflows that affected thousands of customers and created scripts to automate the reproduction of the issue consistently to be investigated by the service team, that had to patch the whole RDS fleet.
+>
+>**Projects:** 
+>- Designed and Implemented automated practical onBoarding training for MySQL, MariaDB, and Aurora Engines for new hires.
+>- Mentoring and training 6 Engineer to the subject matter experts level.
+>- Facelitating new hires training to develob the new hires to Tinured engineers as fast as possible.
+>
+>**Working Period:**
+>- Cloud Support Engineer I: November 2015 - September 2017
+>- Cloud Support Engineer II: October 2017(Promotion) - Current
+>
+>**Speciality:** Relational Database Services
+>
+>**Expertiese:**
+>- MySQL
+>- MariaDB
+>- Amazon Aurora-MySQL
+
 
 ### - *NIX System Engineer in [Link Data Center](http://www.linkdatacenter.net/)
+>**Description:** Provide Server Administration, doing some proofs of concepts and benchmarking to help the leadership planing and designing for projects.
+>After that I implement the projects based on the leadership decisions.
+>
+>**Achievements:**
+>1. Changed the company hosting solution to use NginX instead of Apache.
+>2. Used Lsyncd (RSync Deamon) to cerate a distributed media hosting solution instead of using NAS or SAN solutions to avoid single points of failure and high costs.
+>3. Created Bash script to automatically migrate DNS Zones from Windows DNS servers into Bind in a project to migrate the compnies customers' nameservers to Linux.
+>4. Created bash scripts to monitor the Lsyncd service, and trigger an alarm in case of any failure.
+>5. Setup a highly available MySQL “Active-Active” Binary log replication to provide high availability for the database and avoid slow performance of the synchronous replication systems.
+>6. Learned how to integrate different services together to produce highly available, scalable, and high performing solutions.
+>
+>**Projects:** Building and maintaining **msnarabia.com** which used to handle more than 7 million hits a day.
+>
+>**Working Period:**
+>- March 2012 - October 2014 (2 years and 10 Months)
 >
 >**Speciality:** Web Hosting on Linux
 >
@@ -61,19 +79,3 @@ I am interested in system engineering and automation, and looking forward to Sit
 >- Bind
 >- Word-Press
 >- Varnish
->
->**Working Period:**
->- March 2012 - October 2014 (2 years and 10 Months)
->
->**Description:** Provide Server Administration, doing some proofs of concepts and benchmarking to help the leadership planing and designing for projects.
->After that I implement the projects based on the leadership decisions.
->
->**Projects:** Building and maintaining **msnarabia.com** which used to handle more than 7 million hits a day.
->
->**Achievements:**
->1. Changed the company hosting solution to use NginX instead of Apache.
->2. Used Lsyncd (RSync Deamon) to cerate a distributed media hosting solution instead of using NAS or SAN solutions to avoid single points of failure and high costs.
->3. Created Bash script to automatically migrate DNS Zones from Windows DNS servers into Bind in a project to migrate the compnies customers' nameservers to Linux.
->4. Created bash scripts to monitor the Lsyncd service, and trigger an alarm in case of any failure.
->5. Setup a highly available MySQL “Active-Active” Binary log replication to provide high availability for the database and avoid slow performance of the synchronous replication systems.
->6. Learned how to integrate different services together to produce highly available, scalable, and high performing solutions.
