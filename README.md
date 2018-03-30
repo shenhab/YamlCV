@@ -47,6 +47,8 @@ I am interested in system engineering and automation, and looking forward to Sit
 >**Speciality:** Relational Database Services
 >
 >**Expertiese:**
+>- AWS (General)
+>- RDS (Specialized)
 >- MySQL
 >- MariaDB
 >- Amazon Aurora-MySQL
@@ -75,6 +77,7 @@ I am interested in system engineering and automation, and looking forward to Sit
 >- MySQL
 >- Linux
 >- NginX
+>- Apache
 >- SMTP-Gated
 >- Bind
 >- Word-Press
