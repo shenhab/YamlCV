@@ -23,22 +23,22 @@ I am interested in system engineering and automation, and looking forward to Sit
 ## _Working Experience:_ 
 ### Cloud Support Engineer in Amazon Web Services (Current): 
 >
->** Speciality:**
+>**Speciality:**
 >  - Relational Database Services
 >
->** Expertiese:**
+>**Expertiese:**
 >  - MySQL
 >  - MariaDB
 >  - Amazon Aurora-MySQL
 >
->** Working Period:**
+>**Working Period:**
 >  - Cloud Support Engineer I: November 2015 - September 2017
 >  - Cloud Support Engineer II: October 2017(Promotion) - Current
 >
->** Description:**
+>**Description:**
 >  - Supporting “Amazon Web Services’ Enterprise customers” to solve their infrastructure problems through mail, chat, or Phone calls and recommending the best ways to assist them in achieving their aim maintaining the best possible Performance and the minimal price.
 >
->** Achievements:**
+>**Achievements:**
 >  1.  RDS Subject Matter Expert.
 >  2.  Assisted several customer to migrate to and from “Aurora, MySQL, and MariaDB” databases over several regions minimizing the downtime to 5 minutes at MAX.
 >  2.  Deeply investigated failure root causes for the customers and the company.
