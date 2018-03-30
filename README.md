@@ -69,6 +69,7 @@ I am interested in system engineering and automation, and looking forward to Sit
 >After that I implement the projects based on the leadership decisions.
 >
 >**Projects:** Building and maintaining **msnarabia.com** which used to handle more than 7 million hits a day.
+>
 >**Achievements:**
 >1. Changed the company hosting solution to use NginX instead of Apache.
 >2. Used Lsyncd (RSync Deamon) to cerate a distributed media hosting solution instead of using NAS or SAN solutions to avoid single points of failure and high costs.
