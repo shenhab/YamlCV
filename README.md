@@ -82,3 +82,21 @@ I am interested in system engineering and automation, and looking forward to Sit
 >- Bind
 >- Word-Press
 >- Varnish
+
+### - System Administrator in [International Turnkey Systems](https://www.its.ws/)
+>**Description:** Provide Server Administration for Microsoft Windows, Linux(VMware ESX), MS SQL Server, and SYBASE Adaptive Server
+>
+>**Achievements:**
+>1. Created a centralized backup solution to automatically backup All the database Servers and rotate these backup using Bash and powershell scripts.
+>
+>**Working Period:**
+>- October 2011 - March 2012 (6 Months)
+>
+>**Speciality:** Database Administration
+>
+>**Expertiese:**
+>- MS SQL Server
+>- Sybase
+>- PowerShell
+>- Bash
+>- ESX
