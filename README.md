@@ -13,8 +13,9 @@ As delivering a consistent updated copy of this document became an issue when it
 
 
 ## Summary:
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+I am a cloud support engineer in Amazon Web Services Premium Support -Cape Town-, but currently transferring to the networking orgnization as a System Engineer to take a role of Automating Amazon Web Service Network. 
+I do have a very strong database as I worked in the databases profile specilizing in MySQL, MariaDB, and Amazon Aurora-MySQL, during this period I was also reconized as an RDS Expert within AWS.
+I am interested in system engineering and automation, and looking forward to Site Reliability Engineering position.
 
 ```markdown
 Syntax highlighted code block
