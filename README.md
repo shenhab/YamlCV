@@ -20,8 +20,9 @@ I am interested in system engineering and automation, and looking forward to Sit
 - Graduation Year: **2009**
 - Accumulative Grade: **Good - 70.73%**
 
-## _Working Experience:_ >
-### Cloud Support Engineer in Amazon Web Services:
+## _Working Experience:_ 
+### Cloud Support Engineer in Amazon Web Services: 
+```markdown
 **Speciality:**
   - Relational Database Services
 
@@ -46,3 +47,4 @@ I am interested in system engineering and automation, and looking forward to Sit
   6.  convinced several internal and external customers to redesign their applications to adjust the communication method between their application and the database which significantly optimized their workloads.
   7.  Learned a lot more about Scalable, Distributed, and Highly Available Solution.
   8.  Created bash and python scripts to assist customers automating their tasks.
+```
