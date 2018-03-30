@@ -15,7 +15,7 @@ I do have a very strong database as I worked in the databases profile specilizin
 I am interested in system engineering and automation, and looking forward to Site Reliability Engineering position.
 
 ## _Education:_
-Degree: **Bachelor of computer sciences**
-School: [**Misr higher insistitution for commerce & computers**](https://www.facebook.com/METMISR/)
-Graduation Year: **2009**
-Accumulative Grade: **Good - 70.73%**
+- Degree: **Bachelor of computer sciences**
+- School: [**Misr higher insistitution for commerce & computers**](https://www.facebook.com/METMISR/)
+- Graduation Year: **2009**
+- Accumulative Grade: **Good - 70.73%**
