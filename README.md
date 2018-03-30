@@ -2,11 +2,13 @@
 As delivering a consistent updated copy of this document became an issue when it comes to recruitement, I started to belive that reverting back to centerlized source of such document is a must, thus when I saw a github hosted CV for a friend of mine, I decided to follow the same Idea.
 
 ## Contact Information:
-- Full Name: Mahmoud Abdulmottaleb Elshenhab
-- Personal e-mail: root@gurutux.com
-- Phone Number: +27 (0) 79 300 1251 -South Africa-
-- Linkedin URL: https://www.linkedin.com/in/mahmoudalshinhab/
-- PDF version of this document: https://goo.gl/vZBdb7 
+```markdown
+- Name: Mahmoud Abdulmottaleb Elshenhab
+- e-mail: root@gurutux.com
+- Phone: +27 (0) 79 300 1251 -South Africa-
+- Linkedin: https://www.linkedin.com/in/mahmoudalshinhab/
+- PDF CV: https://goo.gl/vZBdb7 
+- Current Location: Cape Town - South Africa
 
 
 
