@@ -1,10 +1,15 @@
-## Welcome to GitHub Pages
+### Mahmoud Elshenhab CV
+As delivering a consistent updated copy of this document became an issue when it comes to recruitement, I started to belive that reverting back to centerlized source of such document is a must, thus when I saw a github hosted CV for a friend of mine, I decided to follow the same Idea.
 
-You can use the [editor on GitHub](https://github.com/gurutux/gurutux.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Contact Information:
+# Full Name: Mahmoud Abdulmottaleb Elshenhab
+# Personal e-mail: root@gurutux.com
+# Phone Number: +27 (0) 79 300 1251 -South Africa-
+# Linkedin URL: https://www.linkedin.com/in/mahmoudalshinhab/
+# PDF version of this document: https://goo.gl/vZBdb7
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Summary:
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
