@@ -1,8 +1,7 @@
 ---
 ---
 
-#@import "{{ site.theme }}";
-@import "jekyll-theme-minimal";
+@import "{{ site.theme }}";
 
 header {
   display: none;
