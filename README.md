@@ -41,8 +41,8 @@ I am interested in system engineering and automation, and looking forward to Sit
 >- Facelitating new hires training to develob the new hires to Tinured engineers as fast as possible.
 >
 >**Working Period:**
->- Cloud Support Engineer I: November 2015 - September 2017
 >- Cloud Support Engineer II: October 2017(Promotion) - Current
+>- Cloud Support Engineer I: November 2015 - September 2017
 >
 >**Speciality:** Relational Database Services
 >
