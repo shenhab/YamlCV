@@ -5,7 +5,7 @@ As delivering a consistent updated copy of this document became an issue when it
 ```markdown
 - Name: Mahmoud Abdulmottaleb Elshenhab
 - e-mail: root@gurutux.com
-- Phone: +27 (0) 79 300 1251 -South Africa-
+- Phone: +27 (0) 79 300 1251
 - Linkedin: https://www.linkedin.com/in/mahmoudalshinhab/
 - PDF CV: https://goo.gl/vZBdb7 
 - Current Location: Cape Town - South Africa
