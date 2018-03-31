@@ -3,21 +3,16 @@
 
 @import "{{ site.theme }}";
 
+@media print{
+	nav{
+		display: none;
+	}
 
-@media print {
-  header nav, footer {
-    display: none;
-  }
-}
+	th{
+		vertical-align: top;
+	}
 
-@page {
-  margin: 0.5cm;
-}
-
-@page :left {
-  margin: 0.5cm;
-}
-
-@page :right {
-  margin: 0.8cm;
+	#tech-skills{
+		page-break-before: always;
+	}
 }
