@@ -1,7 +1,7 @@
 # Mahmoud Elshenhab CV
 As delivering a consistent updated copy of this document became an issue when it comes to recruitement, I started to belive that reverting back to centerlized source of such document is a must, thus when I saw a github hosted CV for a friend of mine, I decided to follow the same Idea.
-> **Thus you can find the latest updated CV on this [link](https://root.gurutux.com)
-> **then download a PDF copy [here](http://api.html2pdfrocket.com/pdf?value=https://root.gurutux.com&apikey=9bfdd04b-e544-4782-a4ac-b54131031a51&FileName=MahmoudElshenhabCV.pdf&MarginLeft=10&MarginRight=10&MarginTop=15&MarginBottom=15)**
+> **Thus you can find the latest updated CV on this [link](https://root.gurutux.com),
+> then download a PDF copy [here](http://api.html2pdfrocket.com/pdf?value=https://root.gurutux.com&apikey=9bfdd04b-e544-4782-a4ac-b54131031a51&FileName=MahmoudElshenhabCV.pdf&MarginLeft=10&MarginRight=10&MarginTop=15&MarginBottom=15)**
 
 ## _Contact Information:_
 - Name: Mahmoud Abdulmottaleb Elshenhab
