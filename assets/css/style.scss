@@ -8,15 +8,16 @@
   header nav, footer {
     display: none;
   }
-  @page {
-    margin: 0.5cm;
-  }
+}
 
-  @page :left {
-    margin: 0.5cm;
-  }
+@page {
+  margin: 0.5cm;
+}
 
-  @page :right {
-    margin: 0.8cm;
-  }
+@page :left {
+  margin: 0.5cm;
+}
+
+@page :right {
+  margin: 0.8cm;
 }
