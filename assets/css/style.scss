@@ -2,14 +2,3 @@
 ---
 
 @import "{{ site.theme }}";
-
-header {
-  display: none;
-}
-html, body {
-    height: 90%;
-}
-
-body {
-    vertical-align: left;
-}
