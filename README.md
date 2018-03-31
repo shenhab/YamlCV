@@ -47,7 +47,7 @@ I am interested in system engineering and automation, and looking forward to Sit
 >
 >**Speciality:** Relational Database Services
 >
->**Expertiese:**
+>**Experties:**
 >- AWS (General)
 >- RDS (Specialized)
 >- MySQL
@@ -74,7 +74,7 @@ I am interested in system engineering and automation, and looking forward to Sit
 >
 >**Speciality:** Web Hosting on Linux
 >
->**Expertiese:**
+>**Experties:**
 >- MySQL
 >- Linux
 >- NginX
@@ -95,7 +95,7 @@ I am interested in system engineering and automation, and looking forward to Sit
 >
 >**Speciality:** Database Administration
 >
->**Expertiese:**
+>**Experties:**
 >- MS SQL Server
 >- Sybase
 >- PowerShell
