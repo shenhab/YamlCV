@@ -8,7 +8,6 @@ As delivering a consistent updated copy of this document became an issue when it
 - e-mail: [root@gurutux.com](mailto:root@gurutux.com)
 - Phone: [+27 (0) 79 300 1251](tel:0027793001251)
 - [Linkedin Profile](https://www.linkedin.com/in/mahmoudalshinhab/)
-- [PDF CV](https://goo.gl/vZBdb7)
 - Current Location: Cape Town - South Africa
 
 ## _Summary:_
