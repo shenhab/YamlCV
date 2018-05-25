@@ -22,7 +22,26 @@ I am interested in system engineering and automation, and looking forward to Sit
 - Accumulative Grade: **Good - 70.73%**
 
 ## _Working Experience:_ 
-### - Cloud Support Engineer in [Amazon Web Services](https://aws.amazon.com/) (Current): 
+### - System Engineer in [Amazon Web Services](https://aws.amazon.com/): 
+<!---
+>**Description:** 
+>
+>**Achievements:**
+>1. 
+>
+>**Projects:** 
+>- 
+>
+>**Working Period:**
+>- System Engineer I: May 2018 - Current
+>
+>**Speciality:** Systems Automation
+>
+>**Experties:**
+>- 
+--->
+
+### - Cloud Support Engineer in [Amazon Web Services](https://aws.amazon.com/): 
 >**Description:** Supporting “Amazon Web Services’ Enterprise customers” to solve their infrastructure problems through mail, chat, or Phone calls and recommending the best ways to assist them in achieving their aim maintaining the best possible Performance and the minimal price.
 >
 >**Achievements:**
@@ -42,8 +61,8 @@ I am interested in system engineering and automation, and looking forward to Sit
 >- Facelitating new hires training to develob the new hires to Tinured engineers as fast as possible.
 >
 >**Working Period:**
->- Cloud Support Engineer II: October 2017(Promotion) - Current
->- Cloud Support Engineer I: November 2015 - September 2017
+>- Cloud Support Engineer II: October 2017(Promotion) - April 2018 (7 Months)
+>- Cloud Support Engineer I: November 2015 - September 2017 (1 year, 11 Months) 
 >
 >**Speciality:** Relational Database Services
 >
