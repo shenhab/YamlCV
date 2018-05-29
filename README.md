@@ -24,6 +24,11 @@ I am interested in system engineering and automation, and looking forward to Sit
 ### - System Engineer in [Amazon Web Services](https://aws.amazon.com/): 
 >**Description:** solving the current deployments blocking issues, then working on automating the solution for most frequent issues to reduce the operitional load and eventually reach the zero touch deployment point.
 >
+>**Working Period:**
+>- System Engineer I: May 2018 - Current
+>
+>**Speciality:** Networking Systems Automation
+>
 <!---
 >**Achievements:**
 >1. 
@@ -31,13 +36,6 @@ I am interested in system engineering and automation, and looking forward to Sit
 >**Projects:** 
 >- 
 >
---->
->**Working Period:**
->- System Engineer I: May 2018 - Current
->
->**Speciality:** Networking Systems Automation
->
-<!---
 >**Experties:**
 >- 
 --->
