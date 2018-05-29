@@ -29,6 +29,11 @@ In the mean time, I am interested in system engineering and automation, and look
 >
 >**Speciality:** Networking Systems Automation
 >
+>**Experties:**
+>- Python
+>- Puppet
+>
+
 <!---
 >**Achievements:**
 >1. 
@@ -36,8 +41,6 @@ In the mean time, I am interested in system engineering and automation, and look
 >**Projects:** 
 >- 
 >
->**Experties:**
->- 
 --->
 
 ### - Cloud Support Engineer in [Amazon Web Services](https://aws.amazon.com/): 
