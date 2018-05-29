@@ -1,5 +1,5 @@
 # Mahmoud Elshenhab CV
-As delivering a consistent updated copy of this document became an issue when it comes to recruitement, I started to belive that reverting back to centerlized source of such document is a must, thus when I saw a github hosted CV for a friend of mine, I decided to follow the same Idea.
+As delivering a consistent updated copy of a CV became an issue when it comes to recruitement, I started to belive that reverting back to centerlized source of such document is a must, thus when I saw a github hosted CV for a friend of mine, I decided to follow the same Idea.
 > **Thus you can find the latest updated CV in this [link](https://root.gurutux.com),
 > then [download](http://api.html2pdfrocket.com/pdf?value=https://root.gurutux.com&apikey=9bfdd04b-e544-4782-a4ac-b54131031a51&FileName=MahmoudElshenhabCV.pdf&MarginLeft=10&MarginRight=10&MarginTop=15&MarginBottom=15) a PDF copy.**
 
@@ -11,8 +11,8 @@ As delivering a consistent updated copy of this document became an issue when it
 - Current Location: Ireland - Dublin
 
 ## _Summary:_
-I am a System Engineer working in Amazon Web Services, Dublin. I do have a very strong database background as I worked with databases specilizing in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support, during this period I was also reconized as an RDS Expert within AWS.
-I am interested in system engineering and automation, and looking forward to Site Reliability Engineering position.
+I am a System Engineer working in Amazon Web Services in Dublin. I have a very strong database background as I worked as a databas support engineer specilized in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support. During this period I was also reconized as an RDS Expert within Amazon network.
+In the mean time, I am interested in system engineering and automation, and looking forward to a Site Reliability Engineer or similar positions.
 
 ## _Education:_
 - Degree: **Bachelor of computer sciences**
