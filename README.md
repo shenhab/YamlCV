@@ -36,7 +36,7 @@ I am interested in system engineering and automation, and looking forward to Sit
 >**Working Period:**
 >- System Engineer I: May 2018 - Current
 >
->**Speciality:** Systems Automation
+>**Speciality:** Networking Systems Automation
 >
 <!---
 >**Experties:**
