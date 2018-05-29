@@ -6,13 +6,12 @@ As delivering a consistent updated copy of this document became an issue when it
 ## _Contact Information:_
 - Name: Mahmoud Abdulmottaleb Elshenhab
 - e-mail: [root@gurutux.com](mailto:root@gurutux.com)
-- Phone: [+27 (0) 79 300 1251](tel:0027793001251)
+- Phone: [+353 (86) 461 9975](tel:+353864619975)
 - [Linkedin Profile](https://www.linkedin.com/in/mahmoudalshinhab/)
-- Current Location: Cape Town - South Africa
+- Current Location: Ireland - Dublin
 
 ## _Summary:_
-I am a cloud support engineer in Amazon Web Services Premium Support, Cape Town, but currently transferring to the networking orgnization as a System Engineer to take a role of Automating Amazon Web Service Network. 
-I do have a very strong database as I worked in the databases profile specilizing in MySQL, MariaDB, and Amazon Aurora-MySQL, during this period I was also reconized as an RDS Expert within AWS.
+I am a System Engineer working in Amazon Web Services, Dublin. I do have a very strong database background as I worked with databases specilizing in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support, during this period I was also reconized as an RDS Expert within AWS.
 I am interested in system engineering and automation, and looking forward to Site Reliability Engineering position.
 
 ## _Education:_
