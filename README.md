@@ -23,20 +23,22 @@ I am interested in system engineering and automation, and looking forward to Sit
 
 ## _Working Experience:_ 
 ### - System Engineer in [Amazon Web Services](https://aws.amazon.com/): 
-<!---
->**Description:** 
+>**Description:** solving the current deployments blocking issues, then working on automating the solution for most frequent issues to reduce the operitional load and eventually reach the zero touch deployment point.
 >
+<!---
 >**Achievements:**
 >1. 
 >
 >**Projects:** 
 >- 
 >
+--->
 >**Working Period:**
 >- System Engineer I: May 2018 - Current
 >
 >**Speciality:** Systems Automation
 >
+<!---
 >**Experties:**
 >- 
 --->
