@@ -7,7 +7,7 @@ As delivering a consistent updated copy of this document became an issue when it
 - Name: Mahmoud Abdulmottaleb Elshenhab
 - e-mail: [root@gurutux.com](mailto:root@gurutux.com)
 - Phone: [+353 (86) 461 9975](tel:+353864619975)
-- [Linkedin Profile](https://www.linkedin.com/in/mahmoudalshinhab/)
+- [Linkedin Profile](https://www.linkedin.com/in/Elshenhab)
 - Current Location: Ireland - Dublin
 
 ## _Summary:_
