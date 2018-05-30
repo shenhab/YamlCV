@@ -124,28 +124,30 @@ In the mean time, I am interested in system engineering and automation, and look
 >- ESX
 
 ## _Certificates:_ 
-### - Redhat Certified Technician 
-### - Redhat Certified System Administrator
 ### - Cloud Computing Concepts (Part 1)
 > Issuer: 			University of Illinois at Urbana-Champaign
 > Issue Date: 		March 17, 2015
 > Technologies Used:
 > Certificate ID: 	[4LVSBUDRWC](https://www.coursera.org/account/accomplishments/certificate/4LVSBUDRWC)
+
 ### - Cloud Computing Concepts (Part 2)
 > Issuer: 			University of Illinois at Urbana-Champaign
 > Issue Date: 		April 27, 2015
 > Technologies Used:
 > Certificate ID: 	[48W63NBRVF](https://www.coursera.org/account/accomplishments/certificate/48W63NBRVF)
+
 ### - Introduction to computer science and programming using Python
 > Issuer: 			MITx
 > Issue Date: 		March 17, 2017
 > Technologies Used:Python 3.5, Linux
 > Certificate ID: 	[05a576b4853640b0bfe7b9b221a9fd5d](https://courses.edx.org/certificates/05a576b4853640b0bfe7b9b221a9fd5d)
+
 ### - RH202 Red Hat Enterprise Linux 5 combined RHCT/RHCE
 > Issuer:			Red Hat
 > Issue Date: 		Apr 16, 2009
 > Technologies Used:RedHat Enterprise Linux 5
 > Certificate ID: 	[100-108-729](https://www.redhat.com/rhtapps/certification/verify/?certId=100-108-729+)
+
 ### - EX200 RHCSA
 > Issuer:			Red Hat
 > Issue Date: 		Apr 16, 2009
