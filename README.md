@@ -122,3 +122,19 @@ In the mean time, I am interested in system engineering and automation, and look
 >- PowerShell
 >- Bash
 >- ESX
+
+## _Certificates:_ 
+### - Redhat Certified Technician 
+### - Redhat Certified System Administrator
+### - Cloud Computing Concepts (Part 1)
+> Issuer: 			University of Illinois at Urbana-Champaign
+> Issue Date: 		March 17, 2015
+> Certificate ID: 	[4LVSBUDRWC](https://www.coursera.org/account/accomplishments/certificate/4LVSBUDRWC)
+### - Cloud Computing Concepts (Part 2)
+> Issuer: 			University of Illinois at Urbana-Champaign
+> Issue Date: 		April 27, 2015
+> Certificate ID: 	[48W63NBRVF](https://www.coursera.org/account/accomplishments/certificate/48W63NBRVF)
+### - Introduction to computer science and programming using Python 3.5
+> Issuer: 			MITx
+> Issue Date: 		March 17, 2017
+> Certificate ID: 	[05a576b4853640b0bfe7b9b221a9fd5d](https://courses.edx.org/certificates/05a576b4853640b0bfe7b9b221a9fd5d)
