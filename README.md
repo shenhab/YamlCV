@@ -22,7 +22,12 @@ In the mean time, I am interested in system engineering and automation, and look
 
 ## _Working Experience:_ 
 ### - System Engineer in [Amazon Web Services](https://aws.amazon.com/): 
->**Description:** solving the current deployments blocking issues, then working on automating the solution for most frequent issues to reduce the operitional load and eventually reach the zero touch deployment point.
+>**Description:** solving the current deployments blockers, then working on automating solutions for most frequent issues to reduce the operitional workload and eventually reach the goal of zero touch deployments.
+>
+>**Responsibilities:**
+>- Owning Production fleets of more than 1800 hosts for different services
+>- Working on Automating manual work using the current available services and creating services that will help in Automating more tasks if not available in the mean time.
+>- Developing solutions for current problems to automatically resolve the issue in the future if occured in different environment.
 >
 >**Working Period:**
 >- System Engineer I: May 2018 - Current
@@ -30,9 +35,10 @@ In the mean time, I am interested in system engineering and automation, and look
 >**Speciality:** Networking Systems Automation
 >
 >**Experties:**
+>- Currently Learning Ruby
 >- Python
->- Puppet
->
+>- Puppet for Continues Configuration Managent
+>-
 
 <!---
 >**Achievements:**
