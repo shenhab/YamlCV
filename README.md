@@ -1,5 +1,5 @@
 # Mahmoud Elshenhab CV
-As delivering a consistent updated copy of a CV became an issue for recruiters, I started to belive that reverting back to centerlized source of such document is a must, thus when I saw a github hosted CV for a friend of mine, I decided to follow the same Idea.
+As delivering a consistent updated copy of a CV became an issue for recruiters, I started to believe that reverting back to centralized source of such document is a must, thus when I saw a GitHub hosted CV for a friend of mine, I decided to follow the same Idea.
 > **Thus you can find the latest updated CV in this [link](https://root.gurutux.com),
 > then [download](http://api.html2pdfrocket.com/pdf?value=https://root.gurutux.com&apikey=9bfdd04b-e544-4782-a4ac-b54131031a51&FileName=MahmoudElshenhabCV.pdf&MarginLeft=10&MarginRight=10&MarginTop=15&MarginBottom=15) a PDF copy.**
 
@@ -11,34 +11,36 @@ As delivering a consistent updated copy of a CV became an issue for recruiters, 
 - Current Location: Ireland - Dublin
 
 ## _Summary:_
-I am a System Engineer working in Amazon Web Services in Dublin. I have a very strong database background as I worked as a databas support engineer specilized in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support. During this period I was also reconized as an RDS Expert within Amazon network.
+I am a System Engineer working in Amazon Web Services in Dublin. I have a very strong database background as I worked as a database support engineer specialized in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support. During this period I was also recognized as an RDS Expert within Amazon network.
 In the mean time, I am interested in system engineering and automation, and looking forward to a Site Reliability Engineer or similar positions.
 
 ## _Education:_
 - Degree: **Bachelor of computer sciences**
-- School: [**Misr higher insistitution for commerce & computers**](https://www.facebook.com/METMISR/)
+- School: [**Misr higher institution for commerce & computers**](https://www.facebook.com/METMISR/)
 - Graduation Year: **2009**
 - Accumulative Grade: **Good - 70.73%**
 
 ## _Working Experience:_ 
 ### - System Engineer in [Amazon Web Services](https://aws.amazon.com/): 
->**Description:** solving the current deployments blockers, then working on automating solutions for most frequent issues to reduce the operitional workload and eventually reach the goal of zero touch deployments.
+>**Description:** Automating deployments blockers to eventually reach the goal of zero touch deployments.
 >
 >**Responsibilities:**
->- Owning Production fleets of more than 1800 hosts for different services
->- Working on Automating manual work using the current available services and creating services that will help in Automating more tasks if not available in the mean time.
->- Developing solutions for current problems to automatically resolve the issue in the future if occured in different environment.
+>- Part of on-call rotation
+>- Owning production fleets and responsible of maintaining the service, and improving the quality of the service.
+>- Focused on automating deployments for different services across AWS regions.
+>- Maintaining current software, and fixing any discovered issues/bugs
 >
 >**Working Period:**
 >- System Engineer I: May 2018 - Current
 >
->**Speciality:** Networking Systems Automation
+>**Specialty:** Systems and Deployment Automation
 >
->**Experties:**
->- Currently Learning Ruby
+>**Expertise:**
+>- Ruby (Learning in progress)
 >- Python
->- Puppet for Continues Configuration Managent
->-
+>- Puppet
+>- Redis
+>- Services Archeticture
 
 <!---
 >**Achievements:**
@@ -64,17 +66,17 @@ In the mean time, I am interested in system engineering and automation, and look
 >9. [Business Critical] Discovered “bugs” in the AWS internal workflows that affected thousands of customers and created scripts to automate the reproduction of the issue consistently to be investigated by the service team, that had to patch the whole RDS fleet.
 >
 >**Projects:** 
->- Designed and Implemented automated practical onBoarding training for MySQL, MariaDB, and Aurora Engines for new hires.
+>- Designed and Implemented automated practical on Boarding training for MySQL, MariaDB, and Aurora Engines for new hires.
 >- Mentoring and training 6 Engineer to the subject matter experts level.
->- Facelitating new hires training to develob the new hires to Tinured engineers as fast as possible.
+>- Facilitating new hires training to develop the new hires to T enured engineers as fast as possible.
 >
 >**Working Period:**
 >- Cloud Support Engineer II: October 2017(Promotion) - April 2018 (7 Months)
 >- Cloud Support Engineer I: November 2015 - September 2017 (1 year, 11 Months) 
 >
->**Speciality:** Relational Database Services
+>**Specialty:** Relational Database Services
 >
->**Experties:**
+>**Expertise:**
 >- AWS (General)
 >- RDS (Specialized)
 >- MySQL
@@ -83,13 +85,13 @@ In the mean time, I am interested in system engineering and automation, and look
 
 
 ### - *NIX System Engineer in [Link Data Center](http://www.linkdatacenter.net/)
->**Description:** Provide Server Administration, doing some proofs of concepts and benchmarking to help the leadership planing and designing for projects.
+>**Description:** Provide Server Administration, doing some proofs of concepts and bench-marking to help the leadership planing and designing for projects.
 >After that I implement the projects based on the leadership decisions.
 >
 >**Achievements:**
 >1. Changed the company hosting solution to use NginX instead of Apache.
->2. Used Lsyncd (RSync Deamon) to cerate a distributed media hosting solution instead of using NAS or SAN solutions to avoid single points of failure and high costs.
->3. Created Bash script to automatically migrate DNS Zones from Windows DNS servers into Bind in a project to migrate the compnies customers' nameservers to Linux.
+>2. Used Lsyncd (RSync Deamon) to create a distributed media hosting solution instead of using NAS or SAN solutions to avoid single points of failure and high costs.
+>3. Created Bash script to automatically migrate DNS Zones from Windows DNS servers into Bind in a project to migrate the companies customers' name servers to Linux.
 >4. Created bash scripts to monitor the Lsyncd service, and trigger an alarm in case of any failure.
 >5. Setup a highly available MySQL “Active-Active” Binary log replication to provide high availability for the database and avoid slow performance of the synchronous replication systems.
 >6. Learned how to integrate different services together to produce highly available, scalable, and high performing solutions.
@@ -99,9 +101,9 @@ In the mean time, I am interested in system engineering and automation, and look
 >**Working Period:**
 >- March 2012 - October 2014 (2 years and 10 Months)
 >
->**Speciality:** Web Hosting on Linux
+>**Specialty:** Web Hosting on Linux
 >
->**Experties:**
+>**Expertise:**
 >- MySQL
 >- Linux
 >- NginX
@@ -120,9 +122,9 @@ In the mean time, I am interested in system engineering and automation, and look
 >**Working Period:**
 >- October 2011 - March 2012 (6 Months)
 >
->**Speciality:** Database Administration
+>**Specialty:** Database Administration
 >
->**Experties:**
+>**Expertise:**
 >- MS SQL Server
 >- Sybase
 >- PowerShell
