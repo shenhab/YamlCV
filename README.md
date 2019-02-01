@@ -39,7 +39,6 @@ In the mean time, I am interested in system engineering and automation, and look
 >- Ruby (Learning in progress)
 >- Python
 >- Puppet
->- Redis
 >- Services Archeticture
 
 <!---
