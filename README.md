@@ -5,14 +5,16 @@ As delivering a consistent updated copy of a CV became an issue for recruiters, 
 
 ## _Contact Information:_
 - Name: Mahmoud Abdulmottaleb Elshenhab
-- e-mail: [root@gurutux.com](mailto:root@gurutux.com)
+- e-mail: [mahmoud.alshinhab@gmail.com](mailto:mahmoud.alshinhab@gmail.com)
 - Phone: [+353 (86) 461 9975](tel:+353864619975)
 - [Linkedin Profile](https://www.linkedin.com/in/Shenhab)
 - Current Location: Ireland - Dublin
+- Preferred Working Location: "Western Europe"
 
 ## _Summary:_
-I am a System Engineer working in Amazon Web Services in Dublin. I have a very strong database background as I worked as a database support engineer specialized in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support. During this period I was also recognized as an RDS Expert within Amazon network.
-In the mean time, I am interested in system engineering and automation, and looking forward to a Site Reliability Engineer or similar positions.
+I am a System Development Engineer working in Amazon Web Services in Dublin. I have a very strong database background as I worked as a database support engineer specialized in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support. During this period I was also recognized as an RDS Expert within Amazon network. 
+Currntly I am focusd on infrastruction and region build automation, helping my team and others to automate current build workflow, in order to reach zero touch build workflows. 
+I am interested in Site Reliability Engineer roles, as I am pasionate about automation, troubleshooting, and bug fixing.
 
 ## _Education:_
 - Degree: **Bachelor of computer sciences**
@@ -21,34 +23,39 @@ In the mean time, I am interested in system engineering and automation, and look
 - Accumulative Grade: **Good - 70.73%**
 
 ## _Working Experience:_ 
-### - System Engineer in [Amazon Web Services](https://aws.amazon.com/): 
->**Description:** Automating deployments blockers to eventually reach the goal of zero touch deployments.
+### - System Development Engineer in [Amazon Web Services](https://aws.amazon.com/): 
+>**Description:** 
+>- Automating region build for mandatory networking services of AWS, with the goal of reaching zero touch region builds.
 >
 >**Responsibilities:**
 >- Part of on-call rotation
 >- Owning production fleets and responsible of maintaining the service, and improving the quality of the service.
->- Focused on automating deployments for different services across AWS regions.
->- Maintaining current software, and fixing any discovered issues/bugs
+>- Focused on automating deployments for different services across AWS to improve the new region builds.
+>- Maintaining current software by fixing issues/bugs, developing new features, and enhancing the automation arount the owned services.
 >
 >**Working Period:**
->- System Engineer I: May 2018 - Current
+>- System Development Engineer: (title Change) December 2020 - Current
+>- System Engineer I: (Internal Transfer) May 2018 - November 2019
 >
->**Specialty:** Systems and Deployment Automation
+>**Specialty:** Systems Transformation and Deployment Automation.
 >
 >**Expertise:**
 >- Ruby (Learning in progress)
 >- Python
 >- Puppet
+>- Software Debugging
+>- System Developing
 >- Services Archeticture
-
-<!---
+>- Monitoring
+>- Dashboarding
+>
 >**Achievements:**
->1. 
+>1. Fixed a bug of a software that used Gossip protocol to monitor fleets.
+>1. is an expert in automating patching workflows across multible teams.
 >
 >**Projects:** 
->- 
->
---->
+>1. Enhancing patching automation for several fleets (across several teams).
+>1. owning a fleet of bastions, and developing it to reach zero touch build workflows.
 
 ### - Cloud Support Engineer in [Amazon Web Services](https://aws.amazon.com/): 
 >**Description:** Supporting “Amazon Web Services’ Enterprise customers” to solve their infrastructure problems through mail, chat, or Phone calls and recommending the best ways to assist them in achieving their aim maintaining the best possible Performance and the minimal price.
@@ -70,7 +77,7 @@ In the mean time, I am interested in system engineering and automation, and look
 >- Facilitating new hires training to develop the new hires to T enured engineers as fast as possible.
 >
 >**Working Period:**
->- Cloud Support Engineer II: October 2017(Promotion) - April 2018 (7 Months)
+>- Cloud Support Engineer II: (Promotion) October 2017 - April 2018 (7 Months)
 >- Cloud Support Engineer I: November 2015 - September 2017 (1 year, 11 Months) 
 >
 >**Specialty:** Relational Database Services
