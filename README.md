@@ -34,7 +34,7 @@ I am interested in Site Reliability Engineer roles, as I am pasionate about auto
 >- Maintaining current software by fixing issues/bugs, developing new features, and enhancing the automation arount the owned services.
 >
 >**Working Period:**
->- System Development Engineer: (title Change) December 2020 - Current
+>- System Development Engineer: (Title Change) December 2019 - Current
 >- System Engineer I: (Internal Transfer) May 2018 - November 2019
 >
 >**Specialty:** Systems Transformation and Deployment Automation.
