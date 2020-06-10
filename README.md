@@ -109,8 +109,8 @@ I am interested in Site Reliability Engineer roles, as I am pasionate about auto
 >- Linux
 >- Winodws
 >- Databases (SQL Server, Access)
->- Accuired [Cloud Computing Concepts Certificate Part 1](https://root.gurutux.com#--cloud-computing-concepts-part-1)
->- Accuired [Cloud Computing Concepts Certificate Part 2](https://root.gurutux.com#--cloud-computing-concepts-part-2)
+>- Accuired [Cloud Computing Concepts Certificate Part 1](#--cloud-computing-concepts-part-1)
+>- Accuired [Cloud Computing Concepts Certificate Part 2](#--cloud-computing-concepts-part-2)
 >
 
 ### - NIX System Engineer in [Link Data Center](http://www.linkdatacenter.net/)
