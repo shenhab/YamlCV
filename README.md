@@ -8,7 +8,7 @@ As delivering a consistent updated copy of a CV became an issue for recruiters, 
 - e-mail: [mahmoud.alshinhab@gmail.com](mailto:mahmoud.alshinhab@gmail.com)
 - Phone: [+353 (86) 461 9975](tel:+353864619975)
 - [Linkedin Profile](https://www.linkedin.com/in/Shenhab)
-- Blog: gurutux.com
+- Blog: [gurutux.com](https://www.gurutux.com)
 - Current Location: Ireland - Dublin
 - Preferred Working Location: "Western Europe"
 
