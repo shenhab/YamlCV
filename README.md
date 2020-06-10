@@ -8,6 +8,7 @@ As delivering a consistent updated copy of a CV became an issue for recruiters, 
 - e-mail: [mahmoud.alshinhab@gmail.com](mailto:mahmoud.alshinhab@gmail.com)
 - Phone: [+353 (86) 461 9975](tel:+353864619975)
 - [Linkedin Profile](https://www.linkedin.com/in/Shenhab)
+- Blog: gurutux.com
 - Current Location: Ireland - Dublin
 - Preferred Working Location: "Western Europe"
 
@@ -19,7 +20,7 @@ I am interested in Site Reliability Engineer roles, as I am pasionate about auto
 ## _Education:_
 - Degree: **Bachelor of computer sciences**
 - School: [**Misr higher institution for commerce & computers**](https://www.facebook.com/METMISR/)
-- Graduation Year: **2009**
+- Period: **September 2005 - June 2009**
 - Accumulative Grade: **Good - 70.73%**
 
 ## _Working Experience:_ 
@@ -34,7 +35,7 @@ I am interested in Site Reliability Engineer roles, as I am pasionate about auto
 >- Maintaining current software by fixing issues/bugs, developing new features, and enhancing the automation arount the owned services.
 >
 >**Working Period:**
->- System Development Engineer: (Title Change) December 2019 - Current
+>- System Development Engineer: (Promotion) December 2019 - Current
 >- System Engineer I: (Internal Transfer) May 2018 - November 2019
 >
 >**Specialty:** Systems Transformation and Deployment Automation.
@@ -54,8 +55,8 @@ I am interested in Site Reliability Engineer roles, as I am pasionate about auto
 >1. is an expert in automating patching workflows across multible teams.
 >
 >**Projects:** 
->1. Enhancing patching automation for several fleets (across several teams).
->1. owning a fleet of bastions, and developing it to reach zero touch build workflows.
+>1. Enhancing patching automation for several fleets (across several teams) (reduced patching time from 40+ days to 7 days).
+>1. owning a fleet of bastions, and developing it to reach zero touch build workflows (in progress).
 
 ### - Cloud Support Engineer in [Amazon Web Services](https://aws.amazon.com/): 
 >**Description:** Supporting “Amazon Web Services’ Enterprise customers” to solve their infrastructure problems through mail, chat, or Phone calls and recommending the best ways to assist them in achieving their aim maintaining the best possible Performance and the minimal price.
@@ -89,8 +90,28 @@ I am interested in Site Reliability Engineer roles, as I am pasionate about auto
 >- MariaDB
 >- Amazon Aurora-MySQL
 
+### - Free Lancer
+>**Description:**
+>Worked on couple of projects as a system admin and system engineer, I also used this period to get certified in Cloud Computing Concepts, as I was moving to amazon, but never worked with cloud based systems.
+>
+>**Achievements:**
+>- Built a Home Multimedia System which uses DLNA/Torrent to stream multimedia for Home devices (TV, Tablets, Phones).
+>- Worked on solving a probelm with a local company which had a management software that was based on Access database, to work over multible branches.
+>
+>**Working Period:**
+>- October 2014 - September 2015 (11 Months)
+>
+>**Specialty:**
+>- Linux
+>- Database administration
+>
+>**Expertise:**
+>- Linux
+>- Winodws
+>- Databases (SQL Server, Access)
+>
 
-### - *NIX System Engineer in [Link Data Center](http://www.linkdatacenter.net/)
+### - NIX System Engineer in [Link Data Center](http://www.linkdatacenter.net/)
 >**Description:** Provide Server Administration, doing some proofs of concepts and bench-marking to help the leadership planing and designing for projects.
 >After that I implement the projects based on the leadership decisions.
 >
