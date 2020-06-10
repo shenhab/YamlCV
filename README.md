@@ -75,7 +75,7 @@ I am interested in Site Reliability Engineer roles, as I am pasionate about auto
 >**Projects:** 
 >- Designed and Implemented automated practical on Boarding training for MySQL, MariaDB, and Aurora Engines for new hires.
 >- Mentoring and training 6 Engineer to the subject matter experts level.
->- Facilitating new hires training to develop the new hires to T enured engineers as fast as possible.
+>- Facilitating new hires training to develop the new hires to become tenured engineers as fast as possible.
 >
 >**Working Period:**
 >- Cloud Support Engineer II: (Promotion) October 2017 - April 2018 (7 Months)
