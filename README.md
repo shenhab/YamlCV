@@ -90,7 +90,7 @@ I am interested in Site Reliability Engineer roles, as I am pasionate about auto
 >- MariaDB
 >- Amazon Aurora-MySQL
 
-### - Free Lancer
+### - Free Lancer (System Engineer)
 >**Description:**
 >Worked on couple of projects as a system admin and system engineer, I also used this period to get certified in Cloud Computing Concepts, as I was moving to amazon, but never worked with cloud based systems.
 >
