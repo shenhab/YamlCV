@@ -24,6 +24,14 @@ I am interested in Site Reliability Engineer roles, as I am pasionate about auto
 - Accumulative Grade: **Good - 70.73%**
 
 ## _Working Experience:_ 
+### - Staff Site Reliability Engineer in [ServiceNow](https://www.servicenow.com/): 
+>**Description:** 
+>
+>**Responsibilities:**
+>
+>**Working Period:**
+>- Staff Site Reliability Engineer: September 2021 - Current.
+
 ### - System Development Engineer in [Amazon Web Services](https://aws.amazon.com/): 
 >**Description:** 
 >- Automating region build for mandatory networking services of AWS, with the goal of reaching zero touch region builds.
@@ -35,7 +43,7 @@ I am interested in Site Reliability Engineer roles, as I am pasionate about auto
 >- Maintaining current software by fixing issues/bugs, developing new features, and enhancing the automation arount the owned services.
 >
 >**Working Period:**
->- System Development Engineer: (Promotion) December 2019 - Current
+>- System Development Engineer: (Promotion) December 2019 - November 2021
 >- System Engineer I: (Internal Transfer) May 2018 - November 2019
 >
 >**Specialty:** Systems Transformation and Deployment Automation.
