@@ -198,3 +198,9 @@ I am interested in Site Reliability Engineer roles, as I am pasionate about auto
 > - Issue Date: 		Apr 16, 2009
 > - Technologies Used:Red Hat Enterprise Linux 5
 > - Certificate ID: 	[100-108-729](https://www.redhat.com/rhtapps/certification/verify/?certId=100-108-729+)
+
+### - AZ-900
+> - Issuer:			Microsoft
+> - Issue Date: 		OCT 22, 2021
+> - Technologies Used:Microsoft Fundimentals Certificate
+> - Certificate ID: 	[I003-7698](https://www.credly.com/badges/53a71064-6981-4123-84cc-c77058ae328d)
