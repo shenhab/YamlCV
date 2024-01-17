@@ -10,7 +10,7 @@ As delivering a consistent updated copy of a CV became an issue for recruiters, 
 - [Linkedin Profile](https://www.linkedin.com/in/Shenhab)
 - Blog: [gurutux.com](https://www.gurutux.com)
 - Current Location: Ireland - Dublin
-- Preferred Working Location: "Western Europe"
+- Preferred Working Location: "Ireland, and Middle East"
 
 ## _Summary:_
 I am a Staff Site Reilability Engineer working in ServiceNow in Dublin. I have a very strong database background as I worked as a database support engineer specialized in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support. During this period I was also recognized as an RDS Expert within Amazon network. 
