@@ -26,9 +26,15 @@ I am interested in Site Reliability Engineer roles, as I am pasionate about auto
 ## _Working Experience:_ 
 ### - Staff Site Reliability Engineer in [ServiceNow](https://www.servicenow.com/): 
 >**Description:** 
->
+>- Working on maintaning the Reliability of ServiceNow Cloud, and working on improving The current infrastructure with internal automation services.
+>  
 >**Responsibilities:**
->
+>- Handling alerts of ServiceNow infrastructure.
+>- Working closely with customer support teams to maintain the Customer's infrastructure and providing recommendation to maintaning the reliability of the infrastructure.
+>- Working closely with other Database, and Infrastructure teams to maintain the current Infrastructure.
+>- Working on automating the handling of the Incoming alerts to reduce workload.
+>- Working on improving internal processes of how team handles workload.
+>  
 >**Working Period:**
 >- Staff Site Reliability Engineer: September 2021 - Current.
 
@@ -167,6 +173,9 @@ I am interested in Site Reliability Engineer roles, as I am pasionate about auto
 >- PowerShell
 >- Bash
 >- ESX
+
+## _GITHUB Repository:_ 
+### - [Shenhab](https://github.com/shenhab)
 
 ## _Certificates:_ 
 ### - Cloud Computing Concepts (Part 1)
