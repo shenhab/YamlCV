@@ -13,9 +13,9 @@ As delivering a consistent updated copy of a CV became an issue for recruiters, 
 - Preferred Working Location: "Western Europe"
 
 ## _Summary:_
-I am a System Development Engineer working in Amazon Web Services in Dublin. I have a very strong database background as I worked as a database support engineer specialized in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support. During this period I was also recognized as an RDS Expert within Amazon network. 
-Currntly I am focusd on infrastruction and region build automation, helping my team and others to automate current build workflow, in order to reach zero touch build workflows. 
-I am interested in Site Reliability Engineer roles, as I am pasionate about automation, troubleshooting, and bug fixing.
+I am a Staff Site Reilability Engineer working in ServiceNow in Dublin. I have a very strong database background as I worked as a database support engineer specialized in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support. During this period I was also recognized as an RDS Expert within Amazon network. 
+I also worked on infrastruction and region build automation, helping my team and others to automate current build workflow, in order to reach zero touch build workflows while I was in AWS as System Engineer and System Dev Engineer. 
+Currently I am wokring on maintaining the Inferastructure of ServiceNow. I am interested in Site Reliability Engineer roles, as I am pasionate about automation, troubleshooting, and bug fixing, I am also exploring the posibility of being a Solution Archetict as I do have good knowledge of systems design and destributed systems
 
 ## _Education:_
 - Degree: **Bachelor of computer sciences**
