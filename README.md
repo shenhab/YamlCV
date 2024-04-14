@@ -1,16 +1,15 @@
-# Mahmoud Elshenhab
+<h1 align="center">
+  Mahmoud Elshenhab
+</h1>
+<p align="center">
+  <a href="mailto:mahmoud.alshinhab@gmail.com">mahmoud.alshinhab@gmail.com</a> | <a href="https://www.linkedin.com/in/Shenhab">linkedin.com/in/Shenhab</a><br>
+  <a href="https://github.com/shenhab">github.com/shenhab</a> | <a href="https://www.gurutux.com">gurutux.com</a><br>
+  <a href:"tel:00353864619975">+353 (86) 461 9975</a> | Dublin
+</p>
+
 Note: As delivering a consistent updated copy of a CV became an issue for recruiters, I started to believe that reverting back to centralized source of such document is a must, thus when I saw a GitHub hosted CV for a friend of mine, I decided to follow the same Idea.
 > **Thus you can find the up to date CV in this [link](https://root.gurutux.com),
 > or [download](https://api.html2pdfrocket.com/pdf?value=https://root.gurutux.com&apikey=9bfdd04b-e544-4782-a4ac-b54131031a51&FileName=MahmoudElshenhabCV.pdf&MarginLeft=10&MarginRight=10&MarginTop=15&MarginBottom=15) a PDF copy.**
-
-## _Contact Information:_
-- Name: Mahmoud Abdulmottaleb Elshenhab
-- e-mail: [mahmoud.alshinhab@gmail.com](mailto:mahmoud.alshinhab@gmail.com)
-- Phone: [+353 (86) 461 9975](tel:+353864619975)
-- [Linkedin Profile](https://www.linkedin.com/in/Shenhab)
-- Blog: [gurutux.com](https://www.gurutux.com)
-- Current Location: Ireland - Dublin
-- Preferred Working Location: "Ireland, and Middle East"
 
 ## _Summary:_
 I am a Staff Site Reilability Engineer working in ServiceNow in Dublin. I have a very strong database and Linux background as I worked as a database support engineer specialized in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support. During this period I was also recognized as an RDS Expert within Amazon network. 
@@ -173,9 +172,6 @@ Currently I am wokring on maintaining the Inferastructure of ServiceNow. I am in
 >- PowerShell
 >- Bash
 >- ESX
-
-## _GITHUB Repository:_ 
-### - [Shenhab](https://github.com/shenhab)
 
 ## _Certificates:_ 
 ### - Cloud Computing Concepts (Part 1)
