@@ -1,11 +1,11 @@
-<h1 align="center">
-  Mahmoud Elshenhab
-</h1>
 <p align="center">
   <a href="mailto:mahmoud.alshinhab@gmail.com">mahmoud.alshinhab@gmail.com</a> | <a href="https://www.linkedin.com/in/Shenhab">linkedin.com/in/Shenhab</a><br>
   <a href="https://github.com/shenhab">github.com/shenhab</a> | <a href="https://www.gurutux.com">gurutux.com</a><br>
   +353 (86) 461 9975 | Dublin
 </p>
+<h1 align="center">
+  Mahmoud Elshenhab
+</h1>
 
 > **You can find the up to date CV in this [link](https://root.gurutux.com)**
 
@@ -34,6 +34,12 @@ Currently I am wokring on maintaining the Inferastructure of ServiceNow. I am in
 >  
 >**Working Period:**
 >- Staff Site Reliability Engineer: September 2021 - Current.
+>**Skills:**
+>- MySQL
+>- Linux
+>- PostgreSQL
+>- ServiceNow
+>- Grafana
 
 ### - System Development Engineer in [Amazon Web Services](https://aws.amazon.com/): 
 >**Description:** 
@@ -51,7 +57,7 @@ Currently I am wokring on maintaining the Inferastructure of ServiceNow. I am in
 >
 >**Specialty:** Systems Transformation and Deployment Automation.
 >
->**Expertise:**
+>**Skills:**
 >- Ruby (Learning in progress)
 >- Python
 >- Puppet
@@ -94,7 +100,7 @@ Currently I am wokring on maintaining the Inferastructure of ServiceNow. I am in
 >
 >**Specialty:** Relational Database Services
 >
->**Expertise:**
+>**Skills:**
 >- AWS (General)
 >- RDS (Specialized)
 >- MySQL
@@ -116,7 +122,7 @@ Currently I am wokring on maintaining the Inferastructure of ServiceNow. I am in
 >- Linux
 >- Database administration
 >
->**Expertise:**
+>**Skills:**
 >- Linux
 >- Winodws
 >- Databases (SQL Server, Access)
@@ -143,7 +149,7 @@ Currently I am wokring on maintaining the Inferastructure of ServiceNow. I am in
 >
 >**Specialty:** Web Hosting on Linux
 >
->**Expertise:**
+>**Skills:**
 >- MySQL
 >- Linux
 >- NginX
@@ -164,7 +170,7 @@ Currently I am wokring on maintaining the Inferastructure of ServiceNow. I am in
 >
 >**Specialty:** Database Administration
 >
->**Expertise:**
+>**Skills:**
 >- MS SQL Server
 >- Sybase
 >- PowerShell
