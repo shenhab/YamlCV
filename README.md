@@ -1,5 +1,5 @@
-# Mahmoud Elshenhab CV
-As delivering a consistent updated copy of a CV became an issue for recruiters, I started to believe that reverting back to centralized source of such document is a must, thus when I saw a GitHub hosted CV for a friend of mine, I decided to follow the same Idea.
+# Mahmoud Elshenhab
+Note: As delivering a consistent updated copy of a CV became an issue for recruiters, I started to believe that reverting back to centralized source of such document is a must, thus when I saw a GitHub hosted CV for a friend of mine, I decided to follow the same Idea.
 > **Thus you can find the up to date CV in this [link](https://root.gurutux.com),
 > or [download](https://api.html2pdfrocket.com/pdf?value=https://root.gurutux.com&apikey=9bfdd04b-e544-4782-a4ac-b54131031a51&FileName=MahmoudElshenhabCV.pdf&MarginLeft=10&MarginRight=10&MarginTop=15&MarginBottom=15) a PDF copy.**
 
@@ -13,8 +13,8 @@ As delivering a consistent updated copy of a CV became an issue for recruiters, 
 - Preferred Working Location: "Ireland, and Middle East"
 
 ## _Summary:_
-I am a Staff Site Reilability Engineer working in ServiceNow in Dublin. I have a very strong database background as I worked as a database support engineer specialized in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support. During this period I was also recognized as an RDS Expert within Amazon network. 
-I also worked on infrastruction and region build automation, helping my team and others to automate current build workflow, in order to reach zero touch build workflows while I was in AWS as System Engineer and System Dev Engineer. 
+I am a Staff Site Reilability Engineer working in ServiceNow in Dublin. I have a very strong database and Linux background as I worked as a database support engineer specialized in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support. During this period I was also recognized as an RDS Expert within Amazon network. 
+I also worked on infrastruction and region build automation, helping my team and other teams to automate region build workflows, in order to reach zero touch build workflows while I was in AWS as System Engineer and System Dev Engineer. 
 Currently I am wokring on maintaining the Inferastructure of ServiceNow. I am interested in Site Reliability Engineer roles, as I am pasionate about automation, troubleshooting, and bug fixing, I am also exploring the posibility of being a Solution Archetict as I do have good knowledge of systems design and destributed systems
 
 ## _Education:_
