@@ -6,6 +6,7 @@
   <a href="https://github.com/shenhab">github.com/shenhab</a> | <a href="https://www.gurutux.com">gurutux.com</a><br>
   +353 (86) 461 9975 | Dublin
 </p>
+
 > **You can find the up to date CV in this [link](https://root.gurutux.com)
 
 ## _Summary:_
