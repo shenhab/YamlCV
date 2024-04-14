@@ -1,7 +1,7 @@
 <p align="center">
   <a href="mailto:mahmoud.alshinhab@gmail.com">mahmoud.alshinhab@gmail.com</a> | <a href="https://www.linkedin.com/in/Shenhab">linkedin.com/in/Shenhab</a><br>
   <a href="https://github.com/shenhab">github.com/shenhab</a> | <a href="https://www.gurutux.com">gurutux.com</a><br>
-  +353 (86) 461 9975 | Dublin
+  +353 (86) 461 9975 | Kill, Co. Kildare, Ireland
 </p>
 <h1 align="center">
   Mahmoud Elshenhab
