@@ -7,7 +7,7 @@
   +353 (86) 461 9975 | Dublin
 </p>
 
-> **You can find the up to date CV in this [link](https://root.gurutux.com)
+> **You can find the up to date CV in this [link](https://root.gurutux.com)**
 
 ## _Summary:_
 I am a Staff Site Reilability Engineer working in ServiceNow in Dublin. I have a very strong database and Linux background as I worked as a database support engineer specialized in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support. During this period I was also recognized as an RDS Expert within Amazon network. 
