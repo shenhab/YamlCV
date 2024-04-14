@@ -7,7 +7,7 @@
   Mahmoud Elshenhab
 </h1>
 
-> **You can find the up to date CV in this [link](https://root.gurutux.com) or [download](https://api.html2pdfrocket.com/pdf?value=https://root.gurutux.com&apikey=9bfdd04b-e544-4782-a4ac-b54131031a51&FileName=MahmoudElshenhabCV.pdf&MarginLeft=10&MarginRight=10&MarginTop=15&MarginBottom=15) a PDF copy.**
+> **You can find the up to date CV in this [link](https://root.gurutux.com) or [download](https://api.html2pdfrocket.com/pdf?value=https://root.gurutux.com&apikey=9bfdd04b-e544-4782-a4ac-b54131031a51&FileName=MahmoudElshenhabCV.pdf&MarginLeft=10&MarginRight=10&MarginTop=15&MarginBottom=15) an Updated PDF copy.**
 
 ## _Summary:_
 I am a Staff Site Reilability Engineer working in ServiceNow in Dublin. I have a very strong database and Linux background as I worked as a database support engineer specialized in MySQL, MariaDB, and Amazon Aurora-MySQL while I was in AWS Premium support. During this period I was also recognized as an RDS Expert within Amazon network. 
