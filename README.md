@@ -4,7 +4,7 @@
 <p align="center">
   <a href="mailto:mahmoud.alshinhab@gmail.com">mahmoud.alshinhab@gmail.com</a> | <a href="https://www.linkedin.com/in/Shenhab">linkedin.com/in/Shenhab</a><br>
   <a href="https://github.com/shenhab">github.com/shenhab</a> | <a href="https://www.gurutux.com">gurutux.com</a><br>
-  <a href:"tel:00353864619975">+353 (86) 461 9975</a> | Dublin
+  +353 (86) 461 9975 | Dublin
 </p>
 
 Note: As delivering a consistent updated copy of a CV became an issue for recruiters, I started to believe that reverting back to centralized source of such document is a must, thus when I saw a GitHub hosted CV for a friend of mine, I decided to follow the same Idea.
