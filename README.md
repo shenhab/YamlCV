@@ -40,6 +40,9 @@ Currently I am wokring on maintaining the Inferastructure of ServiceNow. I am in
 >- PostgreSQL
 >- ServiceNow
 >- Grafana
+>- Splunk
+>- K8s
+>- Ansible
 
 ### - System Development Engineer in [Amazon Web Services](https://aws.amazon.com/): 
 >**Description:** 
