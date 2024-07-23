@@ -141,12 +141,12 @@ Accumulative Grade: Good - 70.73%
 - **RH202 Red Hat Enterprise Linux 5 (RHCT/RHCE)**
   - Issuer: Red Hat
   - Issue Date: April 16, 2009
-  - [Certificate ID: 100-108-729](https://www.redhat.com/rhtapps/certification/verify/?certId=100-108-729+)
+  - [Certificate ID: 100-108-729](https://rhtapps.redhat.com/verify?certId=100-108-729)
 
 - **EX200 RHCSA**
   - Issuer: Red Hat
   - Issue Date: April 16, 2009
-  - [Certificate ID: 100-108-729](https://www.redhat.com/rhtapps/certification/verify/?certId=100-108-729+)
+  - [Certificate ID: 100-108-729](https://rhtapps.redhat.com/verify?certId=100-108-729)
 
 - **Microsoft AZ-900**
   - Issuer: Microsoft
