@@ -24,6 +24,7 @@ layout: default
       color: #333;
       background-color: #f5f5f5;
       padding: 20px;
+      scroll-behavior: smooth;
     }
     
     .container {
@@ -51,6 +52,14 @@ layout: default
       padding-bottom: 5px;
       margin-top: 30px;
       margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+    
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     
     h3 {
@@ -91,29 +100,60 @@ layout: default
     
     section {
       margin-bottom: 30px;
+      scroll-margin-top: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     
-    /* Header Styles */
+    /* Header Styles with enhanced visual appeal */
     .header {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       flex-wrap: wrap;
+      position: relative;
+      padding: 20px;
+      background: linear-gradient(to right, #f8f9fa, #ffffff);
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
     }
     
     .header-left {
       flex: 2;
       min-width: 300px;
+      animation: fadeIn 1s ease-in-out;
     }
     
     .header-right {
       flex: 1;
       min-width: 250px;
       text-align: right;
+      animation: slideIn 1s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideIn {
+      from { transform: translateX(30px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
     }
     
     .header-right p {
       margin-bottom: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .header-right p:hover {
+      transform: translateX(-5px);
     }
     
     .header-right i {
@@ -125,40 +165,56 @@ layout: default
     /* ATS Resume Link Button */
     .ats-button-container {
       text-align: center;
-      margin: 20px 0;
+      margin: 20px 0 30px;
     }
     
     .ats-button {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 25px;
       background-color: #3498db;
       color: white;
       border-radius: 5px;
       font-weight: bold;
-      transition: background-color 0.3s;
+      transition: all 0.3s;
+      box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
     }
     
     .ats-button:hover {
       background-color: #2980b9;
       text-decoration: none;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 8px rgba(41, 128, 185, 0.3);
+    }
+    
+    .ats-button:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 4px rgba(41, 128, 185, 0.3);
     }
 
     .ats-button i {
       margin-right: 8px;
     }
     
-    /* Table of Contents */
+    /* Table of Contents with interactive highlights */
     .toc {
       background-color: #f8f9fa;
-      padding: 15px 20px;
-      border-radius: 5px;
-      margin-bottom: 30px;
+      padding: 20px 25px;
+      border-radius: 8px;
+      margin-bottom: 40px;
       border-left: 4px solid #3498db;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+    }
+    
+    .toc:hover {
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
     }
     
     .toc h3 {
       margin-top: 0;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      color: #3498db;
     }
     
     .toc ul {
@@ -167,10 +223,52 @@ layout: default
     
     .toc a {
       display: inline-block;
-      margin: 5px 0;
+      margin: 8px 0;
+      position: relative;
+      padding-left: 2px;
+      font-weight: 500;
     }
     
-    /* Skills Section */
+    .toc a:before {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #3498db;
+      transition: width 0.3s;
+    }
+    
+    .toc a:hover:before {
+      width: 100%;
+    }
+    
+    .toc a.active {
+      color: #2980b9;
+      font-weight: bold;
+    }
+    
+    .toc a.active:before {
+      width: 100%;
+    }
+    
+    /* Summary section with attention-grabbing design */
+    #summary {
+      padding: 25px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #3498db;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+    }
+    
+    #summary p {
+      font-size: 1.1em;
+      line-height: 1.7;
+    }
+    
+    /* Skills Section - now at the end */
     .skills-container {
       display: flex;
       flex-wrap: wrap;
@@ -181,18 +279,38 @@ layout: default
       flex: 1 0 250px;
       margin-bottom: 20px;
       background-color: #f8f9fa;
-      padding: 15px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+      border-top: 3px solid #3498db;
+    }
+    
+    .skill-category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
     }
     
     .skill-category h3 {
-      font-size: 1.1em;
+      font-size: 1.2em;
       color: #3498db;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #e0e0e0;
     }
     
-    /* Experience & Education Timeline */
+    .skill-category ul li {
+      position: relative;
+      padding-left: 5px;
+      transition: all 0.2s;
+    }
+    
+    .skill-category ul li:hover {
+      transform: translateX(5px);
+      color: #2980b9;
+    }
+    
+    /* Enhanced Experience & Education Timeline */
     /* Company color mapping for the timeline */
     .company-servicenow {
       --company-color: #62B132; /* ServiceNow Green */
@@ -217,8 +335,13 @@ layout: default
     .timeline-item {
       position: relative;
       padding-left: 30px;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       border-left: 2px solid var(--company-color, #3498db);
+      transition: all 0.3s ease;
+    }
+    
+    .timeline-item:hover {
+      transform: translateX(5px);
     }
     
     .timeline-item:last-child {
@@ -233,23 +356,53 @@ layout: default
       height: 18px;
       background-color: var(--company-color, #3498db);
       border-radius: 50%;
-      box-shadow: 0 0 0 3px #fff;
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.9);
+      transition: all 0.3s;
+    }
+    
+    .timeline-item:hover .timeline-dot {
+      box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.9), 0 0 15px rgba(52, 152, 219, 0.5);
+      transform: scale(1.2);
     }
     
     .timeline-date {
       font-size: 0.9em;
       font-weight: bold;
       color: #7f8c8d;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+      transition: color 0.3s;
     }
     
-    /* Certification & Projects Styles */
-    .cert-item, .project-item {
-      margin-bottom: 20px;
+    .timeline-item:hover .timeline-date {
+      color: var(--company-color, #3498db);
+    }
+    
+    .timeline-content {
       padding: 15px 20px;
-      border-radius: 5px;
       background-color: #f8f9fa;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+    }
+    
+    .timeline-item:hover .timeline-content {
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    
+    /* Enhanced Certification & Projects Styles */
+    .cert-item, .project-item {
+      margin-bottom: 25px;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #f8f9fa;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+      border-left: 3px solid #3498db;
+    }
+    
+    .cert-item:hover, .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
     }
     
     .cert-item:last-child, .project-item:last-child {
@@ -257,19 +410,51 @@ layout: default
     }
     
     .cert-item h3, .project-item h3 {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      color: #2c3e50;
+      transition: color 0.3s;
+    }
+    
+    .cert-item:hover h3, .project-item:hover h3 {
+      color: #3498db;
     }
     
     .cert-meta {
       font-size: 0.9em;
       color: #7f8c8d;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #e0e0e0;
+    }
+    
+    /* Highlight for important achievements */
+    .key-achievement {
+      position: relative;
+      padding-left: 3px;
+    }
+    
+    .key-achievement:before {
+      content: '';
+      position: absolute;
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background-color: var(--company-color, #3498db);
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .timeline-item:hover .key-achievement:before {
+      opacity: 1;
     }
     
     /* Footer Styles */
     footer {
-      margin-top: 40px;
-      padding-top: 20px;
+      margin-top: 60px;
+      padding-top: 30px;
       border-top: 1px solid #eee;
       text-align: center;
       font-size: 0.9em;
@@ -277,7 +462,39 @@ layout: default
     }
     
     footer p {
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+    }
+    
+    /* Enhanced Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #3498db;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 50px;
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s;
+      box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    }
+    
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background-color: #2980b9;
+      text-decoration: none;
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(41, 128, 185, 0.4);
     }
     
     /* Print Styles */
@@ -303,6 +520,13 @@ layout: default
       
       h2 {
         border-bottom: 2px solid #333;
+        opacity: 1;
+        transform: none;
+      }
+      
+      section {
+        opacity: 1;
+        transform: none;
       }
       
       @page {
@@ -326,48 +550,35 @@ layout: default
       }
     }
 
-    /* Section Anchors for TOC */
-    section {
-      scroll-margin-top: 20px;
-    }
-    
-    /* Back to top button */
-    .back-to-top {
+    /* Progress indicator */
+    .progress-container {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #3498db;
-      color: #fff;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 40px;
-      z-index: 99;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: transparent;
+      z-index: 100;
     }
     
-    .back-to-top.show {
-      opacity: 1;
-      visibility: visible;
-    }
-    
-    .back-to-top:hover {
-      background-color: #2980b9;
-      text-decoration: none;
-      color: white;
+    .progress-bar {
+      height: 4px;
+      background: #3498db;
+      width: 0%;
+      transition: width 0.2s ease;
     }
   </style>
 </head>
 <body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+
   <div class="container">
     <header class="header">
       <div class="header-left">
         <h1>{{ site.data.cv.personal.name }}</h1>
-        <h2>{{ site.data.cv.personal.title }}</h2>
+        <h2 style="opacity: 1; transform: none;">{{ site.data.cv.personal.title }}</h2>
       </div>
       <div class="header-right">
         {% if site.data.cv.personal.email %}<p><i class="fas fa-envelope"></i> <a href="mailto:{{ site.data.cv.personal.email }}">{{ site.data.cv.personal.email }}</a></p>{% endif %}
@@ -386,35 +597,18 @@ layout: default
     <div class="toc">
       <h3><i class="fas fa-list"></i> Table of Contents</h3>
       <ul>
-        <li><a href="#summary">Professional Summary</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Professional Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        {% if site.data.cv.projects %}<li><a href="#projects">Projects</a></li>{% endif %}
+        <li><a href="#summary" class="toc-link">Professional Summary</a></li>
+        <li><a href="#experience" class="toc-link">Professional Experience</a></li>
+        <li><a href="#education" class="toc-link">Education</a></li>
+        <li><a href="#certifications" class="toc-link">Certifications</a></li>
+        {% if site.data.cv.projects %}<li><a href="#projects" class="toc-link">Projects</a></li>{% endif %}
+        <li><a href="#skills" class="toc-link">Skills</a></li>
       </ul>
     </div>
 
     <section id="summary" class="summary">
       <h2>Professional Summary</h2>
       <p>{{ site.data.cv.summary }}</p>
-    </section>
-
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <div class="skills-container">
-        {% for category in site.data.cv.skills %}
-          <div class="skill-category">
-            <h3>{{ category.category }}</h3>
-            <ul>
-              {% assign skills = category.items | split: ", " %}
-              {% for item in skills %}
-                <li>{{ item }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-        {% endfor %}
-      </div>
     </section>
 
     <section id="experience" class="experience">
@@ -438,7 +632,7 @@ layout: default
               <h4>{{ job.company }} | {{ job.location }}</h4>
               <ul>
                 {% for item in job.achievements %}
-                  <li>{{ item }}</li>
+                  <li class="{% if forloop.index <= 2 %}key-achievement{% endif %}">{{ item }}</li>
                 {% endfor %}
               </ul>
             </div>
@@ -491,6 +685,23 @@ layout: default
       {% endfor %}
     </section>
     {% endif %}
+    
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        {% for category in site.data.cv.skills %}
+          <div class="skill-category">
+            <h3>{{ category.category }}</h3>
+            <ul>
+              {% assign skills = category.items | split: ", " %}
+              {% for item in skills %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
 
     <footer>
       <p>Last updated: {{ site.time | date: '%B %Y' }}</p>
@@ -504,20 +715,75 @@ layout: default
     document.addEventListener('DOMContentLoaded', function() {
       // Back to top button functionality
       const backToTop = document.getElementById('back-to-top');
+      const progressBar = document.getElementById('progress-bar');
+      const sections = document.querySelectorAll('section');
+      const tocLinks = document.querySelectorAll('.toc-link');
       
-      window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
+      // Initialize animation for page load
+      setTimeout(() => {
+        document.querySelectorAll('h2').forEach(heading => {
+          heading.classList.add('visible');
+        });
+        
+        document.querySelectorAll('section').forEach(section => {
+          section.classList.add('visible');
+        });
+      }, 200);
+      
+      // Update scroll progress and back-to-top button
+      function updateScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (scrollTop / scrollHeight) * 100;
+        progressBar.style.width = scrolled + '%';
+        
+        if (scrollTop > 300) {
           backToTop.classList.add('show');
         } else {
           backToTop.classList.remove('show');
         }
-      });
+        
+        // Update active TOC link
+        let currentSectionId = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          if (scrollTop >= sectionTop - 100) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+        
+        tocLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + currentSectionId) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', updateScroll);
       
       backToTop.addEventListener('click', function(e) {
         e.preventDefault();
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
+        });
+      });
+      
+      // Smooth scrolling for TOC links
+      tocLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          window.scrollTo({
+            top: targetElement.offsetTop - 50,
+            behavior: 'smooth'
+          });
+          
+          // Update URL without page reload
+          history.pushState(null, null, targetId);
         });
       });
     });
