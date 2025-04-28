@@ -102,6 +102,127 @@ a:hover {
   font-size: 10pt;
 }
 
+/* Timeline styling */
+.timeline-container {
+  position: relative;
+  width: 100%;
+  margin: 2em auto;
+  padding: 20px 0;
+}
+
+.timeline-line {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #2c3e50;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 10px 30px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  clear: both;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: white;
+  border: 4px solid #2c3e50;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  background-color: #2c3e50;
+  transform: scale(1.2);
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item.left .timeline-dot {
+  right: -12px;
+  top: 15px;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -12px;
+  top: 15px;
+}
+
+.timeline-content {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.timeline-content:after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border: 1px solid #e1e4e8;
+  top: 15px;
+  transform: rotate(45deg);
+}
+
+.timeline-item.left .timeline-content:after {
+  right: -8px;
+  border-right: 1px solid #e1e4e8;
+  border-top: 1px solid #e1e4e8;
+  border-bottom: none;
+  border-left: none;
+}
+
+.timeline-item.right .timeline-content:after {
+  left: -8px;
+  border-left: 1px solid #e1e4e8;
+  border-bottom: 1px solid #e1e4e8;
+  border-right: none;
+  border-top: none;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+/* Add separate colors for jobs and certifications */
+.timeline-item.left .timeline-content {
+  border-left: 4px solid #3498db; /* Blue for education/certifications */
+}
+
+.timeline-item.right .timeline-content {
+  border-left: 4px solid #e74c3c; /* Red for work experience */
+}
+
 /* Job entry styling */
 .job-entry {
   margin-bottom: 1em;
@@ -134,6 +255,33 @@ a:hover {
   margin-bottom: 1em;
 }
 
+/* Responsive timeline for smaller screens */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .timeline-item.left {
+    left: 0;
+    text-align: left;
+  }
+  
+  .timeline-line {
+    left: 40px;
+  }
+  
+  .timeline-item.left .timeline-dot {
+    left: 32px;
+    right: auto;
+  }
+  
+  .timeline-item.right .timeline-dot {
+    left: 32px;
+  }
+}
+
 /* Print specific styling */
 @media print {
   body {
@@ -149,6 +297,11 @@ a:hover {
   
   .page-break {
     page-break-before: always;
+  }
+  
+  .timeline-content {
+    box-shadow: none;
+    border: 1px solid #ddd;
   }
   
   @page {
