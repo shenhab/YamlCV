@@ -142,6 +142,7 @@
                 {% if site.data.cv.personal.phone %}<p>Phone: {{ site.data.cv.personal.phone }}</p>{% endif %}
                 {% if site.data.cv.personal.linkedin %}<p>LinkedIn: {{ site.data.cv.personal.linkedin }}</p>{% endif %}
                 {% if site.data.cv.personal.github %}<p>GitHub: {{ site.data.cv.personal.github }}</p>{% endif %}
+                {% if site.data.cv.personal.website %}<p>Website: {{ site.data.cv.personal.website }}</p>{% endif %}
                 {% if site.data.cv.personal.location %}<p>Location: {{ site.data.cv.personal.location }}</p>{% endif %}
             </div>
         </header>
@@ -156,7 +157,7 @@
             {% for category in site.data.cv.skills %}
             <div class="skill-section">
                 <h3>{{ category.category }}</h3>
-                <p>{{ category.items | join: ", " }}</p>
+                <p>{{ category.items }}</p>
             </div>
             {% endfor %}
         </section>
@@ -165,10 +166,10 @@
             <h2>PROFESSIONAL EXPERIENCE</h2>
             {% for job in site.data.cv.experience %}
             <div class="job">
-                <h3>{{ job.title }}</h3>
-                <p class="company">{{ job.company }} | {{ job.date }} | {{ job.location }}</p>
+                <h3>{{ job.position }}</h3>
+                <p class="company">{{ job.company }} | {{ job.start_date }} to {{ job.end_date }} | {{ job.location }}</p>
                 <ul>
-                    {% for item in job.responsibilities %}
+                    {% for item in job.achievements %}
                     <li>{{ item }}</li>
                     {% endfor %}
                 </ul>
@@ -178,25 +179,33 @@
         
         <section>
             <h2>EDUCATION</h2>
+            {% if site.data.cv.education %}
             {% for edu in site.data.cv.education %}
             <div class="education">
                 <h3>{{ edu.degree }}</h3>
                 <p>{{ edu.institution }} | {{ edu.date }}</p>
             </div>
             {% endfor %}
+            {% else %}
+            <p>Education details not available</p>
+            {% endif %}
         </section>
         
         <section>
             <h2>CERTIFICATIONS</h2>
+            {% if site.data.cv.certifications %}
             <ul>
                 {% for cert in site.data.cv.certifications %}
                 <li>{{ cert }}</li>
                 {% endfor %}
             </ul>
+            {% else %}
+            <p>No certifications listed</p>
+            {% endif %}
         </section>
         
         <footer>
-            <p><a href="index.html">View Interactive Resume</a></p>
+            <p><a href="index.html" class="back-link">View Interactive Resume</a></p>
         </footer>
     </div>
 </body>
