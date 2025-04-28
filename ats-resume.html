@@ -231,7 +231,13 @@ title: ATS-friendly Resume
             {% if site.data.cv.certifications %}
             <ul>
                 {% for cert in site.data.cv.certifications %}
-                <li>{{ cert }}</li>
+                <li>
+                    {% if cert.url %}
+                    <a href="{{ cert.url }}" target="_blank">{{ cert.name }}</a> - {{ cert.issuer }} ({{ cert.date }}) - Certificate ID: {{ cert.id }}
+                    {% else %}
+                    {{ cert.name }} - {{ cert.issuer }} ({{ cert.date }}) - Certificate ID: {{ cert.id }}
+                    {% endif %}
+                </li>
                 {% endfor %}
             </ul>
             {% else %}

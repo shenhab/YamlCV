@@ -13,54 +13,179 @@ personal:
   
 # Professional Summary
 summary: >
-  Staff Site Reliability Engineer with 12+ years of experience in building and operating large-scale distributed systems.
-  Specialized in cloud infrastructure, containerization, and automation. Strong expertise in designing resilient systems with a focus
-  on observability, reliability, and security. Passionate about mentoring and growing engineering teams.
+  Experienced Site Reliability Engineer with a robust background in database management, Linux systems, and infrastructure automation. 
+  Currently maintaining and improving the reliability of ServiceNow's cloud infrastructure. Proven track record at Amazon Web Services 
+  in automating region builds, optimizing patching workflows, and supporting enterprise customers with complex infrastructure issues. 
+  Skilled in troubleshooting, automation, and systems design, with a strong focus on improving operational efficiency and reducing 
+  manual intervention. Passionate about leveraging technology to solve critical business problems and enhance system reliability.
 
 # Skills
 skills:
   - category: Cloud Platforms
-    items: AWS (Advanced), GCP, Azure
+    items: AWS, Azure, GCP
   - category: Infrastructure as Code
-    items: Terraform, CloudFormation, Ansible, Puppet
+    items: Ansible, Puppet
   - category: Containerization
-    items: Docker, Kubernetes, EKS, AKS, GKE
-  - category: CI/CD
-    items: Jenkins, GitHub Actions, CircleCI, ArgoCD, GitOps
+    items: Kubernetes (K8s), LXC on Proxmox
   - category: Monitoring
-    items: Prometheus, Grafana, ELK Stack, Datadog, New Relic
+    items: Grafana, Splunk
   - category: Programming Languages
-    items: Python, Go, Bash, Ruby
-  - category: Security
-    items: HashiCorp Vault, AWS KMS, IAM, Security Compliance
+    items: Python, Ruby, Bash, JavaScript, HTML, CSS
   - category: Databases
-    items: PostgreSQL, MySQL, MongoDB, Redis, DynamoDB
+    items: MySQL, PostgreSQL, MS SQL Server, Sybase, MariaDB, Amazon Aurora
+  - category: Operating Systems
+    items: Linux, Windows, VMware ESX, Proxmox
+  - category: Web Services
+    items: NginX, Apache, SMTP, Bind, WordPress, Varnish
+  - category: Other
+    items: ServiceNow, Software Debugging, System Development, Services Architecture, Dashboarding, n8n, CI/CD, vibecode, GitHub Actions, GitHub, Jira, Confluence, Slack
+  - category: Networking
+    items: TCP/IP, DNS, DHCP, VPN, Firewalls
 
 # Professional Experience
 experience:
-  - company: Stripe
+  - company: ServiceNow
     position: Staff Site Reliability Engineer
-    location: Dublin, Ireland
-    start_date: January 2021
+    location: Ireland
+    start_date: September 2021
     end_date: Present
     achievements:
-      - Led the design and implementation of a global observability platform, reducing MTTR by 45% and improving system reliability across 200+ microservices.
-      - Architected and deployed infrastructure-as-code solutions using Terraform, managing 100+ AWS accounts and enabling self-service infrastructure for 500+ engineers.
-      - Implemented zero-downtime deployment strategies for critical payment services handling $500M+ daily transaction volume.
-      - Established SLO frameworks and error budgets for core services, improving uptime from 99.9% to 99.99%.
-      - Built an incident management system integrating with PagerDuty and Slack, reducing incident response time by 35%.
-      - Mentored junior SREs and developed technical onboarding programs, contributing to 90% team growth in 2 years.
+      - Maintaining the reliability of ServiceNow Cloud.
+      - Improving infrastructure with internal automation services.
+      - Handling alerts and collaborating with customer support teams.
+      - Automating alert handling to reduce workload.
+      - Improving internal team processes.
   
-  - company: Workday
-    position: Senior SRE
-    location: Dublin, Ireland
-    start_date: March 2018
-    end_date: December 2020
+  - company: Amazon Web Services (AWS)
+    position: System Development Engineer
+    location: Ireland
+    start_date: December 2019
+    end_date: November 2021
     achievements:
-      - Led the migration of 50+ applications from on-premises to AWS, improving reliability and reducing operational costs by 30%.
-      - Designed and implemented auto-scaling solutions for variable-load services, optimizing resource utilization and reducing cloud costs by 25%.
-      - Created a comprehensive monitoring stack using Prometheus, Grafana, and ELK, providing real-time visibility into system health.
-      - Automated routine operational tasks with Python and Ansible, reclaiming 20+ engineering hours weekly.
-      - Conducted capacity planning exercises and performance testing, ensuring infrastructure scalability for peak load periods.
+      - Automating region builds for AWS networking services.
+      - On-call rotation and production fleet ownership.
+      - Automating deployments and improving service quality.
+      - Fixing issues, developing new features, and enhancing automation.
+      - Fixed a software bug using the Gossip protocol for monitoring fleets.
+      - Expert in automating patching workflows across multiple teams.
+      - Reduced patching time from 40+ days to 7 days.
+      - Developing zero-touch build workflows for bastion fleets.
+  
+  - company: Amazon Web Services (AWS)
+    position: System Engineer I
+    location: Ireland
+    start_date: May 2018
+    end_date: November 2019
+    achievements:
+      - Automating region builds for AWS networking services.
+      - On-call rotation and production fleet ownership.
+      - Automating deployments and improving service quality.
+      - Fixing issues, developing new features, and enhancing automation.
+  
+  - company: Amazon Web Services (AWS)
+    position: Cloud Support Engineer II
+    location: South Africa
+    start_date: October 2017
+    end_date: April 2018
+    achievements:
+      - Supporting AWS Enterprise customers with infrastructure issues.
+      - Migrating databases with minimal downtime.
+      - Collaborating with solution architects for high availability and performance solutions.
+  
+  - company: Amazon Web Services (AWS)
+    position: Cloud Support Engineer I
+    location: South Africa
+    start_date: November 2015
+    end_date: September 2017
+    achievements:
+      - Recognized as an RDS Subject Matter Expert.
+      - Assisted several customers in migrating to and from Aurora, MySQL, and MariaDB databases across multiple regions, minimizing downtime to less than 5 minutes.
+      - Conducted in-depth investigations of failure root causes for customers and the company.
+      - Collaborated directly with Amazon's solution architects to provide best practices for high availability, durability, and performance.
+      - Recommended specific AWS products based on customer needs, workloads, features, and budgets.
+      - Advised internal and external customers on redesigning applications to optimize communication methods with databases, significantly improving workloads.
+      - Gained extensive knowledge in scalable, distributed, and highly available solutions.
+      - Created bash and python scripts to assist customers in automating their tasks.
+      - Discovered and reported bugs in AWS internal workflows affecting thousands of customers, and developed scripts to consistently reproduce issues for investigation by the service team, leading to fleet-wide patches.
+      - Automated onboarding training for MySQL, MariaDB, and Aurora.
+      - Mentored and trained new hires to expert levels.
+  
+  - company: Freelance
+    position: System Engineer
+    location: Egypt
+    start_date: October 2014
+    end_date: September 2015
+    achievements:
+      - Built a home multimedia system using DLNA/Torrent.
+      - Solved a local company's Access database issue for multi-branch operations.
+  
+  - company: Link Data Center
+    position: NIX System Engineer
+    location: Egypt
+    start_date: March 2012
+    end_date: October 2014
+    achievements:
+      - Server administration and project implementation.
+      - Migrated hosting solutions to NginX and created distributed media hosting solutions.
+      - Developed scripts for DNS migration and service monitoring.
+  
+  - company: International Turnkey Systems
+    position: System Administrator
+    location: Egypt
+    start_date: October 2011
+    end_date: March 2012
+    achievements:
+      - Server administration for Microsoft Windows, Linux (VMware ESX), MS SQL Server, and Sybase.
 
-# You can add additional sections as needed - education, certifications, projects, etc.
+# Education
+education:
+  - degree: Bachelor of Computer Sciences
+    institution: Misr Higher Institute for Commerce & Computers
+    date: September 2005 - June 2009
+    details: Accumulative Grade - Good - 70.73%
+
+# Certifications
+certifications:
+  - name: Cloud Computing Concepts (Part 1)
+    issuer: University of Illinois at Urbana-Champaign
+    date: March 2015
+    id: 4LVSBUDRWC
+    url: https://www.coursera.org/account/accomplishments/certificate/4LVSBUDRWC
+  
+  - name: Cloud Computing Concepts (Part 2)
+    issuer: University of Illinois at Urbana-Champaign
+    date: April 2015
+    id: 48W63NBRVF
+    url: https://www.coursera.org/account/accomplishments/certificate/48W63NBRVF
+  
+  - name: Introduction to Computer Science and Programming Using Python
+    issuer: MITx
+    date: March 2017
+    id: 05a576b4853640b0bfe7b9b221a9fd5d
+    url: https://courses.edx.org/certificates/05a576b4853640b0bfe7b9b221a9fd5d
+  
+  - name: RH202 Red Hat Enterprise Linux 5 (RHCT/RHCE)
+    issuer: Red Hat
+    date: April 2009
+    id: 100-108-729
+    url: https://rhtapps.redhat.com/verify?certId=100-108-729
+  
+  - name: EX200 RHCSA
+    issuer: Red Hat
+    date: April 2009
+    id: 100-108-729
+    url: https://rhtapps.redhat.com/verify?certId=100-108-729
+  
+  - name: Microsoft AZ-900
+    issuer: Microsoft
+    date: October 2021
+    id: I003-7698
+    url: https://www.credly.com/badges/53a71064-6981-4123-84cc-c77058ae328d
+
+# Projects
+projects:
+  - title: Football Player Data Visualization
+    description: >
+      Developed software to visualize football player data from FBref.com, making it accessible and understandable for the general public.
+      Features include comparing player performances, making it easy to understand an unknown player's ability when compared to a known player.
+      Continuously developing new ideas to elevate football data analysis.
