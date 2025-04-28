@@ -5,12 +5,13 @@
 
 /* CV Styling based on professional CV standards */
 body {
-  font-family: Calibri, Arial, sans-serif;
+  font-family: Arial, Calibri, Helvetica, sans-serif;
   line-height: 1.5;
   color: #333333;
   margin: 0 auto;
   max-width: 8.5in;
   padding: 1in;
+  text-align: left;
 }
 
 @media screen {
@@ -24,20 +25,19 @@ body {
 h1 {
   font-size: 18pt;
   font-weight: bold;
-  color: #2c3e50;
+  color: #333333;
   margin-bottom: 0.5em;
-  text-align: center;
+  text-align: left;
 }
 
 h2 {
   font-size: 14pt;
   font-weight: bold;
-  color: #2c3e50;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  color: #333333;
+  margin-top: 1.2em;
+  margin-bottom: 0.7em;
   border-bottom: 1px solid #e1e4e8;
   padding-bottom: 0.2em;
-  text-transform: uppercase;
 }
 
 h3 {
@@ -47,27 +47,29 @@ h3 {
   margin-top: 0.8em;
 }
 
-p, li, .contact-info {
+p, li {
   font-size: 11pt;
 }
 
 /* Contact information section */
 .contact-info {
-  text-align: center;
+  text-align: left;
   margin-bottom: 1em;
   line-height: 1.6;
+  font-size: 11pt;
 }
 
 /* Section and content formatting */
 ul, ol {
   margin-top: 0.3em;
-  margin-bottom: 0.5em;
-  padding-left: 1.5em;
+  margin-bottom: 0.7em;
+  padding-left: 1.2em;
 }
 
 li {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.4em;
   text-align: left;
+  list-style-type: disc;
 }
 
 /* Links styling */
@@ -97,7 +99,25 @@ a:hover {
 }
 
 /* Work experience styling */
-h3 + p {
+.job-title {
+  font-weight: bold;
+  display: inline;
+}
+
+.company {
+  display: inline;
+}
+
+.job-location {
+  display: inline;
+}
+
+.job-date {
+  display: inline;
+  font-style: normal;
+}
+
+.job-details {
   margin-top: 0;
   font-style: normal;
 }
@@ -122,14 +142,5 @@ hr {
   
   .page-break {
     page-break-before: always;
-  }
-  
-  .skills-container {
-    gap: 0.3em;
-  }
-  
-  .skill {
-    padding: 0.1em 0.4em;
-    font-size: 9pt;
   }
 }
