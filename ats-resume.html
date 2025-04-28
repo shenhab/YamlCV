@@ -9,115 +9,167 @@ title: ATS-friendly Resume
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.data.cv.personal.name }} - ATS-friendly Resume</title>
     <meta name="description" content="ATS-friendly resume of {{ site.data.cv.personal.name }} - {{ site.data.cv.personal.title }}">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {
-            font-family: 'Open Sans', Arial, sans-serif;
-            line-height: 1.6;
+        /* CSS Reset and Base Styles */
+        * {
             margin: 0;
-            padding: 30px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             color: #333;
-            max-width: 900px;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .resume-container {
+            max-width: 1000px;
             margin: 0 auto;
-            background-color: white;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
         }
         
         h1, h2, h3, h4 {
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: #333;
+            color: #2c3e50;
+            margin-bottom: 15px;
         }
         
         h1 {
-            font-size: 28px;
+            font-size: 2.5em;
             text-align: center;
+            letter-spacing: -0.5px;
             margin-bottom: 5px;
         }
         
         h2 {
-            font-size: 22px;
-            border-bottom: 1px solid #ddd;
+            font-size: 1.8em;
+            border-bottom: 2px solid #3498db;
             padding-bottom: 5px;
             margin-top: 30px;
+            margin-bottom: 20px;
         }
         
         h3 {
-            font-size: 20px;
-            margin-bottom: 5px;
+            font-size: 1.3em;
+            margin-bottom: 10px;
         }
         
         h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
+            font-size: 1.1em;
+            font-weight: 400;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
         }
         
         ul {
-            margin: 0;
             padding-left: 20px;
+            margin-bottom: 20px;
         }
         
         li {
             margin-bottom: 8px;
         }
         
+        p {
+            margin-bottom: 15px;
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        /* Contact Info Styling */
         .contact-info {
             text-align: center;
             margin-bottom: 30px;
-            font-size: 16px;
         }
         
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+        
+        /* Job Styling */
         .job {
             margin-bottom: 25px;
+            padding-left: 20px;
+            position: relative;
+            border-left: 2px solid #3498db;
         }
         
-        .job-header {
-            margin-bottom: 10px;
-        }
-        
-        .job-title {
-            font-weight: bold;
-            margin-right: 10px;
+        .job h3 {
+            margin-bottom: 5px;
         }
         
         .company {
-            font-weight: bold;
+            font-weight: 500;
+            margin-bottom: 10px;
+            display: block;
         }
         
-        .date {
-            color: #666;
-        }
-
-        .skills-list {
-            display: block;
+        /* Education Styling */
+        .education {
             margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+            border-left: 2px solid #3498db;
+        }
+        
+        /* Skills Section */
+        .skill-section {
+            margin-bottom: 20px;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            text-align: center;
-            text-decoration: none;
-            color: #1976D2;
-            font-weight: bold;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
+        /* Button Styles */
         .download-button {
             display: inline-block;
-            background-color: #1976D2;
+            padding: 10px 20px;
+            background-color: #3498db;
             color: white;
-            padding: 8px 15px;
-            border-radius: 4px;
+            border-radius: 5px;
+            font-weight: bold;
             text-decoration: none;
             margin-right: 15px;
-            font-weight: bold;
-            cursor: pointer;
+            transition: background-color 0.3s;
         }
         
         .download-button:hover {
-            background-color: #1565C0;
+            background-color: #2980b9;
+            text-decoration: none;
+        }
+        
+        .back-link {
+            display: inline-block;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        .back-link:hover {
+            color: #2980b9;
+            text-decoration: underline;
         }
         
         .button-container {
@@ -125,26 +177,31 @@ title: ATS-friendly Resume
             margin-top: 30px;
         }
         
+        /* Print Styles */
         @media print {
             body {
+                background-color: white;
                 padding: 0;
                 font-size: 12px;
             }
             
-            .back-link {
-                display: none;
+            .resume-container {
+                box-shadow: none;
+                padding: 15px;
             }
-
-            .download-button {
-                display: none;
+            
+            a {
+                color: #333;
+                text-decoration: none;
             }
-
+            
             h1 {
                 font-size: 22px;
             }
             
             h2 {
                 font-size: 16px;
+                border-bottom: 1px solid #333;
             }
             
             h3 {
@@ -157,6 +214,18 @@ title: ATS-friendly Resume
             
             .contact-info {
                 font-size: 12px;
+            }
+            
+            .back-link {
+                display: none;
+            }
+
+            .download-button {
+                display: none;
+            }
+            
+            @page {
+                margin: 15mm;
             }
         }
     </style>
@@ -171,14 +240,14 @@ title: ATS-friendly Resume
     <div class="resume-container">
         <header>
             <h1>{{ site.data.cv.personal.name }}</h1>
-            <h2>{{ site.data.cv.personal.title }}</h2>
+            <h2 style="text-align: center; border-bottom: none; margin-top: 5px; margin-bottom: 15px;">{{ site.data.cv.personal.title }}</h2>
             <div class="contact-info">
-                {% if site.data.cv.personal.email %}<p>Email: <a href="mailto:{{ site.data.cv.personal.email }}">{{ site.data.cv.personal.email }}</a></p>{% endif %}
-                {% if site.data.cv.personal.phone %}<p>Phone: {{ site.data.cv.personal.phone }}</p>{% endif %}
-                {% if site.data.cv.personal.linkedin %}<p>LinkedIn: <a href="{{ site.data.cv.personal.linkedin }}" target="_blank">{{ site.data.cv.personal.linkedin | replace: "https://", "" }}</a></p>{% endif %}
-                {% if site.data.cv.personal.github %}<p>GitHub: <a href="{{ site.data.cv.personal.github }}" target="_blank">{{ site.data.cv.personal.github | replace: "https://", "" }}</a></p>{% endif %}
-                {% if site.data.cv.personal.website %}<p>Website: <a href="{{ site.data.cv.personal.website }}" target="_blank">{{ site.data.cv.personal.website | replace: "https://", "" }}</a></p>{% endif %}
-                {% if site.data.cv.personal.location %}<p>Location: {{ site.data.cv.personal.location }}</p>{% endif %}
+                {% if site.data.cv.personal.email %}<p><i class="fas fa-envelope"></i> <a href="mailto:{{ site.data.cv.personal.email }}">{{ site.data.cv.personal.email }}</a></p>{% endif %}
+                {% if site.data.cv.personal.phone %}<p><i class="fas fa-phone"></i> {{ site.data.cv.personal.phone }}</p>{% endif %}
+                {% if site.data.cv.personal.linkedin %}<p><i class="fab fa-linkedin"></i> <a href="{{ site.data.cv.personal.linkedin }}" target="_blank">{{ site.data.cv.personal.linkedin | replace: "https://", "" }}</a></p>{% endif %}
+                {% if site.data.cv.personal.github %}<p><i class="fab fa-github"></i> <a href="{{ site.data.cv.personal.github }}" target="_blank">{{ site.data.cv.personal.github | replace: "https://", "" }}</a></p>{% endif %}
+                {% if site.data.cv.personal.website %}<p><i class="fas fa-globe"></i> <a href="{{ site.data.cv.personal.website }}" target="_blank">{{ site.data.cv.personal.website | replace: "https://", "" }}</a></p>{% endif %}
+                {% if site.data.cv.personal.location %}<p><i class="fas fa-map-marker-alt"></i> {{ site.data.cv.personal.location }}</p>{% endif %}
             </div>
         </header>
         
@@ -247,8 +316,8 @@ title: ATS-friendly Resume
         
         <footer>
             <div class="button-container">
-                <a href="#" class="download-button" onclick="generatePDF()">Download as PDF</a>
-                <a href="index.html" class="back-link">View Interactive Resume</a>
+                <a href="#" class="download-button" onclick="generatePDF()"><i class="fas fa-file-download"></i> Download as PDF</a>
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> View Interactive Resume</a>
             </div>
         </footer>
     </div>
