@@ -173,11 +173,11 @@ title: ATS-friendly Resume
             <h1>{{ site.data.cv.personal.name }}</h1>
             <h2>{{ site.data.cv.personal.title }}</h2>
             <div class="contact-info">
-                {% if site.data.cv.personal.email %}<p>Email: {{ site.data.cv.personal.email }}</p>{% endif %}
+                {% if site.data.cv.personal.email %}<p>Email: <a href="mailto:{{ site.data.cv.personal.email }}">{{ site.data.cv.personal.email }}</a></p>{% endif %}
                 {% if site.data.cv.personal.phone %}<p>Phone: {{ site.data.cv.personal.phone }}</p>{% endif %}
-                {% if site.data.cv.personal.linkedin %}<p>LinkedIn: {{ site.data.cv.personal.linkedin }}</p>{% endif %}
-                {% if site.data.cv.personal.github %}<p>GitHub: {{ site.data.cv.personal.github }}</p>{% endif %}
-                {% if site.data.cv.personal.website %}<p>Website: {{ site.data.cv.personal.website }}</p>{% endif %}
+                {% if site.data.cv.personal.linkedin %}<p>LinkedIn: <a href="{{ site.data.cv.personal.linkedin }}" target="_blank">{{ site.data.cv.personal.linkedin | replace: "https://", "" }}</a></p>{% endif %}
+                {% if site.data.cv.personal.github %}<p>GitHub: <a href="{{ site.data.cv.personal.github }}" target="_blank">{{ site.data.cv.personal.github | replace: "https://", "" }}</a></p>{% endif %}
+                {% if site.data.cv.personal.website %}<p>Website: <a href="{{ site.data.cv.personal.website }}" target="_blank">{{ site.data.cv.personal.website | replace: "https://", "" }}</a></p>{% endif %}
                 {% if site.data.cv.personal.location %}<p>Location: {{ site.data.cv.personal.location }}</p>{% endif %}
             </div>
         </header>

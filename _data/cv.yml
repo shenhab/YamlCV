@@ -3,7 +3,7 @@
 # Personal Information
 personal:
   name: Mahmoud Elshenhab
-  title: Staff Site Reliability Engineer
+  title: Staff Compliance Automation Engineer @Okta
   email: mahmoud.alshinhab@gmail.com
   phone: "+353 86 461 9975"
   location: Kill, Co. Kildare, Ireland
@@ -13,14 +13,14 @@ personal:
   
 # Professional Summary
 summary: >
-  Site Reliability Engineer with extensive experience in database administration (MySQL, PostgreSQL, MariaDB, Amazon Aurora), 
-  Linux system engineering, and infrastructure automation. Currently focused on maintaining and enhancing the reliability of 
-  ServiceNow's cloud infrastructure through proactive monitoring, alert management automation, and process optimization. 
-  Previously at Amazon Web Services (AWS), contributed significantly to automating region builds, streamlining patching 
-  workflows reducing cycle times from 40+ days to 7 days, and providing expert-level support for enterprise customers on 
-  complex AWS infrastructure, particularly Relational Database Services (RDS). Proficient in troubleshooting complex system 
-  issues, developing automation scripts (Python, Ruby, Bash), and designing resilient systems to improve operational 
-  efficiency and minimize manual intervention.
+  Staff Compliance Automation Engineer with 10+ years of experience in software development, infrastructure automation, and system engineering.
+  Currently at Okta, focused on developing tools and processes to automate compliance evidence collection and reporting, 
+  significantly reducing manual effort while improving data reliability. Previously at ServiceNow, enhanced cloud 
+  infrastructure reliability through proactive monitoring and alert automation. At Amazon Web Services (AWS), led key initiatives to 
+  streamline region builds and patching workflows, reducing cycle times from 40+ days to 7 days, and provided expert-level support 
+  for enterprise customers on complex infrastructure, particularly Relational Database Services (RDS). Skilled in designing 
+  resilient systems, developing automation scripts (Python, Ruby, Bash), and implementing database solutions (MySQL, PostgreSQL, MariaDB) 
+  to improve operational efficiency and eliminate manual intervention.
 
 # Skills
 skills:
