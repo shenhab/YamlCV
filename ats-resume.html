@@ -104,6 +104,27 @@ title: ATS-friendly Resume
             text-decoration: underline;
         }
 
+        .download-button {
+            display: inline-block;
+            background-color: #1976D2;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .download-button:hover {
+            background-color: #1565C0;
+        }
+        
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
         @media print {
             body {
                 padding: 0;
@@ -111,6 +132,10 @@ title: ATS-friendly Resume
             }
             
             .back-link {
+                display: none;
+            }
+
+            .download-button {
                 display: none;
             }
 
@@ -135,6 +160,12 @@ title: ATS-friendly Resume
             }
         }
     </style>
+    <script>
+        function generatePDF() {
+            // Tell the browser to print which will give the option to save as PDF
+            window.print();
+        }
+    </script>
 </head>
 <body>
     <div class="resume-container">
@@ -209,7 +240,10 @@ title: ATS-friendly Resume
         </section>
         
         <footer>
-            <p><a href="index.html" class="back-link">View Interactive Resume</a></p>
+            <div class="button-container">
+                <a href="#" class="download-button" onclick="generatePDF()">Download as PDF</a>
+                <a href="index.html" class="back-link">View Interactive Resume</a>
+            </div>
         </footer>
     </div>
 </body>
