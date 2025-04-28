@@ -1,0 +1,29 @@
+[user]
+	name = Mahmoud Elshenhab
+	email = mahmoud.alshinhab@gmail.com
+
+[core]
+	editor = vim
+	autocrlf = input
+	whitespace = trailing-space,space-before-tab
+
+[color]
+	ui = auto
+
+[pull]
+	rebase = false
+
+[push]
+	default = simple
+
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	amend = commit --amend
+	df = diff
+	dfs = diff --staged
