@@ -28,12 +28,25 @@ layout: default
     }
     
     .container {
-      max-width: 1000px;
+      max-width: 90%;
       margin: 0 auto;
       background-color: #fff;
       padding: 30px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
+    }
+    
+    /* For larger screens, add a maximum width to prevent the content from stretching too much */
+    @media (min-width: 1600px) {
+      .container {
+        max-width: 1400px;
+      }
+    }
+    
+    /* Content width for readability on very wide screens */
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
     }
     
     h1, h2, h3, h4 {
@@ -575,138 +588,140 @@ layout: default
   </div>
 
   <div class="container">
-    <header class="header">
-      <div class="header-left">
-        <h1>{{ site.data.cv.personal.name }}</h1>
-        <h2 style="opacity: 1; transform: none;">{{ site.data.cv.personal.title }}</h2>
+    <div class="content-wrapper">
+      <header class="header">
+        <div class="header-left">
+          <h1>{{ site.data.cv.personal.name }}</h1>
+          <h2 style="opacity: 1; transform: none;">{{ site.data.cv.personal.title }}</h2>
+        </div>
+        <div class="header-right">
+          {% if site.data.cv.personal.email %}<p><i class="fas fa-envelope"></i> <a href="mailto:{{ site.data.cv.personal.email }}">{{ site.data.cv.personal.email }}</a></p>{% endif %}
+          {% if site.data.cv.personal.phone %}<p><i class="fas fa-phone"></i> {{ site.data.cv.personal.phone }}</p>{% endif %}
+          {% if site.data.cv.personal.location %}<p><i class="fas fa-map-marker-alt"></i> {{ site.data.cv.personal.location }}</p>{% endif %}
+          {% if site.data.cv.personal.linkedin %}<p><i class="fab fa-linkedin"></i> <a href="https://{{ site.data.cv.personal.linkedin }}" target="_blank">LinkedIn</a></p>{% endif %}
+          {% if site.data.cv.personal.github %}<p><i class="fab fa-github"></i> <a href="https://{{ site.data.cv.personal.github }}" target="_blank">GitHub</a></p>{% endif %}
+          {% if site.data.cv.personal.website %}<p><i class="fas fa-globe"></i> <a href="https://{{ site.data.cv.personal.website }}" target="_blank">{{ site.data.cv.personal.website }}</a></p>{% endif %}
+        </div>
+      </header>
+
+      <div class="ats-button-container">
+        <a href="ats-resume.html" class="ats-button"><i class="fas fa-file-alt"></i> View ATS-Friendly Resume</a>
       </div>
-      <div class="header-right">
-        {% if site.data.cv.personal.email %}<p><i class="fas fa-envelope"></i> <a href="mailto:{{ site.data.cv.personal.email }}">{{ site.data.cv.personal.email }}</a></p>{% endif %}
-        {% if site.data.cv.personal.phone %}<p><i class="fas fa-phone"></i> {{ site.data.cv.personal.phone }}</p>{% endif %}
-        {% if site.data.cv.personal.location %}<p><i class="fas fa-map-marker-alt"></i> {{ site.data.cv.personal.location }}</p>{% endif %}
-        {% if site.data.cv.personal.linkedin %}<p><i class="fab fa-linkedin"></i> <a href="https://{{ site.data.cv.personal.linkedin }}" target="_blank">LinkedIn</a></p>{% endif %}
-        {% if site.data.cv.personal.github %}<p><i class="fab fa-github"></i> <a href="https://{{ site.data.cv.personal.github }}" target="_blank">GitHub</a></p>{% endif %}
-        {% if site.data.cv.personal.website %}<p><i class="fas fa-globe"></i> <a href="https://{{ site.data.cv.personal.website }}" target="_blank">{{ site.data.cv.personal.website }}</a></p>{% endif %}
+
+      <div class="toc">
+        <h3><i class="fas fa-list"></i> Table of Contents</h3>
+        <ul>
+          <li><a href="#summary" class="toc-link">Professional Summary</a></li>
+          <li><a href="#experience" class="toc-link">Professional Experience</a></li>
+          <li><a href="#education" class="toc-link">Education</a></li>
+          <li><a href="#certifications" class="toc-link">Certifications</a></li>
+          {% if site.data.cv.projects %}<li><a href="#projects" class="toc-link">Projects</a></li>{% endif %}
+          <li><a href="#skills" class="toc-link">Skills</a></li>
+        </ul>
       </div>
-    </header>
 
-    <div class="ats-button-container">
-      <a href="ats-resume.html" class="ats-button"><i class="fas fa-file-alt"></i> View ATS-Friendly Resume</a>
-    </div>
+      <section id="summary" class="summary">
+        <h2>Professional Summary</h2>
+        <p>{{ site.data.cv.summary }}</p>
+      </section>
 
-    <div class="toc">
-      <h3><i class="fas fa-list"></i> Table of Contents</h3>
-      <ul>
-        <li><a href="#summary" class="toc-link">Professional Summary</a></li>
-        <li><a href="#experience" class="toc-link">Professional Experience</a></li>
-        <li><a href="#education" class="toc-link">Education</a></li>
-        <li><a href="#certifications" class="toc-link">Certifications</a></li>
-        {% if site.data.cv.projects %}<li><a href="#projects" class="toc-link">Projects</a></li>{% endif %}
-        <li><a href="#skills" class="toc-link">Skills</a></li>
-      </ul>
-    </div>
+      <section id="experience" class="experience">
+        <h2>Professional Experience</h2>
+        {% assign companies = site.data.cv.experience | map: 'company' | uniq %}
+        {% for company in companies %}
+          {% assign company_class = company | downcase | replace: ' ', '-' | replace: '(', '' | replace: ')', '' %}
+          {% assign company_jobs = site.data.cv.experience | where: "company", company %}
+          {% for job in company_jobs %}
+            <div class="timeline-item company-{{ company_class }}">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">
+                {% if job.end_date == "Present" %}
+                  <span>{{ job.start_date }} - {{ job.end_date }}</span>
+                {% else %}
+                  <span>{{ job.start_date }} - {{ job.end_date }}</span>
+                {% endif %}
+              </div>
+              <div class="timeline-content">
+                <h3>{{ job.position }}</h3>
+                <h4>{{ job.company }} | {{ job.location }}</h4>
+                <ul>
+                  {% for item in job.achievements %}
+                    <li class="{% if forloop.index <= 2 %}key-achievement{% endif %}">{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          {% endfor %}
+        {% endfor %}
+      </section>
 
-    <section id="summary" class="summary">
-      <h2>Professional Summary</h2>
-      <p>{{ site.data.cv.summary }}</p>
-    </section>
-
-    <section id="experience" class="experience">
-      <h2>Professional Experience</h2>
-      {% assign companies = site.data.cv.experience | map: 'company' | uniq %}
-      {% for company in companies %}
-        {% assign company_class = company | downcase | replace: ' ', '-' | replace: '(', '' | replace: ')', '' %}
-        {% assign company_jobs = site.data.cv.experience | where: "company", company %}
-        {% for job in company_jobs %}
-          <div class="timeline-item company-{{ company_class }}">
+      <section id="education" class="education">
+        <h2>Education</h2>
+        {% for edu in site.data.cv.education %}
+          <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-date">
-              {% if job.end_date == "Present" %}
-                <span>{{ job.start_date }} - {{ job.end_date }}</span>
-              {% else %}
-                <span>{{ job.start_date }} - {{ job.end_date }}</span>
-              {% endif %}
+              <span>{{ edu.date }}</span>
             </div>
             <div class="timeline-content">
-              <h3>{{ job.position }}</h3>
-              <h4>{{ job.company }} | {{ job.location }}</h4>
+              <h3>{{ edu.degree }}</h3>
+              <h4>{{ edu.institution }} | {{ edu.location }}</h4>
+              {% if edu.details %}<p>{{ edu.details }}</p>{% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </section>
+
+      <section id="certifications" class="certifications">
+        <h2>Certifications</h2>
+        {% for cert in site.data.cv.certifications %}
+          <div class="cert-item">
+            <h3>{{ cert.name }}</h3>
+            <div class="cert-meta">
+              <span><strong>Issuer:</strong> {{ cert.issuer }}</span> • 
+              <span><strong>Date:</strong> {{ cert.date }}</span> • 
+              <span><strong>ID:</strong> {{ cert.id }}</span>
+            </div>
+            {% if cert.url %}<p><a href="{{ cert.url }}" target="_blank"><i class="fas fa-certificate"></i> View Certificate</a></p>{% endif %}
+            {% if cert.notes %}<p><em>{{ cert.notes }}</em></p>{% endif %}
+          </div>
+        {% endfor %}
+      </section>
+
+      {% if site.data.cv.projects %}
+      <section id="projects" class="projects">
+        <h2>Projects</h2>
+        {% for project in site.data.cv.projects %}
+          <div class="project-item">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+          </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+      
+      <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+          {% for category in site.data.cv.skills %}
+            <div class="skill-category">
+              <h3>{{ category.category }}</h3>
               <ul>
-                {% for item in job.achievements %}
-                  <li class="{% if forloop.index <= 2 %}key-achievement{% endif %}">{{ item }}</li>
+                {% assign skills = category.items | split: ", " %}
+                {% for item in skills %}
+                  <li>{{ item }}</li>
                 {% endfor %}
               </ul>
             </div>
-          </div>
-        {% endfor %}
-      {% endfor %}
-    </section>
-
-    <section id="education" class="education">
-      <h2>Education</h2>
-      {% for edu in site.data.cv.education %}
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">
-            <span>{{ edu.date }}</span>
-          </div>
-          <div class="timeline-content">
-            <h3>{{ edu.degree }}</h3>
-            <h4>{{ edu.institution }} | {{ edu.location }}</h4>
-            {% if edu.details %}<p>{{ edu.details }}</p>{% endif %}
-          </div>
+          {% endfor %}
         </div>
-      {% endfor %}
-    </section>
+      </section>
 
-    <section id="certifications" class="certifications">
-      <h2>Certifications</h2>
-      {% for cert in site.data.cv.certifications %}
-        <div class="cert-item">
-          <h3>{{ cert.name }}</h3>
-          <div class="cert-meta">
-            <span><strong>Issuer:</strong> {{ cert.issuer }}</span> • 
-            <span><strong>Date:</strong> {{ cert.date }}</span> • 
-            <span><strong>ID:</strong> {{ cert.id }}</span>
-          </div>
-          {% if cert.url %}<p><a href="{{ cert.url }}" target="_blank"><i class="fas fa-certificate"></i> View Certificate</a></p>{% endif %}
-          {% if cert.notes %}<p><em>{{ cert.notes }}</em></p>{% endif %}
-        </div>
-      {% endfor %}
-    </section>
-
-    {% if site.data.cv.projects %}
-    <section id="projects" class="projects">
-      <h2>Projects</h2>
-      {% for project in site.data.cv.projects %}
-        <div class="project-item">
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.description }}</p>
-        </div>
-      {% endfor %}
-    </section>
-    {% endif %}
-    
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <div class="skills-container">
-        {% for category in site.data.cv.skills %}
-          <div class="skill-category">
-            <h3>{{ category.category }}</h3>
-            <ul>
-              {% assign skills = category.items | split: ", " %}
-              {% for item in skills %}
-                <li>{{ item }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-        {% endfor %}
-      </div>
-    </section>
-
-    <footer>
-      <p>Last updated: {{ site.time | date: '%B %Y' }}</p>
-      <p><a href="ats-resume.html">View ATS-friendly Resume</a></p>
-    </footer>
+      <footer>
+        <p>Last updated: {{ site.time | date: '%B %Y' }}</p>
+        <p><a href="ats-resume.html">View ATS-friendly Resume</a></p>
+      </footer>
+    </div>
   </div>
 
   <a href="#" class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up"></i></a>

@@ -22,11 +22,24 @@ title: ATS-friendly Resume
         }
         
         .resume-container {
-            max-width: 800px;
+            max-width: 90%;
             margin: 0 auto;
             background-color: white;
             padding: 30px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        /* For larger screens, add a maximum width to prevent the content from stretching too much */
+        @media (min-width: 1600px) {
+            .resume-container {
+                max-width: 1400px;
+            }
+        }
+        
+        /* Content width for readability on very wide screens */
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         h1, h2, h3 {
@@ -142,77 +155,79 @@ title: ATS-friendly Resume
 </head>
 <body>
     <div class="resume-container">
-        <header>
-            <h1>{{ site.data.cv.personal.name }}</h1>
-            <p style="text-align: center; font-size: 18px; margin-bottom: 10px;">{{ site.data.cv.personal.title }}</p>
+        <div class="content-wrapper">
+            <header>
+                <h1>{{ site.data.cv.personal.name }}</h1>
+                <p style="text-align: center; font-size: 18px; margin-bottom: 10px;">{{ site.data.cv.personal.title }}</p>
+                
+                <div class="contact">
+                    {% if site.data.cv.personal.email %}<p>Email: {{ site.data.cv.personal.email }}</p>{% endif %}
+                    {% if site.data.cv.personal.phone %}<p>Phone: {{ site.data.cv.personal.phone }}</p>{% endif %}
+                    {% if site.data.cv.personal.location %}<p>Location: {{ site.data.cv.personal.location }}</p>{% endif %}
+                    {% if site.data.cv.personal.linkedin %}<p>LinkedIn: {{ site.data.cv.personal.linkedin | replace: "https://", "" }}</p>{% endif %}
+                    {% if site.data.cv.personal.github %}<p>GitHub: {{ site.data.cv.personal.github | replace: "https://", "" }}</p>{% endif %}
+                </div>
+            </header>
             
-            <div class="contact">
-                {% if site.data.cv.personal.email %}<p>Email: {{ site.data.cv.personal.email }}</p>{% endif %}
-                {% if site.data.cv.personal.phone %}<p>Phone: {{ site.data.cv.personal.phone }}</p>{% endif %}
-                {% if site.data.cv.personal.location %}<p>Location: {{ site.data.cv.personal.location }}</p>{% endif %}
-                {% if site.data.cv.personal.linkedin %}<p>LinkedIn: {{ site.data.cv.personal.linkedin | replace: "https://", "" }}</p>{% endif %}
-                {% if site.data.cv.personal.github %}<p>GitHub: {{ site.data.cv.personal.github | replace: "https://", "" }}</p>{% endif %}
-            </div>
-        </header>
-        
-        <section>
-            <h2>SUMMARY</h2>
-            <p>{{ site.data.cv.summary }}</p>
-        </section>
-        
-        <section>
-            <h2>SKILLS</h2>
-            {% for category in site.data.cv.skills %}
-            <div class="skills-container">
-                <h3>{{ category.category }}</h3>
-                <p>{{ category.items }}</p>
-            </div>
-            {% endfor %}
-        </section>
-        
-        <section>
-            <h2>EXPERIENCE</h2>
-            {% for job in site.data.cv.experience %}
-            <div class="job">
-                <h3 class="job-title">{{ job.position }}</h3>
-                <p class="job-details">{{ job.company }} | {{ job.start_date }} to {{ job.end_date }}</p>
-                <p>{{ job.location }}</p>
+            <section>
+                <h2>SUMMARY</h2>
+                <p>{{ site.data.cv.summary }}</p>
+            </section>
+            
+            <section>
+                <h2>SKILLS</h2>
+                {% for category in site.data.cv.skills %}
+                <div class="skills-container">
+                    <h3>{{ category.category }}</h3>
+                    <p>{{ category.items }}</p>
+                </div>
+                {% endfor %}
+            </section>
+            
+            <section>
+                <h2>EXPERIENCE</h2>
+                {% for job in site.data.cv.experience %}
+                <div class="job">
+                    <h3 class="job-title">{{ job.position }}</h3>
+                    <p class="job-details">{{ job.company }} | {{ job.start_date }} to {{ job.end_date }}</p>
+                    <p>{{ job.location }}</p>
+                    <ul>
+                        {% for item in job.achievements %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </section>
+            
+            <section>
+                <h2>EDUCATION</h2>
+                {% for edu in site.data.cv.education %}
+                <div class="job">
+                    <h3>{{ edu.degree }}</h3>
+                    <p class="job-details">{{ edu.institution }} | {{ edu.date }}</p>
+                    {% if edu.location %}<p>{{ edu.location }}</p>{% endif %}
+                    {% if edu.details %}<p>{{ edu.details }}</p>{% endif %}
+                </div>
+                {% endfor %}
+            </section>
+            
+            <section>
+                <h2>CERTIFICATIONS</h2>
                 <ul>
-                    {% for item in job.achievements %}
-                    <li>{{ item }}</li>
+                    {% for cert in site.data.cv.certifications %}
+                    <li>
+                        <strong>{{ cert.name }}</strong> - {{ cert.issuer }} ({{ cert.date }})
+                        <br>Certificate ID: {{ cert.id }}
+                    </li>
                     {% endfor %}
                 </ul>
+            </section>
+            
+            <div class="buttons">
+                <a href="#" onclick="printResume()" class="btn"><i class="fas fa-file-download"></i> Download PDF</a>
+                <a href="index.html" class="btn"><i class="fas fa-arrow-left"></i> Interactive Resume</a>
             </div>
-            {% endfor %}
-        </section>
-        
-        <section>
-            <h2>EDUCATION</h2>
-            {% for edu in site.data.cv.education %}
-            <div class="job">
-                <h3>{{ edu.degree }}</h3>
-                <p class="job-details">{{ edu.institution }} | {{ edu.date }}</p>
-                {% if edu.location %}<p>{{ edu.location }}</p>{% endif %}
-                {% if edu.details %}<p>{{ edu.details }}</p>{% endif %}
-            </div>
-            {% endfor %}
-        </section>
-        
-        <section>
-            <h2>CERTIFICATIONS</h2>
-            <ul>
-                {% for cert in site.data.cv.certifications %}
-                <li>
-                    <strong>{{ cert.name }}</strong> - {{ cert.issuer }} ({{ cert.date }})
-                    <br>Certificate ID: {{ cert.id }}
-                </li>
-                {% endfor %}
-            </ul>
-        </section>
-        
-        <div class="buttons">
-            <a href="#" onclick="printResume()" class="btn"><i class="fas fa-file-download"></i> Download PDF</a>
-            <a href="index.html" class="btn"><i class="fas fa-arrow-left"></i> Interactive Resume</a>
         </div>
     </div>
 </body>
