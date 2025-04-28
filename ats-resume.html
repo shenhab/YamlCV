@@ -9,7 +9,7 @@ title: ATS-friendly Resume
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.data.cv.personal.name }} - ATS-friendly Resume</title>
     <meta name="description" content="ATS-friendly resume of {{ site.data.cv.personal.name }} - {{ site.data.cv.personal.title }}">
-    <!-- Font Awesome for icons -->
+    <!-- Font Awesome for icons - only visible to human readers, not ATS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* CSS Reset and Base Styles */
@@ -20,13 +20,14 @@ title: ATS-friendly Resume
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', 'Helvetica', sans-serif; /* Standard font for better ATS parsing */
             line-height: 1.6;
-            color: #333;
+            color: #000; /* High contrast for ATS */
             background-color: #f5f5f5;
             padding: 20px;
         }
         
+        /* Container for human viewers */
         .resume-container {
             max-width: 1000px;
             margin: 0 auto;
@@ -36,24 +37,26 @@ title: ATS-friendly Resume
             border-radius: 5px;
         }
         
+        /* Clear heading styles for ATS */
         h1, h2, h3, h4 {
-            color: #2c3e50;
+            color: #000;
             margin-bottom: 15px;
+            font-weight: bold;
         }
         
         h1 {
             font-size: 2.5em;
             text-align: center;
-            letter-spacing: -0.5px;
             margin-bottom: 5px;
         }
         
         h2 {
             font-size: 1.8em;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid #3498db; /* Visual style for humans */
             padding-bottom: 5px;
             margin-top: 30px;
             margin-bottom: 20px;
+            text-transform: uppercase; /* ATS systems recognize uppercase section headings */
         }
         
         h3 {
@@ -63,15 +66,17 @@ title: ATS-friendly Resume
         
         h4 {
             font-size: 1.1em;
-            font-weight: 400;
-            color: #555;
             margin-bottom: 8px;
         }
         
         a {
-            color: #3498db;
+            color: #000; /* ATS-friendly link color */
             text-decoration: none;
-            transition: color 0.3s;
+        }
+        
+        /* Human-readable styles */
+        .for-humans {
+            color: #3498db;
         }
         
         a:hover {
@@ -82,6 +87,7 @@ title: ATS-friendly Resume
         ul {
             padding-left: 20px;
             margin-bottom: 20px;
+            list-style-type: disc; /* Standard bullets for better ATS parsing */
         }
         
         li {
@@ -96,7 +102,7 @@ title: ATS-friendly Resume
             margin-bottom: 30px;
         }
         
-        /* Contact Info Styling */
+        /* Contact Info Styling - Simple for ATS */
         .contact-info {
             text-align: center;
             margin-bottom: 30px;
@@ -106,42 +112,48 @@ title: ATS-friendly Resume
             margin-bottom: 8px;
         }
         
-        /* Job Styling */
+        /* Job Styling - simplified for ATS */
         .job {
             margin-bottom: 25px;
-            padding-left: 20px;
-            position: relative;
+            padding-left: 0; /* No indentation for ATS */
+        }
+        
+        /* Visual decoration for humans only */
+        .visual-separator {
             border-left: 2px solid #3498db;
+            padding-left: 20px;
         }
         
         .job h3 {
             margin-bottom: 5px;
         }
         
+        /* Plain text date/company info for ATS */
         .company {
-            font-weight: 500;
+            font-weight: bold;
             margin-bottom: 10px;
             display: block;
         }
         
-        /* Education Styling */
-        .education {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            position: relative;
-            border-left: 2px solid #3498db;
-        }
-        
-        /* Skills Section */
+        /* Skills Section - simple for ATS */
         .skill-section {
             margin-bottom: 20px;
+        }
+        
+        /* Human-readable styling */
+        .skill-human {
             background-color: #f8f9fa;
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        /* Button Styles */
+        /* Button Styles - for human viewers only, not affecting ATS */
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
         .download-button {
             display: inline-block;
             padding: 10px 20px;
@@ -157,6 +169,7 @@ title: ATS-friendly Resume
         .download-button:hover {
             background-color: #2980b9;
             text-decoration: none;
+            color: white;
         }
         
         .back-link {
@@ -172,17 +185,13 @@ title: ATS-friendly Resume
             text-decoration: underline;
         }
         
-        .button-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-        
-        /* Print Styles */
+        /* Print Styles - for PDF download */
         @media print {
             body {
                 background-color: white;
                 padding: 0;
                 font-size: 12px;
+                color: black;
             }
             
             .resume-container {
@@ -191,7 +200,7 @@ title: ATS-friendly Resume
             }
             
             a {
-                color: #333;
+                color: #000;
                 text-decoration: none;
             }
             
@@ -201,7 +210,7 @@ title: ATS-friendly Resume
             
             h2 {
                 font-size: 16px;
-                border-bottom: 1px solid #333;
+                border-bottom: 1px solid #000;
             }
             
             h3 {
@@ -212,15 +221,7 @@ title: ATS-friendly Resume
                 font-size: 13px;
             }
             
-            .contact-info {
-                font-size: 12px;
-            }
-            
-            .back-link {
-                display: none;
-            }
-
-            .download-button {
+            .back-link, .download-button, .button-container {
                 display: none;
             }
             
@@ -231,47 +232,51 @@ title: ATS-friendly Resume
     </style>
     <script>
         function generatePDF() {
-            // Tell the browser to print which will give the option to save as PDF
             window.print();
         }
     </script>
 </head>
 <body>
-    <div class="resume-container">
+    <main class="resume-container">
         <header>
             <h1>{{ site.data.cv.personal.name }}</h1>
-            <h2 style="text-align: center; border-bottom: none; margin-top: 5px; margin-bottom: 15px;">{{ site.data.cv.personal.title }}</h2>
+            <p style="text-align: center; font-size: 1.5em; margin-bottom: 15px;">{{ site.data.cv.personal.title }}</p>
             <div class="contact-info">
-                {% if site.data.cv.personal.email %}<p><i class="fas fa-envelope"></i> <a href="mailto:{{ site.data.cv.personal.email }}">{{ site.data.cv.personal.email }}</a></p>{% endif %}
-                {% if site.data.cv.personal.phone %}<p><i class="fas fa-phone"></i> {{ site.data.cv.personal.phone }}</p>{% endif %}
-                {% if site.data.cv.personal.linkedin %}<p><i class="fab fa-linkedin"></i> <a href="{{ site.data.cv.personal.linkedin }}" target="_blank">{{ site.data.cv.personal.linkedin | replace: "https://", "" }}</a></p>{% endif %}
-                {% if site.data.cv.personal.github %}<p><i class="fab fa-github"></i> <a href="{{ site.data.cv.personal.github }}" target="_blank">{{ site.data.cv.personal.github | replace: "https://", "" }}</a></p>{% endif %}
-                {% if site.data.cv.personal.website %}<p><i class="fas fa-globe"></i> <a href="{{ site.data.cv.personal.website }}" target="_blank">{{ site.data.cv.personal.website | replace: "https://", "" }}</a></p>{% endif %}
-                {% if site.data.cv.personal.location %}<p><i class="fas fa-map-marker-alt"></i> {{ site.data.cv.personal.location }}</p>{% endif %}
+                <!-- Plain contact information for ATS, with icons only visible to humans -->
+                {% if site.data.cv.personal.email %}<p><span class="for-humans"><i class="fas fa-envelope"></i></span> Email: <a href="mailto:{{ site.data.cv.personal.email }}">{{ site.data.cv.personal.email }}</a></p>{% endif %}
+                {% if site.data.cv.personal.phone %}<p><span class="for-humans"><i class="fas fa-phone"></i></span> Phone: {{ site.data.cv.personal.phone }}</p>{% endif %}
+                {% if site.data.cv.personal.linkedin %}<p><span class="for-humans"><i class="fab fa-linkedin"></i></span> LinkedIn: <a href="{{ site.data.cv.personal.linkedin }}" target="_blank">{{ site.data.cv.personal.linkedin | replace: "https://", "" }}</a></p>{% endif %}
+                {% if site.data.cv.personal.github %}<p><span class="for-humans"><i class="fab fa-github"></i></span> GitHub: <a href="{{ site.data.cv.personal.github }}" target="_blank">{{ site.data.cv.personal.github | replace: "https://", "" }}</a></p>{% endif %}
+                {% if site.data.cv.personal.website %}<p><span class="for-humans"><i class="fas fa-globe"></i></span> Website: <a href="{{ site.data.cv.personal.website }}" target="_blank">{{ site.data.cv.personal.website | replace: "https://", "" }}</a></p>{% endif %}
+                {% if site.data.cv.personal.location %}<p><span class="for-humans"><i class="fas fa-map-marker-alt"></i></span> Location: {{ site.data.cv.personal.location }}</p>{% endif %}
             </div>
         </header>
         
+        <!-- Using standard section names for better ATS recognition -->
         <section>
-            <h2>PROFESSIONAL SUMMARY</h2>
+            <h2>SUMMARY</h2>
             <p>{{ site.data.cv.summary }}</p>
         </section>
         
         <section>
             <h2>SKILLS</h2>
             {% for category in site.data.cv.skills %}
-            <div class="skill-section">
+            <div class="skill-section skill-human">
                 <h3>{{ category.category }}</h3>
+                <!-- Keep skills as plain text for ATS -->
                 <p>{{ category.items }}</p>
             </div>
             {% endfor %}
         </section>
         
         <section>
-            <h2>PROFESSIONAL EXPERIENCE</h2>
+            <h2>EXPERIENCE</h2>
             {% for job in site.data.cv.experience %}
-            <div class="job">
+            <div class="job visual-separator">
+                <!-- Clear job titles and company info for ATS -->
                 <h3>{{ job.position }}</h3>
-                <p class="company">{{ job.company }} | {{ job.start_date }} to {{ job.end_date }} | {{ job.location }}</p>
+                <p class="company">{{ job.company }} | {{ job.start_date }} to {{ job.end_date }}</p>
+                <p>{{ job.location }}</p>
                 <ul>
                     {% for item in job.achievements %}
                     <li>{{ item }}</li>
@@ -285,9 +290,11 @@ title: ATS-friendly Resume
             <h2>EDUCATION</h2>
             {% if site.data.cv.education %}
             {% for edu in site.data.cv.education %}
-            <div class="education">
+            <div class="job visual-separator">
                 <h3>{{ edu.degree }}</h3>
-                <p>{{ edu.institution }} | {{ edu.date }}</p>
+                <p><strong>{{ edu.institution }}</strong> | {{ edu.date }}</p>
+                {% if edu.location %}<p>{{ edu.location }}</p>{% endif %}
+                {% if edu.details %}<p>{{ edu.details }}</p>{% endif %}
             </div>
             {% endfor %}
             {% else %}
@@ -301,11 +308,9 @@ title: ATS-friendly Resume
             <ul>
                 {% for cert in site.data.cv.certifications %}
                 <li>
-                    {% if cert.url %}
-                    <a href="{{ cert.url }}" target="_blank">{{ cert.name }}</a> - {{ cert.issuer }} ({{ cert.date }}) - Certificate ID: {{ cert.id }}
-                    {% else %}
-                    {{ cert.name }} - {{ cert.issuer }} ({{ cert.date }}) - Certificate ID: {{ cert.id }}
-                    {% endif %}
+                    <strong>{{ cert.name }}</strong> - {{ cert.issuer }} ({{ cert.date }})
+                    <br>Certificate ID: {{ cert.id }}
+                    {% if cert.url %}<br><span class="for-humans"><a href="{{ cert.url }}" target="_blank">View Certificate</a></span>{% endif %}
                 </li>
                 {% endfor %}
             </ul>
@@ -320,6 +325,6 @@ title: ATS-friendly Resume
                 <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> View Interactive Resume</a>
             </div>
         </footer>
-    </div>
+    </main>
 </body>
 </html>
