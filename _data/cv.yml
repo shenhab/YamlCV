@@ -1,0 +1,66 @@
+# CV Data File - Single source of truth for both versions of the resume
+
+# Personal Information
+personal:
+  name: Mahmoud Elshenhab
+  title: Staff Site Reliability Engineer
+  email: mahmoud.alshinhab@gmail.com
+  phone: "+353 86 461 9975"
+  location: Kill, Co. Kildare, Ireland
+  linkedin: linkedin.com/in/Shenhab
+  github: github.com/shenhab
+  website: gurutux.com
+  
+# Professional Summary
+summary: >
+  Staff Site Reliability Engineer with 12+ years of experience in building and operating large-scale distributed systems.
+  Specialized in cloud infrastructure, containerization, and automation. Strong expertise in designing resilient systems with a focus
+  on observability, reliability, and security. Passionate about mentoring and growing engineering teams.
+
+# Skills
+skills:
+  - category: Cloud Platforms
+    items: AWS (Advanced), GCP, Azure
+  - category: Infrastructure as Code
+    items: Terraform, CloudFormation, Ansible, Puppet
+  - category: Containerization
+    items: Docker, Kubernetes, EKS, AKS, GKE
+  - category: CI/CD
+    items: Jenkins, GitHub Actions, CircleCI, ArgoCD, GitOps
+  - category: Monitoring
+    items: Prometheus, Grafana, ELK Stack, Datadog, New Relic
+  - category: Programming Languages
+    items: Python, Go, Bash, Ruby
+  - category: Security
+    items: HashiCorp Vault, AWS KMS, IAM, Security Compliance
+  - category: Databases
+    items: PostgreSQL, MySQL, MongoDB, Redis, DynamoDB
+
+# Professional Experience
+experience:
+  - company: Stripe
+    position: Staff Site Reliability Engineer
+    location: Dublin, Ireland
+    start_date: January 2021
+    end_date: Present
+    achievements:
+      - Led the design and implementation of a global observability platform, reducing MTTR by 45% and improving system reliability across 200+ microservices.
+      - Architected and deployed infrastructure-as-code solutions using Terraform, managing 100+ AWS accounts and enabling self-service infrastructure for 500+ engineers.
+      - Implemented zero-downtime deployment strategies for critical payment services handling $500M+ daily transaction volume.
+      - Established SLO frameworks and error budgets for core services, improving uptime from 99.9% to 99.99%.
+      - Built an incident management system integrating with PagerDuty and Slack, reducing incident response time by 35%.
+      - Mentored junior SREs and developed technical onboarding programs, contributing to 90% team growth in 2 years.
+  
+  - company: Workday
+    position: Senior SRE
+    location: Dublin, Ireland
+    start_date: March 2018
+    end_date: December 2020
+    achievements:
+      - Led the migration of 50+ applications from on-premises to AWS, improving reliability and reducing operational costs by 30%.
+      - Designed and implemented auto-scaling solutions for variable-load services, optimizing resource utilization and reducing cloud costs by 25%.
+      - Created a comprehensive monitoring stack using Prometheus, Grafana, and ELK, providing real-time visibility into system health.
+      - Automated routine operational tasks with Python and Ansible, reclaiming 20+ engineering hours weekly.
+      - Conducted capacity planning exercises and performance testing, ensuring infrastructure scalability for peak load periods.
+
+# You can add additional sections as needed - education, certifications, projects, etc.

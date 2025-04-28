@@ -208,19 +208,64 @@ a:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.timeline-date {
-  font-weight: bold;
+/* Timeline content specialization styling */
+.specialization {
+  font-style: italic;
   color: #2c3e50;
+  margin-top: 8px;
   margin-bottom: 5px;
 }
 
-/* Add separate colors for jobs and certifications */
-.timeline-item.left .timeline-content {
-  border-left: 4px solid #3498db; /* Blue for education/certifications */
+.technical-proficiencies {
+  margin-bottom: 12px;
+  font-size: 10pt;
+  line-height: 1.4;
 }
 
+.key-projects, .key-accomplishments, .notable-projects {
+  margin-top: 10px;
+  border-top: 1px dashed #e1e4e8;
+  padding-top: 8px;
+}
+
+.key-projects h4, .key-accomplishments h4, .notable-projects h4 {
+  font-size: 10pt;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.key-projects ul, .key-accomplishments ul, .notable-projects ul {
+  margin-top: 0;
+}
+
+/* Enhanced certificate styling */
+.timeline-item.left .timeline-content {
+  border-left: 4px solid #3498db; /* Blue for education/certifications */
+  padding-left: 15px;
+}
+
+/* Enhanced job styling */
 .timeline-item.right .timeline-content {
   border-left: 4px solid #e74c3c; /* Red for work experience */
+  padding-left: 15px;
+}
+
+/* Certificate ID styling */
+.timeline-item.left .timeline-content div:last-child {
+  font-size: 9pt;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Timeline date enhancement */
+.timeline-date {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  border-bottom: 1px dotted #e1e4e8;
+  padding-bottom: 3px;
+  display: inline-block;
 }
 
 /* Job entry styling */

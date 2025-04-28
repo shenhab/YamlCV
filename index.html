@@ -1,261 +1,106 @@
----
-layout: default
-title: Mahmoud Elshenhab - Site Reliability Engineer
-description: Professional CV of Mahmoud Elshenhab - Staff Site Reliability Engineer
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.data.cv.personal.name }} - Resume</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta name="description" content="Professional resume of {{ site.data.cv.personal.name }} - {{ site.data.cv.personal.title }}">
+  <!-- Add any other meta tags, fonts, or script includes you need -->
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-left">
+        <h1>{{ site.data.cv.personal.name }}</h1>
+        <h2>{{ site.data.cv.personal.title }}</h2>
+      </div>
+      <div class="header-right">
+        {% if site.data.cv.personal.email %}<p><i class="fas fa-envelope"></i> {{ site.data.cv.personal.email }}</p>{% endif %}
+        {% if site.data.cv.personal.phone %}<p><i class="fas fa-phone"></i> {{ site.data.cv.personal.phone }}</p>{% endif %}
+        {% if site.data.cv.personal.location %}<p><i class="fas fa-map-marker-alt"></i> {{ site.data.cv.personal.location }}</p>{% endif %}
+        {% if site.data.cv.personal.linkedin %}<p><i class="fab fa-linkedin"></i> <a href="{{ site.data.cv.personal.linkedin }}" target="_blank">LinkedIn</a></p>{% endif %}
+        {% if site.data.cv.personal.github %}<p><i class="fab fa-github"></i> <a href="{{ site.data.cv.personal.github }}" target="_blank">GitHub</a></p>{% endif %}
+      </div>
+    </header>
 
-<div class="cv-container">
-    <h1>Mahmoud Elshenhab</h1>
+    <section class="summary">
+      <h2>Professional Summary</h2>
+      <p>{{ site.data.cv.summary }}</p>
+    </section>
 
-    <div class="contact-info">
-        mahmoud.alshinhab@gmail.com | <a href="https://www.linkedin.com/in/Shenhab">LinkedIn</a> | <a href="https://github.com/shenhab">GitHub</a> | <a href="https://www.gurutux.com">Portfolio</a> | +353 86 461 9975 | Co. Kildare, Ireland
-    </div>
+    <section class="skills">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        {% for category in site.data.cv.skills %}
+          <div class="skill-category">
+            <h3>{{ category.category }}</h3>
+            <ul>
+              {% for item in category.items %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
 
-    <h2>PROFESSIONAL SUMMARY</h2>
-    <p>Experienced Site Reliability Engineer with expertise in database management, Linux systems, and infrastructure automation. Specializing in improving operational efficiency, automating workflows, and enhancing system reliability. Skilled in troubleshooting complex infrastructure issues and implementing solutions that reduce manual intervention.</p>
+    <section class="experience">
+      <h2>Professional Experience</h2>
+      <div class="timeline">
+        {% for job in site.data.cv.experience %}
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">
+              <span>{{ job.date }}</span>
+            </div>
+            <div class="timeline-content">
+              <h3>{{ job.title }}</h3>
+              <h4>{{ job.company }} | {{ job.location }}</h4>
+              <ul>
+                {% for item in job.responsibilities %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
 
-    <h2>SKILLS</h2>
-    <div class="skills-container">
-        <span class="skill">Kubernetes</span>
-        <span class="skill">Linux</span>
-        <span class="skill">MySQL</span>
-        <span class="skill">PostgreSQL</span>
-        <span class="skill">AWS</span>
-        <span class="skill">Python</span>
-        <span class="skill">Ruby</span>
-        <span class="skill">Ansible</span>
-        <span class="skill">Puppet</span>
-        <span class="skill">Grafana</span>
-        <span class="skill">Splunk</span>
-        <span class="skill">ServiceNow</span>
-        <span class="skill">System Architecture</span>
-        <span class="skill">Automation</span>
-        <span class="skill">GCP</span>
-        <span class="skill">JavaScript</span>
-        <span class="skill">HTML</span>
-        <span class="skill">OKTA</span>
-        <span class="skill">Auth0</span>
-    </div>
+    <section class="education">
+      <h2>Education</h2>
+      <div class="timeline">
+        {% for edu in site.data.cv.education %}
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">
+              <span>{{ edu.date }}</span>
+            </div>
+            <div class="timeline-content">
+              <h3>{{ edu.degree }}</h3>
+              <h4>{{ edu.institution }}</h4>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
 
-    <!-- Timeline container for experience and education -->
-    <div class="timeline-container">
-        <div class="timeline-line"></div>
-        
-        <!-- Education on left side -->
-        <div class="timeline-item left">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Bachelor of Computer Sciences</h3>
-                <div class="timeline-date">September 2005 - June 2009</div>
-                <div>Misr Higher Institute for Commerce & Computers | Egypt</div>
-            </div>
-        </div>
-        
-        <!-- System Administrator job on right side -->
-        <div class="timeline-item right">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3 class="job-title">System Administrator</h3>
-                <div class="job-metadata">International Turnkey Systems | Egypt</div>
-                <div class="timeline-date">October 2011 - March 2012</div>
-                <div class="job-details">
-                    <ul>
-                        <li>Administered Microsoft Windows and Linux (VMware ESX) servers</li>
-                        <li>Managed MS SQL Server and Sybase database environments</li>
-                        <li>Automated routine maintenance tasks using PowerShell and Bash scripts</li>
-                        <li>Provided technical support to end-users for system and database issues</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <!-- NIX System Engineer job on right side -->
-        <div class="timeline-item right">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3 class="job-title">NIX System Engineer</h3>
-                <div class="job-metadata">Link Data Center | Egypt</div>
-                <div class="timeline-date">March 2012 - October 2014</div>
-                <div class="job-details">
-                    <ul>
-                        <li>Migrated hosting solutions to NginX, improving performance and reliability by 30%</li>
-                        <li>Created distributed media hosting solutions for high-traffic websites</li>
-                        <li>Developed scripts for DNS migration and service monitoring, reducing downtime by 45%</li>
-                        <li>Implemented backup and recovery procedures, ensuring 99.9% data protection</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Freelance System Engineer job on right side -->
-        <div class="timeline-item right">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3 class="job-title">Freelance System Engineer</h3>
-                <div class="job-metadata">Self-employed | Egypt</div>
-                <div class="timeline-date">October 2014 - September 2015</div>
-                <div class="job-details">
-                    <ul>
-                        <li>Built custom multimedia system solutions using DLNA/Torrent technologies</li>
-                        <li>Implemented database solutions for multi-branch business operations</li>
-                        <li>Developed custom scripts to automate routine system maintenance tasks</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Cloud Computing Concepts certification on left side -->
-        <div class="timeline-item left">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Cloud Computing Concepts (Part 1 & 2)</h3>
-                <div class="timeline-date">2015</div>
-                <div>University of Illinois at Urbana-Champaign</div>
-            </div>
-        </div>
-        
-        <!-- Cloud Support Engineer I job on right side -->
-        <div class="timeline-item right">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3 class="job-title">Cloud Support Engineer I</h3>
-                <div class="job-metadata">Amazon Web Services (AWS) | Ireland</div>
-                <div class="timeline-date">November 2015 - September 2017</div>
-                <div class="job-details">
-                    <ul>
-                        <li>Migrated customer databases across multiple regions with minimal service disruption</li>
-                        <li>Conducted in-depth investigations of failure root causes for customers</li>
-                        <li>Created bash and python scripts to assist customers in automating database tasks</li>
-                        <li>Discovered and reported bugs in AWS internal workflows affecting thousands of customers</li>
-                        <li>Mentored and trained new hires to expert level on database technologies</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Introduction to Computer Science certification on left side -->
-        <div class="timeline-item left">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Introduction to Computer Science and Programming Using Python</h3>
-                <div class="timeline-date">March 2017</div>
-                <div>MITx</div>
-            </div>
-        </div>
-        
-        <!-- Cloud Support Engineer II job on right side -->
-        <div class="timeline-item right">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3 class="job-title">Cloud Support Engineer II</h3>
-                <div class="job-metadata">Amazon Web Services (AWS) | Ireland</div>
-                <div class="timeline-date">October 2017 - April 2018</div>
-                <div class="job-details">
-                    <ul>
-                        <li>Provided technical support to AWS Enterprise customers with complex infrastructure issues</li>
-                        <li>Recognized as an RDS Subject Matter Expert within the organization</li>
-                        <li>Assisted customers with database migrations, minimizing downtime to less than 5 minutes</li>
-                        <li>Collaborated with solution architects to implement high availability and performance solutions</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <!-- System Engineer I job on right side -->
-        <div class="timeline-item right">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3 class="job-title">System Engineer I</h3>
-                <div class="job-metadata">Amazon Web Services (AWS) | Ireland</div>
-                <div class="timeline-date">May 2018 - November 2019</div>
-                <div class="job-details">
-                    <ul>
-                        <li>Automated deployments and enhanced service quality metrics across multiple teams</li>
-                        <li>Implemented feature enhancements to improve internal service reliability</li>
-                        <li>Collaborated with cross-functional teams to develop standardized automation practices</li>
-                        <li>Created monitoring dashboards to visualize system performance and identify bottlenecks</li>
-                        <li>Reduced mean time to resolution (MTTR) by 35% through improved troubleshooting workflows</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <!-- System Development Engineer job on right side -->
-        <div class="timeline-item right">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3 class="job-title">System Development Engineer</h3>
-                <div class="job-metadata">Amazon Web Services (AWS) | Ireland</div>
-                <div class="timeline-date">December 2019 - November 2021</div>
-                <div class="job-details">
-                    <ul>
-                        <li>Automated region builds for AWS networking services, reducing deployment time by 40%</li>
-                        <li>Participated in on-call rotation for production fleet ownership and incident response</li>
-                        <li>Reduced patching time from 40+ days to 7 days through workflow optimization</li>
-                        <li>Developed zero-touch build workflows for bastion fleets, eliminating manual configuration steps</li>
-                        <li>Fixed critical software bug using the Gossip protocol for monitoring fleets, improving system stability</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Microsoft AZ-900 certification on left side -->
-        <div class="timeline-item left">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Microsoft AZ-900</h3>
-                <div class="timeline-date">October 2021</div>
-                <div>Microsoft</div>
-            </div>
-        </div>
-        
-        <!-- Staff Site Reliability Engineer job on right side -->
-        <div class="timeline-item right">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3 class="job-title">Staff Site Reliability Engineer</h3>
-                <div class="job-metadata">ServiceNow | Remote</div>
-                <div class="timeline-date">September 2021 - September 2024</div>
-                <div class="job-details">
-                    <ul>
-                        <li>Maintain and enhance the reliability of ServiceNow Cloud infrastructure through proactive monitoring and optimization</li>
-                        <li>Developed internal automation services to improve infrastructure stability and performance, reducing system outages by 25%</li>
-                        <li>Streamlined alert handling processes, reducing response time by 30%</li>
-                        <li>Collaborated with customer support teams to resolve complex technical issues affecting enterprise clients</li>
-                        <li>Led initiatives to improve team processes and knowledge sharing, increasing team efficiency by 20%</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Staff Compliance Automation Engineer job on right side -->
-        <div class="timeline-item right">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3 class="job-title">Staff Compliance Automation Engineer</h3>
-                <div class="job-metadata">OKTA | Remote</div>
-                <div class="timeline-date">September 2024 - Present</div>
-                <div class="job-details">
-                    <ul>
-                        <li>Developed Python-based automation tools that streamline evidence collection processes, reducing manual effort by 40%</li>
-                        <li>Architected and implemented solutions to automate manual workflows, significantly improving team productivity</li>
-                        <li>Created integrated systems leveraging GCP and AWS for secure, scalable compliance solutions</li>
-                        <li>Implemented SSO authentication using OKTA and Auth0 to enhance security protocols and user experience</li>
-                        <li>Built responsive web interfaces using JavaScript and HTML to provide user-friendly access to compliance tools</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    <section class="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        {% for cert in site.data.cv.certifications %}
+          <li>{{ cert }}</li>
+        {% endfor %}
+      </ul>
+    </section>
 
-    <h2>PROJECTS</h2>
-    <div class="project-entry">
-        <h3>Football Player Data Visualization</h3>
-        <ul>
-            <li>Developed application visualizing football player performance statistics from FBref.com</li>
-            <li>Created comparison tools for evaluating player abilities across different metrics</li>
-            <li>Implemented user-friendly interface for non-technical users to understand complex sports data</li>
-            <li>Utilized modern web technologies to present statistical data in an intuitive format</li>
-        </ul>
-    </div>
-</div>
+    <footer>
+      <p><a href="ats-resume.html">View ATS-friendly Resume</a></p>
+      <p>Last updated: {{ site.time | date: '%B %Y' }}</p>
+    </footer>
+  </div>
+
+  <!-- Add any scripts you need at the end of the body -->
+</body>
+</html>

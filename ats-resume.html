@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.data.cv.personal.name }} - ATS-friendly Resume</title>
+    <meta name="description" content="ATS-friendly resume of {{ site.data.cv.personal.name }} - {{ site.data.cv.personal.title }}">
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 30px;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        
+        h2 {
+            font-size: 22px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .job {
+            margin-bottom: 25px;
+        }
+        
+        .job-header {
+            margin-bottom: 10px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .company {
+            font-weight: bold;
+        }
+        
+        .date {
+            color: #666;
+        }
+
+        .skills-list {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #1976D2;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                font-size: 12px;
+            }
+            
+            .back-link {
+                display: none;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+            
+            h2 {
+                font-size: 16px;
+            }
+            
+            h3 {
+                font-size: 14px;
+            }
+            
+            h4 {
+                font-size: 13px;
+            }
+            
+            .contact-info {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <header>
+            <h1>{{ site.data.cv.personal.name }}</h1>
+            <h2>{{ site.data.cv.personal.title }}</h2>
+            <div class="contact-info">
+                {% if site.data.cv.personal.email %}<p>Email: {{ site.data.cv.personal.email }}</p>{% endif %}
+                {% if site.data.cv.personal.phone %}<p>Phone: {{ site.data.cv.personal.phone }}</p>{% endif %}
+                {% if site.data.cv.personal.linkedin %}<p>LinkedIn: {{ site.data.cv.personal.linkedin }}</p>{% endif %}
+                {% if site.data.cv.personal.github %}<p>GitHub: {{ site.data.cv.personal.github }}</p>{% endif %}
+                {% if site.data.cv.personal.location %}<p>Location: {{ site.data.cv.personal.location }}</p>{% endif %}
+            </div>
+        </header>
+        
+        <section>
+            <h2>PROFESSIONAL SUMMARY</h2>
+            <p>{{ site.data.cv.summary }}</p>
+        </section>
+        
+        <section>
+            <h2>SKILLS</h2>
+            {% for category in site.data.cv.skills %}
+            <div class="skill-section">
+                <h3>{{ category.category }}</h3>
+                <p>{{ category.items | join: ", " }}</p>
+            </div>
+            {% endfor %}
+        </section>
+        
+        <section>
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+            {% for job in site.data.cv.experience %}
+            <div class="job">
+                <h3>{{ job.title }}</h3>
+                <p class="company">{{ job.company }} | {{ job.date }} | {{ job.location }}</p>
+                <ul>
+                    {% for item in job.responsibilities %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </section>
+        
+        <section>
+            <h2>EDUCATION</h2>
+            {% for edu in site.data.cv.education %}
+            <div class="education">
+                <h3>{{ edu.degree }}</h3>
+                <p>{{ edu.institution }} | {{ edu.date }}</p>
+            </div>
+            {% endfor %}
+        </section>
+        
+        <section>
+            <h2>CERTIFICATIONS</h2>
+            <ul>
+                {% for cert in site.data.cv.certifications %}
+                <li>{{ cert }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        
+        <footer>
+            <p><a href="index.html">View Interactive Resume</a></p>
+        </footer>
+    </div>
+</body>
+</html>
