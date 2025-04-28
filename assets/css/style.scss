@@ -21,6 +21,10 @@ body {
   }
 }
 
+.cv-container {
+  max-width: 100%;
+}
+
 /* Typography */
 h1 {
   font-size: 18pt;
@@ -98,33 +102,36 @@ a:hover {
   font-size: 10pt;
 }
 
-/* Work experience styling */
+/* Job entry styling */
+.job-entry {
+  margin-bottom: 1em;
+}
+
 .job-title {
   font-weight: bold;
-  display: inline;
+  margin-bottom: 0.2em;
 }
 
-.company {
-  display: inline;
-}
-
-.job-location {
-  display: inline;
-}
-
-.job-date {
-  display: inline;
-  font-style: normal;
+.job-metadata {
+  font-size: 11pt;
+  margin-bottom: 0.5em;
 }
 
 .job-details {
-  margin-top: 0;
-  font-style: normal;
+  margin-top: 0.3em;
 }
 
-/* Ensure proper whitespace */
-hr {
-  display: none;
+.job-details ul {
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+.education-entry {
+  margin-bottom: 1em;
+}
+
+.project-entry {
+  margin-bottom: 1em;
 }
 
 /* Print specific styling */
@@ -142,5 +149,9 @@ hr {
   
   .page-break {
     page-break-before: always;
+  }
+  
+  @page {
+    margin: 1in;
   }
 }
