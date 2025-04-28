@@ -97,7 +97,7 @@ layout: default
     .header {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       flex-wrap: wrap;
     }
     
@@ -121,6 +121,54 @@ layout: default
       width: 20px;
       color: #3498db;
     }
+
+    /* ATS Resume Link Button */
+    .ats-button-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    
+    .ats-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .ats-button:hover {
+      background-color: #2980b9;
+      text-decoration: none;
+    }
+
+    .ats-button i {
+      margin-right: 8px;
+    }
+    
+    /* Table of Contents */
+    .toc {
+      background-color: #f8f9fa;
+      padding: 15px 20px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      border-left: 4px solid #3498db;
+    }
+    
+    .toc h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    
+    .toc ul {
+      margin-bottom: 0;
+    }
+    
+    .toc a {
+      display: inline-block;
+      margin: 5px 0;
+    }
     
     /* Skills Section */
     .skills-container {
@@ -132,6 +180,10 @@ layout: default
     .skill-category {
       flex: 1 0 250px;
       margin-bottom: 20px;
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     
     .skill-category h3 {
@@ -141,11 +193,32 @@ layout: default
     }
     
     /* Experience & Education Timeline */
+    /* Company color mapping for the timeline */
+    .company-servicenow {
+      --company-color: #62B132; /* ServiceNow Green */
+    }
+    
+    .company-aws {
+      --company-color: #FF9900; /* AWS Orange */
+    }
+    
+    .company-freelance {
+      --company-color: #7B68EE; /* Freelance Purple */
+    }
+    
+    .company-linkdev {
+      --company-color: #0077B6; /* Link Data Center Blue */
+    }
+    
+    .company-its {
+      --company-color: #E63946; /* ITS Red */
+    }
+    
     .timeline-item {
       position: relative;
       padding-left: 30px;
       margin-bottom: 30px;
-      border-left: 2px solid #3498db;
+      border-left: 2px solid var(--company-color, #3498db);
     }
     
     .timeline-item:last-child {
@@ -158,8 +231,9 @@ layout: default
       top: 0;
       width: 18px;
       height: 18px;
-      background-color: #3498db;
+      background-color: var(--company-color, #3498db);
       border-radius: 50%;
+      box-shadow: 0 0 0 3px #fff;
     }
     
     .timeline-date {
@@ -172,12 +246,14 @@ layout: default
     /* Certification & Projects Styles */
     .cert-item, .project-item {
       margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #eee;
+      padding: 15px 20px;
+      border-radius: 5px;
+      background-color: #f8f9fa;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     
     .cert-item:last-child, .project-item:last-child {
-      border-bottom: none;
+      margin-bottom: 0;
     }
     
     .cert-item h3, .project-item h3 {
@@ -249,6 +325,41 @@ layout: default
         flex-direction: column;
       }
     }
+
+    /* Section Anchors for TOC */
+    section {
+      scroll-margin-top: 20px;
+    }
+    
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #3498db;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background-color: #2980b9;
+      text-decoration: none;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -268,12 +379,28 @@ layout: default
       </div>
     </header>
 
-    <section class="summary">
+    <div class="ats-button-container">
+      <a href="ats-resume.html" class="ats-button"><i class="fas fa-file-alt"></i> View ATS-Friendly Resume</a>
+    </div>
+
+    <div class="toc">
+      <h3><i class="fas fa-list"></i> Table of Contents</h3>
+      <ul>
+        <li><a href="#summary">Professional Summary</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Professional Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        {% if site.data.cv.projects %}<li><a href="#projects">Projects</a></li>{% endif %}
+      </ul>
+    </div>
+
+    <section id="summary" class="summary">
       <h2>Professional Summary</h2>
       <p>{{ site.data.cv.summary }}</p>
     </section>
 
-    <section class="skills">
+    <section id="skills" class="skills">
       <h2>Skills</h2>
       <div class="skills-container">
         {% for category in site.data.cv.skills %}
@@ -290,32 +417,37 @@ layout: default
       </div>
     </section>
 
-    <section class="experience">
+    <section id="experience" class="experience">
       <h2>Professional Experience</h2>
-      {% for job in site.data.cv.experience %}
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">
-            {% if job.end_date == "Present" %}
-              <span>{{ job.start_date }} - {{ job.end_date }}</span>
-            {% else %}
-              <span>{{ job.start_date }} - {{ job.end_date }}</span>
-            {% endif %}
+      {% assign companies = site.data.cv.experience | map: 'company' | uniq %}
+      {% for company in companies %}
+        {% assign company_class = company | downcase | replace: ' ', '-' | replace: '(', '' | replace: ')', '' %}
+        {% assign company_jobs = site.data.cv.experience | where: "company", company %}
+        {% for job in company_jobs %}
+          <div class="timeline-item company-{{ company_class }}">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">
+              {% if job.end_date == "Present" %}
+                <span>{{ job.start_date }} - {{ job.end_date }}</span>
+              {% else %}
+                <span>{{ job.start_date }} - {{ job.end_date }}</span>
+              {% endif %}
+            </div>
+            <div class="timeline-content">
+              <h3>{{ job.position }}</h3>
+              <h4>{{ job.company }} | {{ job.location }}</h4>
+              <ul>
+                {% for item in job.achievements %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </div>
           </div>
-          <div class="timeline-content">
-            <h3>{{ job.position }}</h3>
-            <h4>{{ job.company }} | {{ job.location }}</h4>
-            <ul>
-              {% for item in job.achievements %}
-                <li>{{ item }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
+        {% endfor %}
       {% endfor %}
     </section>
 
-    <section class="education">
+    <section id="education" class="education">
       <h2>Education</h2>
       {% for edu in site.data.cv.education %}
         <div class="timeline-item">
@@ -332,7 +464,7 @@ layout: default
       {% endfor %}
     </section>
 
-    <section class="certifications">
+    <section id="certifications" class="certifications">
       <h2>Certifications</h2>
       {% for cert in site.data.cv.certifications %}
         <div class="cert-item">
@@ -342,14 +474,14 @@ layout: default
             <span><strong>Date:</strong> {{ cert.date }}</span> • 
             <span><strong>ID:</strong> {{ cert.id }}</span>
           </div>
-          {% if cert.url %}<p><a href="{{ cert.url }}" target="_blank">View Certificate</a></p>{% endif %}
+          {% if cert.url %}<p><a href="{{ cert.url }}" target="_blank"><i class="fas fa-certificate"></i> View Certificate</a></p>{% endif %}
           {% if cert.notes %}<p><em>{{ cert.notes }}</em></p>{% endif %}
         </div>
       {% endfor %}
     </section>
 
     {% if site.data.cv.projects %}
-    <section class="projects">
+    <section id="projects" class="projects">
       <h2>Projects</h2>
       {% for project in site.data.cv.projects %}
         <div class="project-item">
@@ -361,9 +493,34 @@ layout: default
     {% endif %}
 
     <footer>
-      <p><a href="ats-resume.html">View ATS-friendly Resume</a></p>
       <p>Last updated: {{ site.time | date: '%B %Y' }}</p>
+      <p><a href="ats-resume.html">View ATS-friendly Resume</a></p>
     </footer>
   </div>
+
+  <a href="#" class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up"></i></a>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Back to top button functionality
+      const backToTop = document.getElementById('back-to-top');
+      
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      });
+      
+      backToTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
