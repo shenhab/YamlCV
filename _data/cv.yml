@@ -47,11 +47,24 @@ skills:
 
 # Professional Experience
 experience:
+- company: OKTA
+    position: Staff Compliance Automation Engineer
+    location: Dublin, Ireland (Remote)
+    start_date: September 2023
+    end_date: Present
+    achievements:
+      - Developed an internal survey tool to automate the collection of compliance-related information from various teams.
+      - Collaborated with cross-functional teams to ensure the tool met compliance requirements.
+      - Implemented a user-friendly interface to facilitate easy data entry and retrieval.
+      - Designed and implemented a CI pipeline to automate testing the survey tool, ensuring high code quality and reliability.
+      - Mentored junior engineers on best practices for developing secure and efficient software solutions.
+      - working on designing and implementing a project to automate the collection of compliance evidence from various teams.
+
   - company: ServiceNow
     position: Staff Site Reliability Engineer
-    location: Dublin, Ireland
+    location: Dublin, Ireland (Remote)
     start_date: September 2021
-    end_date: Present
+    end_date: September 2023
     achievements:
       - Maintain and improve the operational reliability of the ServiceNow Cloud platform.
       - Enhance infrastructure stability and performance utilizing internal automation services.
@@ -86,7 +99,7 @@ experience:
   
   - company: Amazon Web Services (AWS)
     position: Cloud Support Engineer II
-    location: Dublin, Ireland
+    location: Cape Town, South Africa
     start_date: October 2017
     end_date: April 2018
     achievements:
@@ -97,7 +110,7 @@ experience:
   
   - company: Amazon Web Services (AWS)
     position: Cloud Support Engineer I
-    location: Dublin, Ireland
+    location: Cape Town, South Africa
     start_date: November 2015
     end_date: September 2017
     achievements:
