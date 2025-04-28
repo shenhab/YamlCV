@@ -13,11 +13,14 @@ personal:
   
 # Professional Summary
 summary: >
-  Experienced Site Reliability Engineer with a robust background in database management, Linux systems, and infrastructure automation. 
-  Currently maintaining and improving the reliability of ServiceNow's cloud infrastructure. Proven track record at Amazon Web Services 
-  in automating region builds, optimizing patching workflows, and supporting enterprise customers with complex infrastructure issues. 
-  Skilled in troubleshooting, automation, and systems design, with a strong focus on improving operational efficiency and reducing 
-  manual intervention. Passionate about leveraging technology to solve critical business problems and enhance system reliability.
+  Site Reliability Engineer with extensive experience in database administration (MySQL, PostgreSQL, MariaDB, Amazon Aurora), 
+  Linux system engineering, and infrastructure automation. Currently focused on maintaining and enhancing the reliability of 
+  ServiceNow's cloud infrastructure through proactive monitoring, alert management automation, and process optimization. 
+  Previously at Amazon Web Services (AWS), contributed significantly to automating region builds, streamlining patching 
+  workflows reducing cycle times from 40+ days to 7 days, and providing expert-level support for enterprise customers on 
+  complex AWS infrastructure, particularly Relational Database Services (RDS). Proficient in troubleshooting complex system 
+  issues, developing automation scripts (Python, Ruby, Bash), and designing resilient systems to improve operational 
+  efficiency and minimize manual intervention.
 
 # Skills
 skills:
@@ -34,81 +37,80 @@ skills:
   - category: Databases
     items: MySQL, PostgreSQL, MS SQL Server, Sybase, MariaDB, Amazon Aurora
   - category: Operating Systems
-    items: Linux, Windows, VMware ESX, Proxmox
+    items: Linux (CentOS/RHEL), Windows Server, VMware ESX, Proxmox
   - category: Web Services
-    items: NginX, Apache, SMTP, Bind, WordPress, Varnish
+    items: NginX, Apache HTTP Server, SMTP (Postfix), DNS (Bind), WordPress, Varnish Cache
   - category: Other
-    items: ServiceNow, Software Debugging, System Development, Services Architecture, Dashboarding, n8n, CI/CD, vibecode, GitHub Actions, GitHub, Jira, Confluence, Slack
+    items: ServiceNow Platform, Software Debugging, System Development, Services Architecture, Dashboarding, n8n, CI/CD, GitHub Actions, GitHub, Jira, Confluence, Slack
   - category: Networking
-    items: TCP/IP, DNS, DHCP, VPN, Firewalls
+    items: TCP/IP, DNS, DHCP, VPN, Firewalls, DLNA
 
 # Professional Experience
 experience:
   - company: ServiceNow
     position: Staff Site Reliability Engineer
-    location: Ireland
+    location: Dublin, Ireland
     start_date: September 2021
     end_date: Present
     achievements:
-      - Maintaining the reliability of ServiceNow Cloud.
-      - Improving infrastructure with internal automation services.
-      - Handling alerts and collaborating with customer support teams.
-      - Automating alert handling to reduce workload.
-      - Improving internal team processes.
+      - Maintain and improve the operational reliability of the ServiceNow Cloud platform.
+      - Enhance infrastructure stability and performance utilizing internal automation services.
+      - Manage and respond to system alerts, collaborating effectively with customer support teams to ensure timely resolution.
+      - Develop automation processes for alert handling, thereby reducing manual workload and improving response accuracy.
+      - Contribute to the refinement of internal team operational procedures and workflows.
   
   - company: Amazon Web Services (AWS)
     position: System Development Engineer
-    location: Ireland
+    location: Dublin, Ireland
     start_date: December 2019
     end_date: November 2021
     achievements:
-      - Automating region builds for AWS networking services.
-      - On-call rotation and production fleet ownership.
-      - Automating deployments and improving service quality.
-      - Fixing issues, developing new features, and enhancing automation.
-      - Fixed a software bug using the Gossip protocol for monitoring fleets.
-      - Expert in automating patching workflows across multiple teams.
-      - Reduced patching time from 40+ days to 7 days.
-      - Developing zero-touch build workflows for bastion fleets.
+      - Developed automation for AWS networking service region builds, enhancing deployment speed and consistency.
+      - Participated in on-call rotation, assuming ownership for production fleet reliability, maintenance, and incident response.
+      - Engineered automation solutions for service deployments, contributing to improved service quality and reduced release cycle times.
+      - Resolved complex system issues, developed new service features, and enhanced operational automation capabilities.
+      - Resolved a critical software defect related to fleet monitoring by applying expertise in the Gossip protocol.
+      - Served as a subject matter expert in automating patching workflows; led a project reducing patching cycle time from over 40 days to 7 days.
+      - Initiated development of zero-touch build workflows for bastion fleets to minimize manual configuration.
   
   - company: Amazon Web Services (AWS)
     position: System Engineer I
-    location: Ireland
+    location: Dublin, Ireland
     start_date: May 2018
     end_date: November 2019
     achievements:
-      - Automating region builds for AWS networking services.
-      - On-call rotation and production fleet ownership.
-      - Automating deployments and improving service quality.
-      - Fixing issues, developing new features, and enhancing automation.
+      - Developed automation for AWS networking service region builds, enhancing deployment speed and consistency.
+      - Participated in on-call rotation, assuming ownership for production fleet reliability, maintenance, and incident response.
+      - Engineered automation solutions for service deployments, contributing to improved service quality and reduced release cycle times.
+      - Resolved complex system issues, developed new service features, and enhanced operational automation capabilities.
   
   - company: Amazon Web Services (AWS)
     position: Cloud Support Engineer II
-    location: South Africa
+    location: Dublin, Ireland
     start_date: October 2017
     end_date: April 2018
     achievements:
-      - Supporting AWS Enterprise customers with infrastructure issues.
-      - Migrating databases with minimal downtime.
-      - Collaborating with solution architects for high availability and performance solutions.
+      - Provided expert-level technical support to AWS Enterprise customers, diagnosing and resolving complex infrastructure issues, specializing in Relational Database Services (RDS).
+      - Executed database migrations involving MySQL, MariaDB, and Amazon Aurora across multiple AWS regions with minimal downtime.
+      - Conducted in-depth root cause analyses for system and database failures for both customer and internal AWS service teams.
+      - Collaborated with AWS Solution Architects to design and recommend best practices for highly available, durable, and performant database solutions.
   
   - company: Amazon Web Services (AWS)
     position: Cloud Support Engineer I
-    location: South Africa
+    location: Dublin, Ireland
     start_date: November 2015
     end_date: September 2017
     achievements:
-      - Recognized as an RDS Subject Matter Expert.
-      - Assisted several customers in migrating to and from Aurora, MySQL, and MariaDB databases across multiple regions, minimizing downtime to less than 5 minutes.
-      - Conducted in-depth investigations of failure root causes for customers and the company.
-      - Collaborated directly with Amazon's solution architects to provide best practices for high availability, durability, and performance.
-      - Recommended specific AWS products based on customer needs, workloads, features, and budgets.
-      - Advised internal and external customers on redesigning applications to optimize communication methods with databases, significantly improving workloads.
-      - Gained extensive knowledge in scalable, distributed, and highly available solutions.
-      - Created bash and python scripts to assist customers in automating their tasks.
-      - Discovered and reported bugs in AWS internal workflows affecting thousands of customers, and developed scripts to consistently reproduce issues for investigation by the service team, leading to fleet-wide patches.
-      - Automated onboarding training for MySQL, MariaDB, and Aurora.
-      - Mentored and trained new hires to expert levels.
+      - Achieved recognition as an RDS Subject Matter Expert (SME).
+      - Executed numerous database migrations involving MySQL, MariaDB, and Amazon Aurora across multiple AWS regions, consistently achieving minimal downtime (under 5 minutes).
+      - Conducted in-depth root cause analyses for system and database failures for both customer and internal AWS service teams.
+      - Collaborated with AWS Solution Architects to design and recommend best practices for highly available, durable, and performant database solutions.
+      - Advised customers on optimal AWS service selection based on workload requirements, feature needs, and budget constraints.
+      - Guided internal and external clients on application redesign to optimize database communication methods, significantly improving workload performance.
+      - Developed Python and Bash scripts to automate operational tasks for customers.
+      - Identified and reported bugs in AWS internal workflows impacting customer experience; created reproducible test cases facilitating service team investigations and subsequent fleet-wide patches.
+      - Developed automated onboarding training materials for MySQL, MariaDB, and Aurora support.
+      - Mentored and trained new Cloud Support Engineers to proficiency.
   
   - company: Freelance
     position: System Engineer
@@ -116,76 +118,81 @@ experience:
     start_date: October 2014
     end_date: September 2015
     achievements:
-      - Built a home multimedia system using DLNA/Torrent.
-      - Solved a local company's Access database issue for multi-branch operations.
+      - Designed and implemented a home multimedia streaming system leveraging DLNA and Torrent technologies on a Linux platform.
+      - Resolved multi-user access limitations for a local company's Microsoft Access database application, enabling concurrent operations across multiple branches.
   
-  - company: Link Data Center
+  - company: Link Data Center (LinkDev)
     position: NIX System Engineer
-    location: Egypt
+    location: Cairo, Egypt
     start_date: March 2012
     end_date: October 2014
     achievements:
-      - Server administration and project implementation.
-      - Migrated hosting solutions to NginX and created distributed media hosting solutions.
-      - Developed scripts for DNS migration and service monitoring.
+      - Administered Linux servers (primarily CentOS/RHEL) and led project implementations within a data center environment focused on web hosting.
+      - Executed migration of hosting infrastructure from Apache HTTP Server to Nginx.
+      - Designed and implemented distributed media hosting solutions for enhanced performance and scalability.
+      - Developed Bash scripts for automated DNS record migration and proactive service monitoring.
   
-  - company: International Turnkey Systems
+  - company: International Turnkey Systems (ITS)
     position: System Administrator
-    location: Egypt
+    location: Cairo, Egypt
     start_date: October 2011
     end_date: March 2012
     achievements:
-      - Server administration for Microsoft Windows, Linux (VMware ESX), MS SQL Server, and Sybase.
+      - Administered servers operating Microsoft Windows Server and Linux distributions within a VMware ESX virtualized environment.
+      - Managed database systems including Microsoft SQL Server and Sybase ASE.
 
 # Education
 education:
   - degree: Bachelor of Computer Sciences
     institution: Misr Higher Institute for Commerce & Computers
+    location: Mansoura, Egypt
     date: September 2005 - June 2009
-    details: Accumulative Grade - Good - 70.73%
+    details: Grade - Good (70.73%)
 
 # Certifications
 certifications:
-  - name: Cloud Computing Concepts (Part 1)
-    issuer: University of Illinois at Urbana-Champaign
-    date: March 2015
-    id: 4LVSBUDRWC
-    url: https://www.coursera.org/account/accomplishments/certificate/4LVSBUDRWC
-  
-  - name: Cloud Computing Concepts (Part 2)
-    issuer: University of Illinois at Urbana-Champaign
-    date: April 2015
-    id: 48W63NBRVF
-    url: https://www.coursera.org/account/accomplishments/certificate/48W63NBRVF
+  - name: Microsoft Certified - Azure Fundamentals (AZ-900)
+    issuer: Microsoft
+    date: October 22, 2021
+    id: I003-7698
+    url: https://www.credly.com/badges/53a71064-6981-4123-84cc-c77058ae328d
   
   - name: Introduction to Computer Science and Programming Using Python
-    issuer: MITx
-    date: March 2017
+    issuer: MITx (edX)
+    date: March 17, 2017
     id: 05a576b4853640b0bfe7b9b221a9fd5d
     url: https://courses.edx.org/certificates/05a576b4853640b0bfe7b9b221a9fd5d
   
-  - name: RH202 Red Hat Enterprise Linux 5 (RHCT/RHCE)
+  - name: Cloud Computing Concepts, Part 2
+    issuer: University of Illinois at Urbana-Champaign (Coursera)
+    date: April 27, 2015
+    id: 48W63NBRVF
+    url: https://www.coursera.org/account/accomplishments/certificate/48W63NBRVF
+  
+  - name: Cloud Computing Concepts, Part 1
+    issuer: University of Illinois at Urbana-Champaign (Coursera)
+    date: March 17, 2015
+    id: 4LVSBUDRWC
+    url: https://www.coursera.org/account/accomplishments/certificate/4LVSBUDRWC
+  
+  - name: Red Hat Certified System Administrator (RHCSA) - RHEL 5 (EX200)
     issuer: Red Hat
-    date: April 2009
+    date: April 16, 2009
     id: 100-108-729
     url: https://rhtapps.redhat.com/verify?certId=100-108-729
   
-  - name: EX200 RHCSA
+  - name: Former Red Hat Certified Technician (RHCT) - RHEL 5 (RH202)
     issuer: Red Hat
-    date: April 2009
+    date: April 16, 2009
     id: 100-108-729
     url: https://rhtapps.redhat.com/verify?certId=100-108-729
-  
-  - name: Microsoft AZ-900
-    issuer: Microsoft
-    date: October 2021
-    id: I003-7698
-    url: https://www.credly.com/badges/53a71064-6981-4123-84cc-c77058ae328d
+    notes: RHCT was superseded by RHCSA
 
 # Projects
 projects:
-  - title: Football Player Data Visualization
+  - title: Football Player Data Visualization Tool
     description: >
-      Developed software to visualize football player data from FBref.com, making it accessible and understandable for the general public.
-      Features include comparing player performances, making it easy to understand an unknown player's ability when compared to a known player.
-      Continuously developing new ideas to elevate football data analysis.
+      Developed a software application using Python (and relevant data analysis/visualization libraries) to process and visualize 
+      football player statistics sourced from FBref.com. Implemented features enabling comparative analysis of player performances, 
+      designed to make complex statistical data accessible and understandable to a general audience. Continuously exploring 
+      enhancements for football data analysis presentation.
