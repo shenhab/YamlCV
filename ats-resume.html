@@ -161,8 +161,9 @@ title: ATS-friendly Resume
                                 {% if site.data.cv.personal.email %}<p>Email: {{ site.data.cv.personal.email }}</p>{% endif %}
                                 {% if site.data.cv.personal.phone %}<p>Phone: {{ site.data.cv.personal.phone }}</p>{% endif %}
                                 {% if site.data.cv.personal.location %}<p>Location: {{ site.data.cv.personal.location }}</p>{% endif %}
-                                {% if site.data.cv.personal.linkedin %}<p>LinkedIn: {{ site.data.cv.personal.linkedin | replace: "https://", "" }}</p>{% endif %}
-                                {% if site.data.cv.personal.github %}<p>GitHub: {{ site.data.cv.personal.github | replace: "https://", "" }}</p>{% endif %}
+                                {% if site.data.cv.personal.linkedin %}<p>LinkedIn: {{ site.data.cv.personal.linkedin }}</p>{% endif %}
+                                {% if site.data.cv.personal.github %}<p>GitHub: {{ site.data.cv.personal.github }}</p>{% endif %}
+                                {% if site.data.cv.personal.website %}<p>Website: {{ site.data.cv.personal.website }}</p>{% endif %}
                             </div>
                         </div>
                     </div>
@@ -180,7 +181,12 @@ title: ATS-friendly Resume
                         <div class="col-md-6 mb-3">
                             <div class="skills-container">
                                 <h3>{{ category.category }}</h3>
-                                <p>{{ category.items }}</p>
+                                <ul class="skills-list">
+                                    {% assign skill_items = category.items | split: ", " %}
+                                    {% for skill in skill_items %}
+                                    <li>{{ skill | strip }}</li>
+                                    {% endfor %}
+                                </ul>
                             </div>
                         </div>
                         {% endfor %}
@@ -230,16 +236,22 @@ title: ATS-friendly Resume
                 <section>
                     <h2>PROJECTS</h2>
                     {% for project in site.data.cv.projects %}
-                    <div class="job mb-4">
+                    <div class="project-item mb-4">
                         <h3>{{ project.title }}</h3>
                         <p>{{ project.description }}</p>
+                        {% if project.description contains "https://" %}
+                        {% assign url_parts = project.description | split: "https://" %}
+                        {% assign last_part = url_parts | last %}
+                        {% assign url = "https://" | append: last_part | split: " " | first %}
+                        <p><strong>Project URL:</strong> {{ url }}</p>
+                        {% endif %}
                     </div>
                     {% endfor %}
                 </section>
                 
                 <div class="text-center my-4 buttons">
-                    <a href="#" onclick="printResume()" class="btn btn-primary me-2"><i class="fas fa-file-download"></i> Download PDF</a>
-                    <a href="index.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Interactive Resume</a>
+                    <a href="#" onclick="printResume()" class="btn btn-primary me-2">Download PDF</a>
+                    <a href="index.html" class="btn btn-secondary">Interactive Resume</a>
                 </div>
             </div>
         </div>
