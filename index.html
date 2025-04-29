@@ -317,27 +317,6 @@ layout: default
     }
     
     /* Enhanced Experience & Education Timeline */
-    /* Company color mapping for the timeline */
-    .company-servicenow {
-      --company-color: #62B132; /* ServiceNow Green */
-    }
-    
-    .company-aws {
-      --company-color: #FF9900; /* AWS Orange */
-    }
-    
-    .company-freelance {
-      --company-color: #7B68EE; /* Freelance Purple */
-    }
-    
-    .company-linkdev {
-      --company-color: #0077B6; /* Link Data Center Blue */
-    }
-    
-    .company-its {
-      --company-color: #E63946; /* ITS Red */
-    }
-    
     .timeline-item {
       position: relative;
       padding-left: 30px;
@@ -626,7 +605,7 @@ layout: default
           {% assign company_class = company | downcase | replace: ' ', '-' | replace: '(', '' | replace: ')', '' %}
           {% assign company_jobs = site.data.cv.experience | where: "company", company %}
           {% for job in company_jobs %}
-            <div class="timeline-item company-{{ company_class }} mb-4">
+            <div class="timeline-item company-{{ company_class }} mb-4" data-company="{{ company_class }}">
               <div class="timeline-dot"></div>
               <div class="timeline-date">
                 {% if job.end_date == "Present" %}
@@ -744,6 +723,37 @@ layout: default
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Generate random colors for companies
+      const companyElements = document.querySelectorAll('[data-company]');
+      const companyColors = {};
+      
+      // Get all unique company names
+      const companies = Array.from(companyElements).map(el => el.dataset.company).filter((v, i, a) => a.indexOf(v) === i);
+      
+      // Generate a random color for each company
+      companies.forEach(company => {
+        // Generate a random color that's not too light (for visibility)
+        const hue = Math.floor(Math.random() * 360);
+        const saturation = Math.floor(Math.random() * 40) + 60; // 60-100%
+        const lightness = Math.floor(Math.random() * 20) + 30; // 30-50% (not too light)
+        companyColors[company] = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+      });
+      
+      // Apply colors to timeline items
+      companyElements.forEach(element => {
+        const company = element.dataset.company;
+        const color = companyColors[company];
+        
+        // Set the CSS variable for this element
+        element.style.setProperty('--company-color', color);
+        
+        // Find the timeline dot within this element and set its color
+        const dot = element.querySelector('.timeline-dot');
+        if (dot) {
+          dot.style.backgroundColor = color;
+        }
+      });
+      
       // Back to top button functionality
       const backToTop = document.getElementById('back-to-top');
       const progressBar = document.getElementById('progress-bar');
