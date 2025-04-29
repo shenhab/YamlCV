@@ -44,6 +44,8 @@ skills:
     items: ServiceNow Platform, Software Debugging, System Development, Services Architecture, Dashboarding, n8n, CI/CD, GitHub Actions, GitHub, Jira, Confluence, Slack
   - category: Networking
     items: TCP/IP, DNS, DHCP, VPN, Firewalls, DLNA
+  - category: Diagram as a code
+    items: Mermaid Diagrams
 
 # Professional Experience
 experience:
