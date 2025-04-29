@@ -207,6 +207,14 @@ certifications:
 
 # Projects
 projects:
+  - title: YamlCV
+    description: >
+      Created a Jekyll-based CV management system that uses YAML as a single source of truth for resume data. 
+      The system generates both an interactive, visually-rich HTML resume and an ATS-friendly version from the same data source.
+      Features responsive design, elegant timeline-based experience visualization, and customizable styling.
+      Built with HTML, CSS, Jekyll/Liquid templating, and JavaScript for interactive elements.
+      Repository available at https://github.com/shenhab/YamlCV
+      
   - title: Football Player Data Visualization Tool
     description: >
       Developed a software application using Python (and relevant data analysis/visualization libraries) to process and visualize 
