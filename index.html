@@ -672,10 +672,10 @@ layout: default
 
       <section id="certifications" class="certifications">
         <h2>Certifications</h2>
-        <div class="row">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
           {% for cert in site.data.cv.certifications %}
-            <div class="col-lg-6 mb-4">
-              <div class="card cert-item h-100">
+            <div class="col">
+              <div class="card cert-item h-100 shadow-sm">
                 <div class="card-body">
                   <h3>{{ cert.name }}</h3>
                   <div class="cert-meta">
@@ -683,7 +683,7 @@ layout: default
                     <span><strong>Date:</strong> {{ cert.date }}</span> • 
                     <span><strong>ID:</strong> {{ cert.id }}</span>
                   </div>
-                  {% if cert.url %}<p><a href="{{ cert.url }}" target="_blank"><i class="fas fa-certificate"></i> View Certificate</a></p>{% endif %}
+                  {% if cert.url %}<p><a href="{{ cert.url }}" target="_blank" class="btn btn-sm btn-outline-primary"><i class="fas fa-certificate"></i> View Certificate</a></p>{% endif %}
                   {% if cert.notes %}<p><em>{{ cert.notes }}</em></p>{% endif %}
                 </div>
               </div>
@@ -712,10 +712,10 @@ layout: default
       
       <section id="skills" class="skills">
         <h2>Skills</h2>
-        <div class="row">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           {% for category in site.data.cv.skills %}
-            <div class="col-md-6 mb-4">
-              <div class="card skill-category h-100">
+            <div class="col">
+              <div class="card skill-category h-100 shadow-sm">
                 <div class="card-body">
                   <h3>{{ category.category }}</h3>
                   <ul>
