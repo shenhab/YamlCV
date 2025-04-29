@@ -1,9 +1,9 @@
 # Site settings
 title: Mahmoud Elshenhab - CV
 email: mahmoud.alshinhab@gmail.com
-description: Professional CV of Mahmoud Elshenhab - Staff Site Reliability Engineer
+description: Professional CV of Mahmoud Elshenhab - Staff Compiliance Automation Engineer @OKTA
 baseurl: ""
-url: "https://shenhab.github.io"
+url: "https://root.gurutux.com"
 
 # Build settings
 markdown: kramdown
