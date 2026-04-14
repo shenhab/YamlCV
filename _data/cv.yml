@@ -62,7 +62,7 @@ experience:
       - Implemented a user-friendly interface to facilitate easy data entry and retrieval.
       - Designed and implemented a CI pipeline to automate testing the survey tool, ensuring high code quality and reliability.
       - Mentored junior engineers on best practices for developing secure and efficient software solutions.
-      - working on designing and implementing a project to automate the collection of compliance evidence from various teams.
+      - Designed and implemented a project to automate the collection of compliance evidence from various sources, the project was designed to be modular and extensible to include new plugins and modules.
 
   - company: ServiceNow
     position: Staff Site Reliability Engineer
