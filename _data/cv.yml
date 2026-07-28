@@ -64,9 +64,9 @@ experience:
       - Mentored junior engineers on best practices for developing secure and efficient software solutions.
       - Architected Heimdall as a modular, plugin-based framework, not a single-purpose tool — a core engine (orchestration, security/credentials, and reporting) that any new data-source integration plugs into, letting the platform expand to new systems without touching core logic.
       - Developed the Okta and GitHub plugins as the first integrations on this framework — 10+ collectors across 50+ compliance evidence artifacts — proving the plugin model by adding two entirely different APIs under one consistent security, auditing, and reporting contract.
-      - Designed the production orchestration layer using windmill: zero-touch AWS CodeDeploy provisioning, self-bootstrapping credentials/tokens, and rate-limit-aware self-scheduling per evidence artifact.
-      - Set the CI/CD and release architecture (GitHub Actions): every commit tested and built into one version-locked artifact, auto-deployed to dev, promoted on a weekly production cadence across all plugins from a single canonical release.
-      - Took care of security and reliability gaps at scale: resolved Dependabot-flagged vulnerabilities, hardened serialization paths flagged in code review, and re-architected the audit/reporting pipeline to stream to disk — eliminating OOMS failures on large collection runs.
+      - Designed the production orchestration layer using windmill, zero-touch AWS CodeDeploy provisioning, self-bootstrapping credentials/tokens, and rate-limit-aware self-scheduling per evidence artifact.
+      - Set the CI/CD and release architecture (GitHub Actions), every commit tested and built into one version-locked artifact, auto-deployed to dev, promoted on a weekly production cadence across all plugins from a single canonical release.
+      - Took care of security and reliability gaps at scale, resolved Dependabot-flagged vulnerabilities, hardened serialization paths flagged in code review, and re-architected the audit/reporting pipeline to stream to disk — eliminating OOMS failures on large collection runs.
       - provided Sessions on AI and How to utilize it as part of day to day work.
       - Designed a Multi Agent System that that will automatically develop Heimdall's new collectors based on jira requests (implementation in-progress).
 
