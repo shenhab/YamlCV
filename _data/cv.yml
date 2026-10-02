@@ -3,7 +3,7 @@
 # Personal Information
 personal:
   name: Mahmoud Elshenhab
-  title: Staff Engineer | Security & Compliance Automation | Agentic AI
+  title: Staff Engineer | Platform, Reliability & Security Automation
   email: mahmoud.alshinhab@gmail.com
   phone: "+353 86 461 9975"
   location: Kill, Co. Kildare, Ireland
@@ -13,34 +13,32 @@ personal:
 
 # Professional Summary
 summary: >
-  Staff engineer who builds security and compliance automation platforms, with 10+ years across AWS, ServiceNow and Okta.
-  At Okta, designed and led Heimdall, a continuous compliance-evidence platform that automates evidence for 171 security
-  controls across Okta, GitHub and AWS, end to end from audit ticket to integrity-verified delivery. In a SOC 2 audit
-  cycle it replaced ~635 engineering hours of manual evidence work with 8 hours of automation, with 98% of evidence
-  accepted by auditors. Previously Staff SRE
-  at ServiceNow and System Development Engineer at AWS, where I led the work that cut fleet patching cycle time from
-  40+ days to 7. Works AI-first: builds agent tooling and multi-agent systems that scale engineering output, and teaches
-  teams to do the same.
+  Staff engineer with 10+ years building platforms, reliability automation and security tooling across AWS, ServiceNow
+  and Okta. At Okta, designed and led Heimdall, a continuous compliance-evidence platform covering 171 security controls
+  across Okta, GitHub and AWS. In a SOC 2 audit cycle it replaced ~635 engineering hours of manual work with 8 hours of
+  automation, with 98% of evidence accepted by auditors. Before that, three years as a Staff SRE at ServiceNow and six
+  at AWS, where I led the automation that cut fleet patching cycle time from 40+ days to 7. Works AI-first: builds
+  agent tooling and multi-agent systems that scale engineering output.
 
 # Skills
 # Items are split on ", " by the template, so never put a comma inside a single item.
 skills:
   - category: Languages
     items: Python, Bash, SQL, Ruby, TypeScript
+  - category: Platforms & Delivery
+    items: GitHub Actions, AWS CodeDeploy, Docker, Docker Compose, Kubernetes, Windmill, n8n, Proxmox
   - category: AWS
-    items: Lambda, Step Functions, CloudFormation, CodeDeploy, EC2, S3, RDS / Aurora
+    items: Lambda, Step Functions, CloudFormation, EC2, S3, RDS / Aurora
+  - category: Reliability & Operations
+    items: On-call & incident response, Alert automation, Linux (RHEL / CentOS), Ansible, Puppet, Nginx, DNS, Grafana, Splunk
+  - category: Backend & Data
+    items: FastAPI, Flask, SQLAlchemy / SQLModel, Alembic, PostgreSQL, MySQL, MariaDB
   - category: Security & Identity
     items: Okta, OAuth2, Private-key JWT / DPoP, GitHub App auth, RBAC, Least-privilege design, Audit trails
   - category: Compliance Automation
     items: Control-to-evidence mapping, Continuous evidence collection, Audit workflow automation, Evidence integrity verification
   - category: AI & Agentic Engineering
     items: Claude Code, Agent skills & hooks, MCP, Multi-agent system design
-  - category: Platforms & Delivery
-    items: GitHub Actions, Docker, Docker Compose, Kubernetes, Windmill, n8n, Proxmox
-  - category: Backend & Data
-    items: FastAPI, Flask, SQLAlchemy / SQLModel, Alembic, PostgreSQL, MySQL, MariaDB
-  - category: Operations & Observability
-    items: Linux (RHEL / CentOS), Ansible, Puppet, Nginx, DNS, Grafana, Splunk
   - category: Docs as Code
     items: Mermaid, D2, YamlCV ;)
 
