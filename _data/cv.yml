@@ -3,168 +3,133 @@
 # Personal Information
 personal:
   name: Mahmoud Elshenhab
-  title: Staff Compliance Automation Engineer @Okta
+  title: Staff Engineer | Security & Compliance Automation | Agentic AI
   email: mahmoud.alshinhab@gmail.com
   phone: "+353 86 461 9975"
   location: Kill, Co. Kildare, Ireland
   linkedin: linkedin.com/in/Shenhab
   github: github.com/shenhab
   website: gurutux.com
-  
+
 # Professional Summary
 summary: >
-  Staff Compliance Automation Engineer with 10+ years of experience in software development, infrastructure automation, and system engineering.
-  Currently at Okta, focused on developing tools and processes to automate compliance evidence collection and reporting, 
-  significantly reducing manual effort while improving data reliability. Previously at ServiceNow, enhanced cloud 
-  infrastructure reliability through proactive monitoring and alert automation. At Amazon Web Services (AWS), led key initiatives to 
-  streamline region builds and patching workflows, reducing cycle times from 40+ days to 7 days, and provided expert-level support 
-  for enterprise customers on complex infrastructure, particularly Relational Database Services (RDS). Skilled in designing 
-  resilient systems, developing automation scripts (Python, Ruby, Bash), and implementing database solutions (MySQL, PostgreSQL, MariaDB) 
-  to improve operational efficiency and eliminate manual intervention.
+  Staff engineer who builds security and compliance automation platforms, with 10+ years across AWS, ServiceNow and Okta.
+  At Okta, designed and led Heimdall, a continuous compliance-evidence platform that automates evidence for 171 security
+  controls across Okta, GitHub and AWS, end to end from audit ticket to integrity-verified delivery. In a SOC 2 audit
+  cycle it replaced ~635 engineering hours of manual evidence work with 8 hours of automation, with 98% of evidence
+  accepted by auditors. Previously Staff SRE
+  at ServiceNow and System Development Engineer at AWS, where I led the work that cut fleet patching cycle time from
+  40+ days to 7. Works AI-first: builds agent tooling and multi-agent systems that scale engineering output, and teaches
+  teams to do the same.
 
 # Skills
+# Items are split on ", " by the template, so never put a comma inside a single item.
 skills:
-  - category: Cloud Platforms
-    items: AWS, Azure, GCP
-  - category: Infrastructure as Code
-    items: Ansible, Puppet
-  - category: Containerization
-    items: Kubernetes (K8s), LXC on Proxmox
-  - category: Monitoring
-    items: Grafana, Splunk
-  - category: Programming Languages
-    items: Python, Ruby, Bash, JavaScript, HTML, CSS
-  - category: Databases
-    items: MySQL, PostgreSQL, MS SQL Server, Sybase, MariaDB, Amazon Aurora
-  - category: Operating Systems
-    items: Linux (CentOS/RHEL), Windows Server, VMware ESX, Proxmox
-  - category: Web Services
-    items: NginX, Apache HTTP Server, SMTP (Postfix), DNS (Bind), WordPress, Varnish Cache
-  - category: Other
-    items: ServiceNow Platform, Software Debugging, System Development, Services Architecture, Dashboarding, n8n, CI/CD, GitHub Actions, GitHub, Jira, Confluence, Slack
-  - category: Networking
-    items: TCP/IP, DNS, DHCP, VPN, Firewalls, DLNA
-  - category: Diagram as Code
-    items: Mermaid Diagrams
-  - category: CV as Code
-    items: YamlCV ;)
+  - category: Languages
+    items: Python, Bash, SQL, Ruby, TypeScript
+  - category: AWS
+    items: Lambda, Step Functions, CloudFormation, CodeDeploy, EC2, S3, RDS / Aurora
+  - category: Security & Identity
+    items: Okta, OAuth2, Private-key JWT / DPoP, GitHub App auth, RBAC, Least-privilege design, Audit trails
+  - category: Compliance Automation
+    items: Control-to-evidence mapping, Continuous evidence collection, Audit workflow automation, Evidence integrity verification
+  - category: AI & Agentic Engineering
+    items: Claude Code, Agent skills & hooks, MCP, Multi-agent system design
+  - category: Platforms & Delivery
+    items: GitHub Actions, Docker, Docker Compose, Kubernetes, Windmill, n8n, Proxmox
+  - category: Backend & Data
+    items: FastAPI, Flask, SQLAlchemy / SQLModel, Alembic, PostgreSQL, MySQL, MariaDB
+  - category: Operations & Observability
+    items: Linux (RHEL / CentOS), Ansible, Puppet, Nginx, DNS, Grafana, Splunk
+  - category: Docs as Code
+    items: Mermaid, D2, YamlCV ;)
 
 # Professional Experience
+# The first two achievements of each role are highlighted by the template - keep the strongest first.
 experience:
-  - company: OKTA
+  - company: Okta
     position: Staff Compliance Automation Engineer
     location: Dublin, Ireland (Remote)
-    start_date: September 2023
+    start_date: September 2024
     end_date: Present
     achievements:
-      - Developed an internal survey tool to automate the collection of compliance-related information from various teams.
-      - Collaborated with cross-functional teams to ensure the tool met compliance requirements.
-      - Implemented a user-friendly interface to facilitate easy data entry and retrieval.
-      - Designed and implemented a CI pipeline to automate testing the survey tool, ensuring high code quality and reliability.
-      - Mentored junior engineers on best practices for developing secure and efficient software solutions.
-      - Architected Heimdall as a modular, plugin-based framework, not a single-purpose tool — a core engine (orchestration, security/credentials, and reporting) that any new data-source integration plugs into, letting the platform expand to new systems without touching core logic.
-      - Developed the Okta and GitHub plugins as the first integrations on this framework — 10+ collectors across 50+ compliance evidence artifacts — proving the plugin model by adding two entirely different APIs under one consistent security, auditing, and reporting contract.
-      - Designed the production orchestration layer using windmill, zero-touch AWS CodeDeploy provisioning, self-bootstrapping credentials/tokens, and rate-limit-aware self-scheduling per evidence artifact.
-      - Set the CI/CD and release architecture (GitHub Actions), every commit tested and built into one version-locked artifact, auto-deployed to dev, promoted on a weekly production cadence across all plugins from a single canonical release.
-      - Took care of security and reliability gaps at scale, resolved Dependabot-flagged vulnerabilities, hardened serialization paths flagged in code review, and re-architected the audit/reporting pipeline to stream to disk — eliminating OOMS failures on large collection runs.
-      - provided Sessions on AI and How to utilize it as part of day to day work.
-      - Designed a Multi Agent System that that will automatically develop Heimdall's new collectors based on jira requests (implementation in-progress).
-
-
+      - Designed and led Heimdall, Okta's continuous compliance-evidence platform, as tech lead and primary author - ~90% of 570+ commits, ~33k lines of production Python and 2,100+ automated tests.
+      - Automated a SOC 2 audit cycle end to end - 127 evidence tickets collected, attached and submitted with no manual work, 125 accepted by auditors (98%) and the other 2 routed to service owners for remediation, replacing ~635 engineering hours of manual collection (~5 hours per ticket) with 8 hours of automated runtime.
+      - Architected a plugin-based core (orchestration, credential management, per-call API audit trail, multi-format reporting) that new data sources plug into without touching core logic, and scaled it to 23 collectors across Okta, GitHub, AWS and HTTP producing 129 evidence artifacts mapped to 171 security controls.
+      - Closed the loop with the audit process - built a Windmill-based orchestrator that claims audit Jira tickets, runs the matching collection, attaches the evidence and transitions the ticket, with stale-job detection, Slack alerting with one-click retry and staggered monthly schedules per artifact.
+      - Built an integrity-verified evidence delivery pipeline - 5 AWS Lambda functions orchestrated by Step Functions and defined in CloudFormation, verifying checksums at every hop from S3 to Google Drive.
+      - Owned CI/CD and release architecture - GitHub Actions builds one version-locked artifact, verified at three independent points, auto-deployed to dev and promoted weekly to production via AWS CodeDeploy (65 tagged releases), with zero-touch host provisioning and self-bootstrapping credentials.
+      - Implemented secure-by-design API clients (OAuth2 private-key JWT with DPoP, GitHub App authentication, rate-limit-aware pagination) and closed security and reliability gaps - remediated Dependabot findings, hardened serialization paths and re-architected reporting to stream to disk, eliminating out-of-memory failures on large collection runs.
+      - Built ActionHub, a compliance workflow platform (Flask / PostgreSQL) that replaced manual compliance questionnaires - dynamic forms, assignment lifecycle, reviewer RBAC, a background workflow engine, full audit logging and Okta SSO, backed by 980 tests.
+      - Drove AI adoption across the team - authored Claude Code skills that make evidence tracing and ticket triage deterministic, ran sessions on AI-assisted engineering, and designed a multi-agent system that generates new collectors from Jira requests to scale coverage across the remaining audit scope.
+      - Mentored engineers on secure, testable software design, and took the platform to steady state before handing long-term ownership to Security Architecture.
 
   - company: ServiceNow
     position: Staff Site Reliability Engineer
     location: Dublin, Ireland (Remote)
     start_date: September 2021
-    end_date: September 2023
+    end_date: August 2024
     achievements:
-      - Maintain and improve the operational reliability of the ServiceNow Cloud platform.
-      - Enhance infrastructure stability and performance utilizing internal automation services.
-      - Manage and respond to system alerts, collaborating effectively with customer support teams to ensure timely resolution.
-      - Develop automation processes for alert handling, thereby reducing manual workload and improving response accuracy.
-      - Contribute to the refinement of internal team operational procedures and workflows.
-  
+      - Owned front-line operational reliability for ServiceNow Cloud services as a Staff SRE - on-call incident response, alert triage and escalation alongside customer support and engineering teams.
+      - Automated recurring alert handling, reducing manual triage and improving response accuracy.
+      - Improved platform stability and performance through internal automation services, and tightened the team's runbooks and operational procedures.
+
   - company: Amazon Web Services (AWS)
     position: System Development Engineer
     location: Dublin, Ireland
     start_date: December 2019
-    end_date: November 2021
+    end_date: September 2021
     achievements:
-      - Developed automation for AWS networking service region builds, enhancing deployment speed and consistency.
-      - Participated in on-call rotation, assuming ownership for production fleet reliability, maintenance, and incident response.
-      - Engineered automation solutions for service deployments, contributing to improved service quality and reduced release cycle times.
-      - Resolved complex system issues, developed new service features, and enhanced operational automation capabilities.
-      - Resolved a critical software defect related to fleet monitoring by applying expertise in the Gossip protocol.
-      - Served as a subject matter expert in automating patching workflows; led a project reducing patching cycle time from over 40 days to 7 days.
-      - Initiated development of zero-touch build workflows for bastion fleets to minimize manual configuration.
-  
+      - Led the patching-automation project that cut fleet patching cycle time from 40+ days to 7, and served as the team's subject-matter expert for patching workflows.
+      - Started zero-touch build workflows for bastion fleets, removing manual host configuration.
+      - Diagnosed and fixed a critical fleet-monitoring defect involving the service's Gossip protocol.
+      - Automated region builds and service deployments for an AWS networking service, improving deployment speed and consistency.
+      - Owned production fleet reliability on the on-call rotation - incident response, maintenance and feature development.
+
   - company: Amazon Web Services (AWS)
     position: System Engineer I
     location: Dublin, Ireland
     start_date: May 2018
     end_date: November 2019
     achievements:
-      - Developed automation for AWS networking service region builds, enhancing deployment speed and consistency.
-      - Participated in on-call rotation, assuming ownership for production fleet reliability, maintenance, and incident response.
-      - Engineered automation solutions for service deployments, contributing to improved service quality and reduced release cycle times.
-      - Resolved complex system issues, developed new service features, and enhanced operational automation capabilities.
-  
+      - Built region-build and deployment automation for an AWS networking service, improving consistency and reducing release cycle times.
+      - Joined the on-call rotation for production fleet reliability, maintenance and incident response; promoted to System Development Engineer.
+
   - company: Amazon Web Services (AWS)
     position: Cloud Support Engineer II
     location: Cape Town, South Africa
     start_date: October 2017
     end_date: April 2018
     achievements:
-      - Provided expert-level technical support to AWS Enterprise customers, diagnosing and resolving complex infrastructure issues, specializing in Relational Database Services (RDS).
-      - Executed database migrations involving MySQL, MariaDB, and Amazon Aurora across multiple AWS regions with minimal downtime.
-      - Conducted in-depth root cause analyses for system and database failures for both customer and internal AWS service teams.
-      - Collaborated with AWS Solution Architects to design and recommend best practices for highly available, durable, and performant database solutions.
-  
+      - Resolved complex infrastructure and database issues for AWS Enterprise customers, specializing in RDS, and led root-cause analyses for customer and internal service teams.
+      - Ran MySQL, MariaDB and Aurora migrations across AWS regions with minimal downtime, and advised on highly available database architectures with AWS Solutions Architects.
+
   - company: Amazon Web Services (AWS)
     position: Cloud Support Engineer I
     location: Cape Town, South Africa
     start_date: November 2015
     end_date: September 2017
     achievements:
-      - Achieved recognition as an RDS Subject Matter Expert (SME).
-      - Executed numerous database migrations involving MySQL, MariaDB, and Amazon Aurora across multiple AWS regions, consistently achieving minimal downtime (under 5 minutes).
-      - Conducted in-depth root cause analyses for system and database failures for both customer and internal AWS service teams.
-      - Collaborated with AWS Solution Architects to design and recommend best practices for highly available, durable, and performant database solutions.
-      - Advised customers on optimal AWS service selection based on workload requirements, feature needs, and budget constraints.
-      - Guided internal and external clients on application redesign to optimize database communication methods, significantly improving workload performance.
-      - Developed Python and Bash scripts to automate operational tasks for customers.
-      - Identified and reported bugs in AWS internal workflows impacting customer experience; created reproducible test cases facilitating service team investigations and subsequent fleet-wide patches.
-      - Developed automated onboarding training materials for MySQL, MariaDB, and Aurora support.
-      - Mentored and trained new Cloud Support Engineers to proficiency.
-  
-  - company: Freelance
-    position: System Engineer
-    location: Egypt
-    start_date: October 2014
-    end_date: September 2015
-    achievements:
-      - Designed and implemented a home multimedia streaming system leveraging DLNA and Torrent technologies on a Linux platform.
-      - Resolved multi-user access limitations for a local company's Microsoft Access database application, enabling concurrent operations across multiple branches.
-  
+      - Recognized as an RDS Subject Matter Expert; ran cross-region MySQL, MariaDB and Aurora migrations with under 5 minutes of downtime.
+      - Found and reproduced bugs in internal AWS workflows affecting customers, leading to fleet-wide patches.
+      - Built onboarding training for MySQL, MariaDB and Aurora support, and mentored new engineers to proficiency.
+
   - company: Link Data Center (LinkDev)
     position: NIX System Engineer
     location: Cairo, Egypt
     start_date: March 2012
     end_date: October 2014
     achievements:
-      - Administered Linux servers (primarily CentOS/RHEL) and led project implementations within a data center environment focused on web hosting.
-      - Executed migration of hosting infrastructure from Apache HTTP Server to Nginx.
-      - Designed and implemented distributed media hosting solutions for enhanced performance and scalability.
-      - Developed Bash scripts for automated DNS record migration and proactive service monitoring.
-  
+      - Ran CentOS/RHEL web-hosting infrastructure in a data-center environment and led the migration from Apache HTTP Server to Nginx.
+      - Designed distributed media hosting for performance and scale, and automated DNS migration and service monitoring in Bash.
+
   - company: International Turnkey Systems (ITS)
     position: System Administrator
     location: Cairo, Egypt
     start_date: October 2011
     end_date: March 2012
     achievements:
-      - Administered servers operating Microsoft Windows Server and Linux distributions within a VMware ESX virtualized environment.
-      - Managed database systems including Microsoft SQL Server and Sybase ASE.
+      - Administered Windows Server and Linux on VMware ESX, plus Microsoft SQL Server and Sybase ASE databases.
 
 # Education
 education:
@@ -181,51 +146,33 @@ certifications:
     date: October 22, 2021
     id: I003-7698
     url: https://www.credly.com/badges/53a71064-6981-4123-84cc-c77058ae328d
-  
-  - name: Introduction to Computer Science and Programming Using Python
-    issuer: MITx (edX)
-    date: March 17, 2017
-    id: 05a576b4853640b0bfe7b9b221a9fd5d
-    url: https://courses.edx.org/certificates/05a576b4853640b0bfe7b9b221a9fd5d
-  
-  - name: Cloud Computing Concepts, Part 2
-    issuer: University of Illinois at Urbana-Champaign (Coursera)
-    date: April 27, 2015
-    id: 48W63NBRVF
-    url: https://www.coursera.org/account/accomplishments/certificate/48W63NBRVF
-  
-  - name: Cloud Computing Concepts, Part 1
-    issuer: University of Illinois at Urbana-Champaign (Coursera)
-    date: March 17, 2015
-    id: 4LVSBUDRWC
-    url: https://www.coursera.org/account/accomplishments/certificate/4LVSBUDRWC
-  
+
   - name: Red Hat Certified System Administrator (RHCSA) - RHEL 5 (EX200)
     issuer: Red Hat
     date: April 16, 2009
     id: 100-108-729
     url: https://rhtapps.redhat.com/verify?certId=100-108-729
-  
-  - name: Former Red Hat Certified Technician (RHCT) - RHEL 5 (RH202)
-    issuer: Red Hat
-    date: April 16, 2009
-    id: 100-108-729
-    url: https://rhtapps.redhat.com/verify?certId=100-108-729
-    notes: RHCT was superseded by RHCSA
+
+  - name: Introduction to Computer Science and Programming Using Python
+    issuer: MITx (edX)
+    date: March 17, 2017
+    id: 05a576b4853640b0bfe7b9b221a9fd5d
+    url: https://courses.edx.org/certificates/05a576b4853640b0bfe7b9b221a9fd5d
 
 # Projects
 projects:
+  - title: Football Wizards - Football Analytics Platform (live at api.gurutux.com)
+    description: >
+      Designed and operate a two-service FastAPI / PostgreSQL platform - a public read-only API with a React explorer,
+      and an isolated admin control plane for scheduled ingestion jobs with live progress streaming. Modelled a normalized
+      schema (123 player and 32 team stat types, minute-stamped match events) holding 10M+ stat rows across ~9,600 matches,
+      fed by a pluggable ingestion layer with 5 source adapters, content-hash caching and cross-source entity resolution.
+      Enforced least privilege at the database layer with separate Postgres roles, so the public service cannot read admin
+      state or secrets. Built a validation framework that caught a column-mapping defect and corrected 5,307 records.
+      Shipped with Docker Compose, auto-applied Alembic migrations and one-command deploys with health checks,
+      self-hosted on Proxmox. Developed AI-first with Claude Code under a persisted architecture and decision log.
+
   - title: YamlCV
     description: >
-      Created a Jekyll-based CV management system that uses YAML as a single source of truth for resume data. 
-      The system generates both an interactive, visually-rich HTML resume and an ATS-friendly version from the same data source.
-      Features responsive design, elegant timeline-based experience visualization, and customizable styling.
-      Built with HTML, CSS, Jekyll/Liquid templating, and JavaScript for interactive elements.
-      Repository available at https://github.com/shenhab/YamlCV
-      
-  - title: Football Player Data Visualization Tool
-    description: >
-      Developed a software application using Python (and relevant data analysis/visualization libraries) to process and visualize 
-      football player statistics sourced from FBref.com. Implemented features enabling comparative analysis of player performances, 
-      designed to make complex statistical data accessible and understandable to a general audience. Continuously exploring 
-      enhancements for football data analysis presentation.
+      This CV. A Jekyll-based CV-as-code system that uses YAML as the single source of truth and generates both an
+      interactive HTML resume and an ATS-friendly version from it. https://github.com/shenhab/YamlCV
