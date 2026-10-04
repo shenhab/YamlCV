@@ -26,7 +26,9 @@ skills:
   - category: Languages
     items: Python, Bash, SQL, Ruby, TypeScript
   - category: Platforms & Delivery
-    items: GitHub Actions, AWS CodeDeploy, Docker, Docker Compose, Kubernetes, Windmill, n8n, Proxmox
+    items: GitHub Actions, AWS CodeDeploy, Windmill, n8n
+  - category: Containers & Virtualization
+    items: Docker, Docker Compose, Container image builds, Proxmox VE, Self-hosted infrastructure
   - category: AWS
     items: Lambda, Step Functions, CloudFormation, EC2, S3, RDS / Aurora
   - category: Reliability & Operations
