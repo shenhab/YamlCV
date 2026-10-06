@@ -24,7 +24,7 @@ summary: >
 # Items are split on ", " by the template, so never put a comma inside a single item.
 skills:
   - category: Languages
-    items: Python, Bash, SQL, Ruby, TypeScript
+    items: Python, Bash, SQL, Ruby
   - category: Platforms & Delivery
     items: GitHub Actions, AWS CodeDeploy, Windmill, n8n
   - category: Containers & Virtualization
