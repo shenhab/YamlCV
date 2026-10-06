@@ -28,7 +28,7 @@ skills:
   - category: Platforms & Delivery
     items: GitHub Actions, AWS CodeDeploy, Windmill, n8n
   - category: Containers & Virtualization
-    items: Docker, Docker Compose, Container image builds, Proxmox VE, Self-hosted infrastructure
+    items: Docker, Docker Compose, Container image builds, Proxmox VE, Self-hosted infrastructure, Kubernetes (fundamentals)
   - category: AWS
     items: Lambda, Step Functions, CloudFormation, EC2, S3, RDS / Aurora
   - category: Reliability & Operations
