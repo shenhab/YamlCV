@@ -1,23 +1,38 @@
 #!/usr/bin/env python3
-"""Sanity checks for the CV site. Run after `bundle exec jekyll build`.
+"""Sanity checks for the CV site. Builds the site first, so it can be run on its own.
+
+The build goes to a temporary directory, so an existing or stale _site/ never affects the
+result and is never modified.
 
 Checks the data file has every field the templates rely on, and that each built page
 is a single well-formed document whose internal links resolve.
 """
 import pathlib
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
 
-import yaml
+try:
+    import yaml
+except ImportError:
+    sys.exit("PyYAML is missing: run `pip install pyyaml`")
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SITE = ROOT / "_site"
 PAGES = ["index.html", "ats-resume.html"]
 errors = []
 
 
 def check_data():
-    cv = yaml.safe_load((ROOT / "_data" / "cv.yml").read_text())
+    try:
+        cv = yaml.safe_load((ROOT / "_data" / "cv.yml").read_text())
+    except (OSError, yaml.YAMLError) as exc:
+        errors.append(f"cv.yml: cannot be read as YAML: {exc}")
+        return
+    if not isinstance(cv, dict):
+        errors.append("cv.yml: top level must be a mapping")
+        return
     for key in ("personal", "summary", "skills", "experience", "education", "certifications"):
         if not cv.get(key):
             errors.append(f"cv.yml: missing or empty '{key}'")
@@ -31,18 +46,33 @@ def check_data():
         for key in ("company", "position", "start_date", "end_date", "achievements"):
             if not job.get(key):
                 errors.append(f"cv.yml: experience entry '{job.get('company')}' lacks '{key}'")
+    for edu in cv.get("education") or []:
+        for key in ("degree", "institution", "date"):
+            if not edu.get(key):
+                errors.append(f"cv.yml: education entry '{edu.get('degree')}' lacks '{key}'")
     for cert in cv.get("certifications") or []:
         for key in ("name", "issuer", "date"):
             if not cert.get(key):
                 errors.append(f"cv.yml: certification '{cert.get('name')}' lacks '{key}'")
 
 
-def check_pages():
-    if not SITE.is_dir():
-        errors.append("_site/ not found: run `bundle exec jekyll build` first")
-        return
+def build_site(dest):
+    if not shutil.which("bundle"):
+        errors.append("bundle not found: install Ruby and run `bundle install`")
+        return False
+    result = subprocess.run(
+        ["bundle", "exec", "jekyll", "build", "--destination", str(dest)],
+        cwd=ROOT, capture_output=True, text=True,
+    )
+    if result.returncode != 0:
+        errors.append("jekyll build failed:\n" + (result.stdout + result.stderr).strip())
+        return False
+    return True
+
+
+def check_pages(site):
     for name in PAGES:
-        path = SITE / name
+        path = site / name
         if not path.is_file():
             errors.append(f"{name}: not built")
             continue
@@ -56,7 +86,7 @@ def check_pages():
         for href in re.findall(r'href="([^"]+)"', html):
             if href.startswith(("http", "mailto:", "#", "tel:")):
                 continue
-            target = (SITE / href.lstrip("/")) if href != "./" else SITE / "index.html"
+            target = (site / href.lstrip("/")) if href != "./" else site / "index.html"
             if target.is_dir():
                 target = target / "index.html"
             if not target.is_file():
@@ -67,7 +97,10 @@ def check_pages():
 
 
 check_data()
-check_pages()
+if not errors:  # a broken data file would only make the build output noisy
+    with tempfile.TemporaryDirectory(prefix="cv-site-") as tmp:
+        if build_site(tmp):
+            check_pages(pathlib.Path(tmp))
 if errors:
     print("\n".join(errors))
     sys.exit(1)
