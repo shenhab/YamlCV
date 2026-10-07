@@ -98,13 +98,24 @@ To develop and test locally:
 4. Run `bundle exec jekyll serve`
 5. Visit `http://localhost:4000` in your browser
 
-To run the same checks as CI after a build:
+To run the same checks as CI (the script builds the site itself):
 
 ```
-bundle exec jekyll build
 pip install pyyaml
 python tools/check_site.py
 ```
+
+The script builds into a temporary folder, so an existing `_site/` never matters.
+
+To stop a broken CV from being pushed at all, enable the pre-push hook once per clone:
+
+```
+git config core.hooksPath .githooks
+```
+
+CI runs the same check on every push and pull request. To make GitHub refuse to merge a
+failing branch, turn on branch protection for `master` and require the "Site checks / check"
+status.
 
 The pages load no external CSS, JavaScript or fonts, so they work offline and the check
 script fails if a template introduces an external resource.
