@@ -32,7 +32,7 @@ skills:
   - category: AWS
     items: Lambda, Step Functions, CloudFormation, EC2, S3, RDS / Aurora
   - category: Reliability & Operations
-    items: On-call & incident response, Alert automation, Linux (RHEL / CentOS), Ansible, Puppet, Nginx, DNS, Grafana, Splunk
+    items: SLIs / SLOs / SLAs, Error budgets, On-call & incident response, Alert automation, Linux (RHEL / CentOS), Ansible, Puppet, Nginx, DNS, Grafana, Splunk
   - category: Backend & Data
     items: FastAPI, Flask, SQLAlchemy / SQLModel, Alembic, PostgreSQL, MySQL, MariaDB
   - category: Security & Identity
