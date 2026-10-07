@@ -6,11 +6,18 @@ baseurl: ""
 url: "https://root.gurutux.com"
 
 # Build settings
+# No theme: index.html and ats-resume.html are complete documents and bring their own
+# styling. A theme layout would wrap them in a second <html> document.
 markdown: kramdown
-theme: minima
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - tools
+  - vendor
 
 # Social media profiles
 social:
