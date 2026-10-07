@@ -48,7 +48,7 @@ To update your CV, simply edit the `_data/cv.yml` file. The structure is intuiti
 - Professional experience
 - Education
 - Certifications
-- Projects
+- Projects (an optional `url` field on a project is rendered as a link)
 
 After pushing your changes to GitHub, the site will automatically rebuild and deploy.
 
@@ -92,11 +92,28 @@ To use a custom domain:
 
 To develop and test locally:
 
-1. Install [Jekyll](https://jekyllrb.com/docs/installation/)
+1. Install Ruby and Bundler (see the [Jekyll installation guide](https://jekyllrb.com/docs/installation/))
 2. Clone your repository
 3. Run `bundle install`
 4. Run `bundle exec jekyll serve`
 5. Visit `http://localhost:4000` in your browser
+
+To run the same checks as CI after a build:
+
+```
+bundle exec jekyll build
+pip install pyyaml
+python tools/check_site.py
+```
+
+The pages load no external CSS, JavaScript or fonts, so they work offline and the check
+script fails if a template introduces an external resource.
+
+## Continuous Integration
+
+`.github/workflows/checks.yml` builds the site on every push and pull request, validates
+`_data/cv.yml` against the fields the templates need, and checks that each built page is a
+single well-formed document whose internal links resolve.
 
 ## Structure
 
@@ -104,8 +121,13 @@ To develop and test locally:
 ├── _config.yml          # Site configuration
 ├── _data/
 │   └── cv.yml          # CV data (edit this file to update your CV)
-├── index.html           # Interactive CV template
-├── ats-resume.html      # ATS-friendly CV template
+├── index.html           # Interactive CV template (self-contained, no external resources)
+├── ats-resume.html      # ATS-friendly CV template (single column, print-optimised)
+├── tools/
+│   └── check_site.py   # Data and build checks, run by CI
+├── .github/workflows/
+│   └── checks.yml      # CI: build and check on every push
+├── Gemfile              # github-pages gem, so local builds match GitHub Pages
 ├── CNAME                # Custom domain configuration (if applicable)
 └── README.md            # This file
 ```
