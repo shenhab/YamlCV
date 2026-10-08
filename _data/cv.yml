@@ -122,6 +122,7 @@ experience:
       - Recognized as an RDS Subject Matter Expert; ran cross-region MySQL, MariaDB and Aurora migrations with under 5 minutes of downtime.
       - Discovered bugs in internal AWS workflows that affected thousands of customers, and wrote scripts to reproduce them consistently for the service team, resulting in a patch to the entire RDS fleet.
       - Designed hands-on onboarding training for MySQL, MariaDB and Aurora support, and mentored 6 engineers to subject-matter-expert level.
+      - Advised customers on database architecture and cost - steering product choices to their workload and budget, and persuading several internal and external customers to redesign how their applications communicated with the database, significantly improving workload performance.
 
   - company: Freelance
     position: System Engineer
