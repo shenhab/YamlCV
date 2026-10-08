@@ -112,7 +112,7 @@ description: ATS-friendly resume of Mahmoud Elshenhab - Staff Engineer - Platfor
       {% for job in site.data.cv.experience %}
         <div class="job">
           <h3>{{ job.position }}</h3>
-          <p class="job-meta"><strong>{{ job.company }}</strong> | {{ job.location }} | {{ job.start_date }} to {{ job.end_date }}</p>
+          <p class="job-meta"><strong>{{ job.company }}</strong>{% if job.location %} | {{ job.location }}{% endif %} | {{ job.start_date }} to {{ job.end_date }}</p>
           <ul>
             {% for item in job.achievements %}
               <li>{{ item }}</li>

@@ -344,7 +344,7 @@ description: Professional CV of Mahmoud Elshenhab - Staff Engineer - Platform, R
             <div class="timeline-date">{{ job.start_date }} - {{ job.end_date }}</div>
             <div class="card">
               <h3>{{ job.position }}</h3>
-              <h4>{{ job.company }} | {{ job.location }}</h4>
+              <h4>{{ job.company }}{% if job.location %} | {{ job.location }}{% endif %}</h4>
               <ul>
                 {% for item in job.achievements %}
                   <li{% if forloop.index <= 2 %} class="key-achievement"{% endif %}>{{ item }}</li>

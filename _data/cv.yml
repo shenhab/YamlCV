@@ -85,7 +85,7 @@ experience:
     start_date: December 2019
     end_date: September 2021
     achievements:
-      - Led the patching-automation project that cut fleet patching cycle time from 40+ days to 7, and served as the team's subject-matter expert for patching workflows.
+      - Led the patching-automation project across several teams' fleets, cutting patching cycle time from 40+ days to 7, and served as the subject-matter expert for patching workflows.
       - Started zero-touch build workflows for bastion fleets, removing manual host configuration.
       - Diagnosed and fixed a critical fleet-monitoring defect involving the service's Gossip protocol.
       - Automated region builds and service deployments for an AWS networking service as infrastructure as code, defining the service's pipelines and infrastructure in an internal Ruby-based templating tool, improving deployment speed and consistency.
@@ -117,8 +117,17 @@ experience:
     end_date: September 2017
     achievements:
       - Recognized as an RDS Subject Matter Expert; ran cross-region MySQL, MariaDB and Aurora migrations with under 5 minutes of downtime.
-      - Found and reproduced bugs in internal AWS workflows affecting customers, leading to fleet-wide patches.
-      - Built onboarding training for MySQL, MariaDB and Aurora support, and mentored new engineers to proficiency.
+      - Discovered bugs in internal AWS workflows that affected thousands of customers, and wrote scripts to reproduce them consistently for the service team, resulting in a patch to the entire RDS fleet.
+      - Designed hands-on onboarding training for MySQL, MariaDB and Aurora support, and mentored 6 engineers to subject-matter-expert level.
+
+  - company: Freelance
+    position: System Engineer
+    location: Cairo, Egypt
+    start_date: October 2014
+    end_date: September 2015
+    achievements:
+      - Took on system administration and engineering contracts, including re-architecting a local company's Access-based management system to work across multiple branches.
+      - Used the period to complete the University of Illinois Cloud Computing Concepts courses (CCC1, CCC2) ahead of joining AWS.
 
   - company: Link Data Center (LinkDev)
     position: NIX System Engineer
@@ -126,8 +135,9 @@ experience:
     start_date: March 2012
     end_date: October 2014
     achievements:
-      - Ran CentOS/RHEL web-hosting infrastructure in a data-center environment and led the migration from Apache HTTP Server to Nginx.
-      - Designed distributed media hosting for performance and scale, and automated DNS migration and service monitoring in Bash.
+      - Built and ran the CentOS/RHEL hosting platform behind msnarabia.com, serving 7M+ hits a day, and led the company-wide migration from Apache HTTP Server to Nginx.
+      - Designed distributed media hosting with Lsyncd in place of NAS/SAN, removing single points of failure at lower cost, and set up active-active MySQL binary-log replication for database high availability.
+      - Automated the migration of customer DNS zones from Windows DNS to BIND and the monitoring of the replication service, both in Bash.
 
   - company: International Turnkey Systems (ITS)
     position: System Administrator
@@ -136,6 +146,7 @@ experience:
     end_date: March 2012
     achievements:
       - Administered Windows Server and Linux on VMware ESX, plus Microsoft SQL Server and Sybase ASE databases.
+      - Built a centralized, automated backup and rotation solution for all database servers in Bash and PowerShell.
 
 # Education
 education:
