@@ -35,6 +35,8 @@ skills:
     items: Lambda, Step Functions, EC2, S3, RDS / Aurora
   - category: Reliability & Operations
     items: On-call & incident response, Alert automation, Linux (RHEL / CentOS), Nginx, DNS, Grafana, Splunk, SLIs / SLOs / SLAs & error budgets (fundamentals)
+  - category: Distributed Systems
+    items: Gossip protocols & failure detection, Replication & consistency models, Fault tolerance & incident analysis, Consensus & leader election (CCC1 / CCC2), MapReduce & stream processing (CCC1 / CCC2)
   - category: Backend & Data
     items: FastAPI, Flask, SQLAlchemy / SQLModel, Alembic, PostgreSQL, MySQL, MariaDB
   - category: Security & Identity
@@ -159,7 +161,7 @@ certifications:
     url: https://courses.edx.org/certificates/05a576b4853640b0bfe7b9b221a9fd5d
 
 
-  - name: Cloud Computing Concepts, Part 2
+  - name: Cloud Computing Concepts, Part 2 (CCC2)
     issuer: University of Illinois at Urbana-Champaign (Coursera)
     date: April 27, 2015
     id: 48W63NBRVF
@@ -167,7 +169,7 @@ certifications:
 
 # Projects
 
-  - name: Cloud Computing Concepts, Part 1
+  - name: Cloud Computing Concepts, Part 1 (CCC1)
     issuer: University of Illinois at Urbana-Champaign (Coursera)
     date: March 17, 2015
     id: 4LVSBUDRWC
