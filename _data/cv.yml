@@ -27,12 +27,14 @@ skills:
     items: Python, Bash, SQL, Ruby
   - category: Platforms & Delivery
     items: GitHub Actions, AWS CodeDeploy, Windmill, n8n
+  - category: Infrastructure as Code
+    items: CloudFormation, Ansible, Puppet, Zero-touch host provisioning
   - category: Containers & Virtualization
     items: Docker, Docker Compose, Container image builds, Proxmox VE, Self-hosted infrastructure, Kubernetes (fundamentals)
   - category: AWS
-    items: Lambda, Step Functions, CloudFormation, EC2, S3, RDS / Aurora
+    items: Lambda, Step Functions, EC2, S3, RDS / Aurora
   - category: Reliability & Operations
-    items: On-call & incident response, Alert automation, Linux (RHEL / CentOS), Ansible, Puppet, Nginx, DNS, Grafana, Splunk, SLIs / SLOs / SLAs & error budgets (fundamentals)
+    items: On-call & incident response, Alert automation, Linux (RHEL / CentOS), Nginx, DNS, Grafana, Splunk, SLIs / SLOs / SLAs & error budgets (fundamentals)
   - category: Backend & Data
     items: FastAPI, Flask, SQLAlchemy / SQLModel, Alembic, PostgreSQL, MySQL, MariaDB
   - category: Security & Identity
