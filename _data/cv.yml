@@ -26,11 +26,11 @@ skills:
   - category: Languages
     items: Python, Bash, SQL, Ruby
   - category: Platforms & Delivery
-    items: GitHub Actions, AWS CodeDeploy, Windmill, n8n
+    items: GitHub Actions, AWS CodeDeploy, Windmill, n8n, Slack integrations
   - category: Infrastructure as Code
-    items: CloudFormation, Ansible, Puppet, Zero-touch host provisioning
+    items: CloudFormation, Puppet, Continuous configuration convergence, Zero-touch host provisioning
   - category: Containers & Virtualization
-    items: Docker, Docker Compose, Container image builds, Proxmox VE, Self-hosted infrastructure, Kubernetes (fundamentals)
+    items: Docker, Docker Compose, Container image builds, Proxmox VE (clustered), TrueNAS, Self-hosted infrastructure, Kubernetes (fundamentals)
   - category: AWS
     items: Lambda, Step Functions, EC2, S3, RDS / Aurora
   - category: Reliability & Operations
@@ -44,7 +44,7 @@ skills:
   - category: AI & Agentic Engineering
     items: Claude Code, Agent skills & hooks, MCP, Multi-agent system design
   - category: Docs as Code
-    items: Mermaid, D2, YamlCV ;)
+    items: Mermaid, YamlCV
 
 # Professional Experience
 # The first two achievements of each role are highlighted by the template - keep the strongest first.
@@ -61,10 +61,11 @@ experience:
       - Closed the loop with the audit process - built a Windmill-based orchestrator that claims audit Jira tickets, runs the matching collection, attaches the evidence and transitions the ticket, with stale-job detection, Slack alerting with one-click retry and staggered monthly schedules per artifact.
       - Built an integrity-verified evidence delivery pipeline - 5 AWS Lambda functions orchestrated by Step Functions and defined in CloudFormation, verifying checksums at every hop from S3 to Google Drive.
       - Owned CI/CD and release architecture - GitHub Actions builds one version-locked artifact, verified at three independent points, auto-deployed to dev and promoted weekly to production via AWS CodeDeploy (65 tagged releases), with zero-touch host provisioning and self-bootstrapping credentials.
+      - Delivered the Heimdall and Windmill platforms as infrastructure as code - AWS resources defined in CloudFormation, Windmill deployed as Docker containers, and everything rolled out to hosts with AWS CodeDeploy and driven end to end by GitHub Actions, so both environments are built from the repository rather than by hand.
       - Implemented secure-by-design API clients (OAuth2 private-key JWT with DPoP, GitHub App authentication, rate-limit-aware pagination) and closed security and reliability gaps - remediated Dependabot findings, hardened serialization paths and re-architected reporting to stream to disk, eliminating out-of-memory failures on large collection runs.
       - Built ActionHub, a compliance workflow platform (Flask / PostgreSQL) that replaced manual compliance questionnaires - dynamic forms, assignment lifecycle, reviewer RBAC, a background workflow engine, full audit logging and Okta SSO, backed by 980 tests.
-      - Drove AI adoption across the team - authored Claude Code skills that make evidence tracing and ticket triage deterministic, ran sessions on AI-assisted engineering, and designed a multi-agent system that generates new collectors from Jira requests to scale coverage across the remaining audit scope.
-      - Mentored engineers on secure, testable software design, and took the platform to steady state before handing long-term ownership to Security Architecture.
+      - Drove AI adoption across the team - authored Claude Code skills that make evidence tracing and ticket triage deterministic, built local MCP servers (generated with Claude Code) for internal APIs such as Jira so agents could operate those services directly, ran sessions on AI-assisted engineering, and designed a multi-agent system that generates new collectors from Jira requests to scale coverage across the remaining audit scope.
+      - Mentored engineers on secure, testable software design, documented the platform's architecture and data flows in the repository with Mermaid diagrams, and took it to steady state before handing long-term ownership to Security Architecture.
 
   - company: ServiceNow
     position: Staff Site Reliability Engineer
@@ -72,7 +73,7 @@ experience:
     start_date: September 2021
     end_date: August 2024
     achievements:
-      - Owned front-line operational reliability for ServiceNow Cloud services as a Staff SRE - on-call incident response, alert triage and escalation alongside customer support and engineering teams.
+      - Owned front-line operational reliability for ServiceNow Cloud services as a Staff SRE - on-call incident response, alert triage and escalation alongside customer support and engineering teams, using Splunk and Grafana for investigation and monitoring.
       - Automated recurring alert handling, reducing manual triage and improving response accuracy.
       - Improved platform stability and performance through internal automation services, and tightened the team's runbooks and operational procedures.
 
@@ -85,7 +86,8 @@ experience:
       - Led the patching-automation project that cut fleet patching cycle time from 40+ days to 7, and served as the team's subject-matter expert for patching workflows.
       - Started zero-touch build workflows for bastion fleets, removing manual host configuration.
       - Diagnosed and fixed a critical fleet-monitoring defect involving the service's Gossip protocol.
-      - Automated region builds and service deployments for an AWS networking service, improving deployment speed and consistency.
+      - Automated region builds and service deployments for an AWS networking service as infrastructure as code, defining the service's pipelines and infrastructure in an internal Ruby-based templating tool, improving deployment speed and consistency.
+      - Took over and ran a production fleet's Puppet-based configuration management - operated the pipeline that pushed manifests to the hosts, and Puppet on each host applied them every 4 hours, so the fleet continuously converged to the declared state and drift was corrected automatically.
       - Owned production fleet reliability on the on-call rotation - incident response, maintenance and feature development.
 
   - company: Amazon Web Services (AWS)
@@ -94,7 +96,7 @@ experience:
     start_date: May 2018
     end_date: November 2019
     achievements:
-      - Built region-build and deployment automation for an AWS networking service, improving consistency and reducing release cycle times.
+      - Built region-build and deployment automation for an AWS networking service in Ruby using an internal infrastructure-as-code templating tool, improving consistency and reducing release cycle times.
       - Joined the on-call rotation for production fleet reliability, maintenance and incident response; promoted to System Development Engineer.
 
   - company: Amazon Web Services (AWS)
@@ -165,7 +167,7 @@ certifications:
 projects:
   - title: Football Wizards - Football Analytics Platform (live at api.gurutux.com)
     description: >
-      Designed and operate a two-service FastAPI / PostgreSQL platform - a public read-only API with a React explorer,
+      Designed and operate a two-service FastAPI / SQLAlchemy / PostgreSQL platform - a public read-only API with a React explorer,
       and an isolated admin control plane for scheduled ingestion jobs with live progress streaming. Modelled a normalized
       schema (123 player and 32 team stat types, minute-stamped match events) holding 10M+ stat rows across ~9,600 matches,
       fed by a pluggable ingestion layer with 5 source adapters, content-hash caching and cross-source entity resolution.
@@ -174,7 +176,20 @@ projects:
       Shipped with Docker Compose, auto-applied Alembic migrations and one-command deploys with health checks,
       self-hosted on Proxmox. Developed AI-first with Claude Code under a persisted architecture and decision log.
 
+  - title: Automated Azan - Prayer Announcements for Chromecast (github.com/shenhab/Automated-Azan)
+    description: >
+      Open-source Python service that schedules and streams prayer announcements to Chromecast and Google Home devices,
+      with a web management interface. Packaged as a multi-stage Docker image (non-root user, health check) published
+      to Docker Hub, with a GitHub Actions release pipeline that builds and pushes versioned and latest tags on each
+      release and a Docker Compose deployment.
+
   - title: YamlCV
     description: >
       This CV. A Jekyll-based CV-as-code system that uses YAML as the single source of truth and generates both an
       interactive HTML resume and an ATS-friendly version from it. https://github.com/shenhab/YamlCV
+
+  - title: Home Lab - Self-Hosted Infrastructure
+    description: >
+      Run a self-hosted environment on a two-node Proxmox VE cluster that lets workloads be managed and migrated between
+      nodes, with a TrueNAS server providing shared storage and continuous off-site backup of its data to cloud storage.
+      It hosts my own services, including Football Wizards and an n8n instance for workflow automation.
