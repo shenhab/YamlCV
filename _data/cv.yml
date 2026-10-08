@@ -163,6 +163,18 @@ certifications:
     id: 05a576b4853640b0bfe7b9b221a9fd5d
     url: https://courses.edx.org/certificates/05a576b4853640b0bfe7b9b221a9fd5d
 
+  - name: Cloud Computing Concepts, Part 1
+    issuer: University of Illinois at Urbana-Champaign (Coursera)
+    date: March 17, 2015
+    id: 4LVSBUDRWC
+    url: https://www.coursera.org/account/accomplishments/certificate/4LVSBUDRWC
+
+  - name: Cloud Computing Concepts, Part 2
+    issuer: University of Illinois at Urbana-Champaign (Coursera)
+    date: April 27, 2015
+    id: 48W63NBRVF
+    url: https://www.coursera.org/account/accomplishments/certificate/48W63NBRVF
+
 # Projects
 projects:
   - title: Football Wizards - Football Analytics Platform (live at api.gurutux.com)
