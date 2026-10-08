@@ -1,0 +1,174 @@
+{% assign cv = site.data[page.cv] %}
+{% assign t = site.data.i18n[page.lang] %}
+<!DOCTYPE html>
+<html lang="{{ page.lang }}" dir="{{ page.text_dir }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% seo %}
+  <link rel="alternate" hreflang="{{ page.alt_lang }}" href="{{ page.alt_url | absolute_url }}">
+  <style>
+    /* Deliberately plain: one column, system fonts, no icons, no external resources.
+       Applicant tracking systems parse this layout reliably and it prints compactly.
+       Logical properties keep the same rules valid for the right-to-left Arabic page. */
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.45;
+      color: #222;
+      background-color: #f5f5f5;
+    }
+    html[dir="rtl"] body { font-family: Tahoma, Arial, 'Noto Sans Arabic', 'Noto Naskh Arabic', sans-serif; line-height: 1.7; }
+    .resume {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 36px 40px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 { font-size: 26px; text-align: center; margin: 0 0 4px; color: #2c3e50; }
+    .headline { text-align: center; font-size: 17px; margin: 0 0 10px; }
+    .contact { text-align: center; margin: 0 0 18px; }
+    .contact p { margin: 2px 0; }
+    .contact a { color: #222; }
+    h2 {
+      font-size: 17px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 3px;
+      margin: 22px 0 10px;
+    }
+    html[dir="rtl"] h2 { letter-spacing: 0; }
+    h3 { font-size: 16px; margin: 0; }
+    p { margin: 0 0 8px; }
+    ul { margin: 0 0 10px; padding-inline-start: 20px; }
+    li { margin-bottom: 4px; }
+    .job { margin-bottom: 14px; }
+    .job-meta { margin: 0 0 6px; }
+    .skills p { margin: 0 0 4px; }
+    .buttons { text-align: center; margin: 24px 0 0; }
+    .buttons a {
+      display: inline-block;
+      padding: 10px 18px;
+      margin: 4px;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #3498db;
+    }
+    .buttons a.secondary { background-color: #6c757d; }
+
+    @media (max-width: 600px) {
+      body { padding: 8px; }
+      .resume { padding: 20px 16px; }
+    }
+
+    @media print {
+      body { background-color: #fff; padding: 0; font-size: 10.5pt; line-height: 1.35; }
+      .resume { max-width: none; padding: 0; box-shadow: none; }
+      .buttons { display: none; }
+      h1 { font-size: 20pt; }
+      .headline { font-size: 12pt; }
+      h2 { font-size: 12pt; margin: 12pt 0 6pt; break-after: avoid; }
+      h3 { font-size: 11pt; }
+      .job, li { break-inside: avoid; }
+      a { color: #222; text-decoration: none; }
+      @page { margin: 14mm 16mm; }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume">
+    <header>
+      <h1>{{ cv.personal.name }}</h1>
+      <p class="headline">{{ cv.personal.title }}</p>
+      <div class="contact">
+        {% if cv.personal.email %}<p>{{ t.email }}: <a href="mailto:{{ cv.personal.email }}"><bdi>{{ cv.personal.email }}</bdi></a></p>{% endif %}
+        {% if cv.personal.phone %}<p>{{ t.phone }}: <bdi dir="ltr">{{ cv.personal.phone }}</bdi></p>{% endif %}
+        {% if cv.personal.location %}<p>{{ t.location }}: {{ cv.personal.location }}</p>{% endif %}
+        {% if cv.personal.linkedin %}<p>LinkedIn: <a href="https://{{ cv.personal.linkedin }}"><bdi>{{ cv.personal.linkedin }}</bdi></a></p>{% endif %}
+        {% if cv.personal.github %}<p>GitHub: <a href="https://{{ cv.personal.github }}"><bdi>{{ cv.personal.github }}</bdi></a></p>{% endif %}
+        {% if cv.personal.website %}<p>{{ t.website }}: <a href="https://{{ cv.personal.website }}"><bdi>{{ cv.personal.website }}</bdi></a></p>{% endif %}
+        {% if cv.personal.nationality %}<p>{{ t.nationality }}: {{ cv.personal.nationality }}</p>{% endif %}
+      </div>
+    </header>
+
+    <section>
+      <h2>{{ t.ats_summary }}</h2>
+      <p>{{ cv.summary }}</p>
+    </section>
+
+    <section class="skills">
+      <h2>{{ t.skills }}</h2>
+      {% for category in cv.skills %}
+        <p><strong>{{ category.category }}:</strong> {{ category.items }}</p>
+      {% endfor %}
+    </section>
+
+    <section>
+      <h2>{{ t.ats_experience }}</h2>
+      {% for job in cv.experience %}
+        <div class="job">
+          <h3>{{ job.position }}</h3>
+          <p class="job-meta"><strong>{{ job.company }}</strong>{% if job.location %} | {{ job.location }}{% endif %} | {{ job.start_date }} {{ t.to }} {{ job.end_date }}</p>
+          <ul>
+            {% for item in job.achievements %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </section>
+
+    <section>
+      <h2>{{ t.education }}</h2>
+      {% for edu in cv.education %}
+        <div class="job">
+          <h3>{{ edu.degree }}</h3>
+          <p class="job-meta"><strong>{{ edu.institution }}</strong>{% if edu.location %} | {{ edu.location }}{% endif %} | {{ edu.date }}</p>
+          {% if edu.details %}<p>{{ edu.details }}</p>{% endif %}
+        </div>
+      {% endfor %}
+    </section>
+
+    <section>
+      <h2>{{ t.certifications }}</h2>
+      <ul>
+        {% for cert in cv.certifications %}
+          <li><strong>{{ cert.name }}</strong> - {{ cert.issuer }}، {{ cert.date }}. {{ t.certificate_id }}: <bdi dir="ltr">{{ cert.id }}</bdi>{% if cert.url %} (<bdi dir="ltr">{{ cert.url }}</bdi>){% endif %}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    {% if cv.languages %}
+    <section>
+      <h2>{{ t.languages }}</h2>
+      <p>{% for lang in cv.languages %}<strong>{{ lang.name }}</strong> - {{ lang.level }}{% unless forloop.last %}; {% endunless %}{% endfor %}</p>
+    </section>
+    {% endif %}
+
+    {% if cv.projects %}
+    <section>
+      <h2>{{ t.projects }}</h2>
+      {% for project in cv.projects %}
+        <div class="job">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          {% if project.url %}<p>{{ t.project_url }}: <a href="{{ project.url }}"><bdi>{{ project.url }}</bdi></a></p>{% endif %}
+        </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    <div class="buttons">
+      <a href="#" onclick="window.print(); return false;">{{ t.download_pdf }}</a>
+      <a href="./" class="secondary">{{ t.interactive }}</a>
+      <a href="{{ page.alt_url | relative_url }}" class="secondary" lang="{{ page.alt_lang }}" dir="{{ page.alt_dir }}" hreflang="{{ page.alt_lang }}">{{ t.switch_language }}</a>
+    </div>
+  </div>
+</body>
+</html>

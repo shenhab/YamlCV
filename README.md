@@ -48,9 +48,24 @@ To update your CV, simply edit the `_data/cv.yml` file. The structure is intuiti
 - Professional experience
 - Education
 - Certifications
+- Languages
 - Projects (an optional `url` field on a project is rendered as a link)
 
 After pushing your changes to GitHub, the site will automatically rebuild and deploy.
+
+### Arabic version
+
+The site is bilingual. English is the default at `/` and `/ats-resume.html`; the Arabic
+pages are at `/ar/` and `/ar/ats-resume.html`, rendered right-to-left from `_data/cv_ar.yml`.
+Every page links to its counterpart in the other language.
+
+`cv_ar.yml` is a translation of `cv.yml` and must mirror it entry for entry: the same number
+of skills, roles, achievements, certificates, languages and projects, with the same
+certificate IDs, links and contact details. The check script fails if the two drift apart,
+so when you add a bullet to one file, add it to the other. Tool and product names stay in
+English in the Arabic file, as is usual in Arabic technical CVs.
+
+Interface strings (section headings, button labels, month names) live in `_data/i18n.yml`.
 
 ## Creating a PDF Version
 
@@ -78,8 +93,13 @@ Edit `_config.yml` to change:
 
 If you want to customize the design:
 
-1. **Interactive CV**: Edit `index.html` - contains the layout and styling for the interactive version
-2. **ATS-friendly CV**: Edit `ats-resume.html` - contains the simplified layout for ATS compatibility
+1. **Interactive CV**: Edit `_layouts/cv.html` - contains the layout and styling for the interactive version
+2. **ATS-friendly CV**: Edit `_layouts/ats.html` - contains the simplified layout for ATS compatibility
+
+The four pages (`index.html`, `ats-resume.html`, `ar/index.html`, `ar/ats-resume.html`) are
+front-matter stubs that pick a layout, a language, a text direction and a data file. The
+layouts use CSS logical properties, so one stylesheet serves both the left-to-right and the
+right-to-left pages.
 
 ### Custom Domain
 
@@ -123,17 +143,27 @@ script fails if a template introduces an external resource.
 ## Continuous Integration
 
 `.github/workflows/checks.yml` builds the site on every push and pull request, validates
-`_data/cv.yml` against the fields the templates need, and checks that each built page is a
-single well-formed document whose internal links resolve.
+`_data/cv.yml` and `_data/cv_ar.yml` against the fields the templates need, checks that the
+Arabic file is structurally in sync with the English one, and checks that each of the four
+built pages is a single well-formed document with the right text direction whose internal
+links resolve.
 
 ## Structure
 
 ```
 ├── _config.yml          # Site configuration
 ├── _data/
-│   └── cv.yml          # CV data (edit this file to update your CV)
-├── index.html           # Interactive CV template (self-contained, no external resources)
-├── ats-resume.html      # ATS-friendly CV template (single column, print-optimised)
+│   ├── cv.yml          # CV data, English (edit this file to update your CV)
+│   ├── cv_ar.yml       # CV data, Arabic (kept in sync with cv.yml by the check script)
+│   └── i18n.yml        # Interface strings per language
+├── _layouts/
+│   ├── cv.html         # Interactive CV layout (self-contained, no external resources)
+│   └── ats.html        # ATS-friendly layout (single column, print-optimised)
+├── index.html           # English interactive CV (default)
+├── ats-resume.html      # English ATS-friendly resume
+├── ar/
+│   ├── index.html      # Arabic interactive CV (right-to-left)
+│   └── ats-resume.html # Arabic ATS-friendly resume
 ├── tools/
 │   └── check_site.py   # Data and build checks, run by CI
 ├── .github/workflows/

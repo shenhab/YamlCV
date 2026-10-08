@@ -1,0 +1,63 @@
+# Interface strings for the page templates, keyed by language code.
+# The CV content itself lives in cv.yml (English) and cv_ar.yml (Arabic).
+en:
+  contents: Contents
+  summary: Professional Summary
+  experience: Professional Experience
+  education: Education
+  certifications: Certifications
+  projects: Projects
+  skills: Skills
+  ats_summary: Summary
+  ats_experience: Experience
+  view_ats: View ATS-friendly resume
+  interactive: Interactive resume
+  download_pdf: Download PDF
+  switch_language: العربية
+  issuer: Issuer
+  date: Date
+  id: ID
+  view_certificate: View certificate
+  certificate_id: Certificate ID
+  project_url: Project URL
+  email: Email
+  phone: Phone
+  location: Location
+  website: Website
+  to: to
+  last_updated: Last updated
+  back_to_top: Back to top
+  languages: Languages
+  nationality: Work authorisation
+  months: [January, February, March, April, May, June, July, August, September, October, November, December]
+
+ar:
+  contents: المحتويات
+  summary: الملخص المهني
+  experience: الخبرة المهنية
+  education: التعليم
+  certifications: الشهادات
+  projects: المشاريع
+  skills: المهارات
+  ats_summary: الملخص
+  ats_experience: الخبرة
+  view_ats: عرض النسخة المتوافقة مع أنظمة التوظيف (ATS)
+  interactive: السيرة الذاتية التفاعلية
+  download_pdf: تنزيل PDF
+  switch_language: English
+  issuer: الجهة المانحة
+  date: التاريخ
+  id: المعرّف
+  view_certificate: عرض الشهادة
+  certificate_id: معرّف الشهادة
+  project_url: رابط المشروع
+  email: البريد الإلكتروني
+  phone: الهاتف
+  location: الموقع
+  website: الموقع الإلكتروني
+  to: إلى
+  last_updated: آخر تحديث
+  back_to_top: العودة إلى الأعلى
+  languages: اللغات
+  nationality: تصريح العمل
+  months: [يناير, فبراير, مارس, أبريل, مايو, يونيو, يوليو, أغسطس, سبتمبر, أكتوبر, نوفمبر, ديسمبر]

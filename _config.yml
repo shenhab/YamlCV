@@ -6,8 +6,9 @@ baseurl: ""
 url: "https://root.gurutux.com"
 
 # Build settings
-# No theme: index.html and ats-resume.html are complete documents and bring their own
-# styling. A theme layout would wrap them in a second <html> document.
+# No theme: _layouts/cv.html and _layouts/ats.html are complete documents that bring their
+# own styling. The four pages (index.html, ats-resume.html and their ar/ counterparts) are
+# front-matter stubs that pick a layout, a language and a data file.
 markdown: kramdown
 plugins:
   - jekyll-seo-tag

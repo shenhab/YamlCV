@@ -10,6 +10,7 @@ personal:
   linkedin: linkedin.com/in/Shenhab
   github: github.com/shenhab
   website: gurutux.com
+  nationality: EU citizen - no work permit or sponsorship required
 
 # Professional Summary
 summary: >
@@ -150,6 +151,13 @@ experience:
       - Administered Windows Server and Linux on VMware ESX, plus Microsoft SQL Server and Sybase ASE databases.
       - Built a centralized, automated backup and rotation solution for all database servers in Bash and PowerShell.
 
+# Languages
+languages:
+  - name: Arabic
+    level: Native
+  - name: English
+    level: Fluent (bilingual professional proficiency)
+
 # Education
 education:
   - degree: Bachelor of Computer Sciences
@@ -180,8 +188,6 @@ certifications:
     id: 48W63NBRVF
     url: https://www.coursera.org/account/accomplishments/certificate/48W63NBRVF
 
-# Projects
-
   - name: Cloud Computing Concepts, Part 1 (CCC1)
     issuer: University of Illinois at Urbana-Champaign (Coursera)
     date: March 17, 2015
@@ -195,7 +201,7 @@ certifications:
     id: 100-108-729
     url: https://rhtapps.redhat.com/verify?certId=100-108-729
 
-
+# Projects
 projects:
   - title: Football Wizards - Football Analytics Platform (live at api.gurutux.com)
     description: >
