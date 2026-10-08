@@ -73,7 +73,7 @@ experience:
     start_date: September 2021
     end_date: August 2024
     achievements:
-      - Owned front-line operational reliability for ServiceNow Cloud services as a Staff SRE - on-call incident response, alert triage and escalation alongside customer support and engineering teams, using Splunk and Grafana for investigation and monitoring.
+      - On-call Staff SRE for ServiceNow's entire fleet of customer production instances - a continuous, high-volume incident load with no quiet shifts - handling incident response, alert triage and escalation alongside customer support and engineering teams, using Splunk and Grafana for investigation and monitoring.
       - Automated recurring alert handling, reducing manual triage and improving response accuracy.
       - Improved platform stability and performance through internal automation services, and tightened the team's runbooks and operational procedures.
 
