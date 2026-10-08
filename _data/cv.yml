@@ -151,11 +151,6 @@ certifications:
     id: I003-7698
     url: https://www.credly.com/badges/53a71064-6981-4123-84cc-c77058ae328d
 
-  - name: Red Hat Certified System Administrator (RHCSA) - RHEL 5 (EX200)
-    issuer: Red Hat
-    date: April 16, 2009
-    id: 100-108-729
-    url: https://rhtapps.redhat.com/verify?certId=100-108-729
 
   - name: Introduction to Computer Science and Programming Using Python
     issuer: MITx (edX)
@@ -163,11 +158,6 @@ certifications:
     id: 05a576b4853640b0bfe7b9b221a9fd5d
     url: https://courses.edx.org/certificates/05a576b4853640b0bfe7b9b221a9fd5d
 
-  - name: Cloud Computing Concepts, Part 1
-    issuer: University of Illinois at Urbana-Champaign (Coursera)
-    date: March 17, 2015
-    id: 4LVSBUDRWC
-    url: https://www.coursera.org/account/accomplishments/certificate/4LVSBUDRWC
 
   - name: Cloud Computing Concepts, Part 2
     issuer: University of Illinois at Urbana-Champaign (Coursera)
@@ -176,6 +166,21 @@ certifications:
     url: https://www.coursera.org/account/accomplishments/certificate/48W63NBRVF
 
 # Projects
+
+  - name: Cloud Computing Concepts, Part 1
+    issuer: University of Illinois at Urbana-Champaign (Coursera)
+    date: March 17, 2015
+    id: 4LVSBUDRWC
+    url: https://www.coursera.org/account/accomplishments/certificate/4LVSBUDRWC
+
+
+  - name: Red Hat Certified System Administrator (RHCSA) - RHEL 5 (EX200)
+    issuer: Red Hat
+    date: April 16, 2009
+    id: 100-108-729
+    url: https://rhtapps.redhat.com/verify?certId=100-108-729
+
+
 projects:
   - title: Football Wizards - Football Analytics Platform (live at api.gurutux.com)
     description: >
