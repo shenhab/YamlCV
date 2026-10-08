@@ -13,12 +13,14 @@ personal:
 
 # Professional Summary
 summary: >
-  Staff engineer with 10+ years building platforms, reliability automation and security tooling across AWS, ServiceNow
-  and Okta. At Okta, designed and led Heimdall, a continuous compliance-evidence platform covering 171 security controls
-  across Okta, GitHub and AWS. In a SOC 2 audit cycle it replaced ~635 engineering hours of manual work with 8 hours of
-  automation, with 98% of evidence accepted by auditors. Before that, three years as a Staff SRE at ServiceNow and six
-  at AWS, where I led the automation that cut fleet patching cycle time from 40+ days to 7. Works AI-first: builds
-  agent tooling and multi-agent systems that scale engineering output.
+  Staff engineer with 15 years across platform engineering, SRE and security automation at AWS, ServiceNow and Okta,
+  with deep roots in Linux operations and relational databases. At Okta, designed and led Heimdall, a continuous
+  compliance-evidence platform covering 171 security controls across Okta, GitHub and AWS; in one SOC 2 audit cycle it
+  replaced ~635 engineering hours of manual work with 8 hours of automation, with 98% of evidence accepted by auditors.
+  Before that, three years as a Staff SRE on call for ServiceNow's entire customer instance fleet, and six at AWS -
+  first as an RDS subject-matter expert, then on infrastructure-as-code and region-build automation, including the
+  project that cut fleet patching from 40+ days to 7. Works AI-first, building agent tooling and multi-agent systems
+  that scale engineering output.
 
 # Skills
 # Items are split on ", " by the template, so never put a comma inside a single item.
